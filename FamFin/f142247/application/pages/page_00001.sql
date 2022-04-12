@@ -13,7 +13,7 @@ wwv_flow_api.component_begin (
 );
 wwv_flow_api.create_page(
  p_id=>1
-,p_user_interface_id=>wwv_flow_api.id(56883039773298342569)
+,p_user_interface_id=>wwv_flow_api.id(57274526744128403746)
 ,p_name=>'Home'
 ,p_alias=>'HOME'
 ,p_step_title=>'FamFin'
@@ -21,15 +21,15 @@ wwv_flow_api.create_page(
 ,p_page_template_options=>'#DEFAULT#'
 ,p_protection_level=>'C'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20220411231857'
+,p_last_upd_yyyymmddhh24miss=>'20220412185548'
 );
 wwv_flow_api.create_page_plug(
- p_id=>wwv_flow_api.id(56883052087242342586)
+ p_id=>wwv_flow_api.id(57274538544794403759)
 ,p_plug_name=>'FamFin'
 ,p_icon_css_classes=>'app-icon'
 ,p_region_template_options=>'#DEFAULT#'
 ,p_escape_on_http_output=>'Y'
-,p_plug_template=>wwv_flow_api.id(56882920378266342522)
+,p_plug_template=>wwv_flow_api.id(57274407240888403698)
 ,p_plug_display_sequence=>10
 ,p_plug_display_point=>'REGION_POSITION_01'
 ,p_plug_source=>'Finanzas Familiares'

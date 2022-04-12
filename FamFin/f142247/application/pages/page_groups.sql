@@ -12,7 +12,7 @@ wwv_flow_api.component_begin (
 ,p_default_owner=>'WKSP_JTSOYA539WS'
 );
 wwv_flow_api.create_page_group(
- p_id=>wwv_flow_api.id(56883045516327342578)
+ p_id=>wwv_flow_api.id(57274532069749403752)
 ,p_group_name=>'Administration'
 );
 wwv_flow_api.component_end;

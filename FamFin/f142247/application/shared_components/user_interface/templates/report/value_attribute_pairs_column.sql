@@ -12,7 +12,7 @@ wwv_flow_api.component_begin (
 ,p_default_owner=>'WKSP_JTSOYA539WS'
 );
 wwv_flow_api.create_row_template(
- p_id=>wwv_flow_api.id(56882983089126342545)
+ p_id=>wwv_flow_api.id(57274469949869403722)
 ,p_row_template_name=>'Value Attribute Pairs - Column'
 ,p_internal_name=>'VALUE_ATTRIBUTE_PAIRS_COLUMN'
 ,p_row_template1=>wwv_flow_string.join(wwv_flow_t_varchar2(

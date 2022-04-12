@@ -12,12 +12,12 @@ wwv_flow_api.component_begin (
 ,p_default_owner=>'WKSP_JTSOYA539WS'
 );
 wwv_flow_api.create_list(
- p_id=>wwv_flow_api.id(56882852189901342495)
+ p_id=>wwv_flow_api.id(57274339091704403671)
 ,p_name=>'Navigation Menu'
 ,p_list_status=>'PUBLIC'
 );
 wwv_flow_api.create_list_item(
- p_id=>wwv_flow_api.id(56883051192488342584)
+ p_id=>wwv_flow_api.id(57274537684417403758)
 ,p_list_item_display_sequence=>10
 ,p_list_item_link_text=>'Home'
 ,p_list_item_link_target=>'f?p=&APP_ID.:1:&APP_SESSION.::&DEBUG.:'
@@ -25,12 +25,12 @@ wwv_flow_api.create_list_item(
 ,p_list_item_current_type=>'TARGET_PAGE'
 );
 wwv_flow_api.create_list_item(
- p_id=>wwv_flow_api.id(56883220107722343395)
+ p_id=>wwv_flow_api.id(57274659303660404499)
 ,p_list_item_display_sequence=>10000
 ,p_list_item_link_text=>'Administration'
 ,p_list_item_link_target=>'f?p=&APP_ID.:10000:&APP_SESSION.::&DEBUG.:'
 ,p_list_item_icon=>'fa-user-wrench'
-,p_security_scheme=>wwv_flow_api.id(56883043949700342575)
+,p_security_scheme=>wwv_flow_api.id(57274530720703403751)
 ,p_list_item_current_type=>'TARGET_PAGE'
 );
 wwv_flow_api.component_end;

@@ -12,7 +12,7 @@ wwv_flow_api.component_begin (
 ,p_default_owner=>'WKSP_JTSOYA539WS'
 );
 wwv_flow_api.create_field_template(
- p_id=>wwv_flow_api.id(56883013848746342558)
+ p_id=>wwv_flow_api.id(57274500775215403735)
 ,p_template_name=>'Required - Floating'
 ,p_internal_name=>'REQUIRED_FLOATING'
 ,p_template_body1=>wwv_flow_string.join(wwv_flow_t_varchar2(

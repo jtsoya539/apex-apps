@@ -12,13 +12,13 @@ wwv_flow_api.component_begin (
 ,p_default_owner=>'WKSP_JTSOYA539WS'
 );
 wwv_flow_api.create_list(
- p_id=>wwv_flow_api.id(56883222651190343396)
+ p_id=>wwv_flow_api.id(57274661889844404500)
 ,p_name=>'Activity Reports'
 ,p_list_status=>'PUBLIC'
-,p_required_patch=>wwv_flow_api.id(56883041316604342573)
+,p_required_patch=>wwv_flow_api.id(57274528364105403750)
 );
 wwv_flow_api.create_list_item(
- p_id=>wwv_flow_api.id(56883223097645343396)
+ p_id=>wwv_flow_api.id(57274662287410404500)
 ,p_list_item_display_sequence=>10
 ,p_list_item_link_text=>'Dashboard'
 ,p_list_item_link_target=>'f?p=&APP_ID.:10030:&SESSION.::&DEBUG.:10030:::'
@@ -27,7 +27,7 @@ wwv_flow_api.create_list_item(
 ,p_list_item_current_type=>'TARGET_PAGE'
 );
 wwv_flow_api.create_list_item(
- p_id=>wwv_flow_api.id(56883223436416343397)
+ p_id=>wwv_flow_api.id(57274662672932404501)
 ,p_list_item_display_sequence=>20
 ,p_list_item_link_text=>'Top Users'
 ,p_list_item_link_target=>'f?p=&APP_ID.:10031:&SESSION.::&DEBUG.:10031:::'
@@ -36,7 +36,7 @@ wwv_flow_api.create_list_item(
 ,p_list_item_current_type=>'TARGET_PAGE'
 );
 wwv_flow_api.create_list_item(
- p_id=>wwv_flow_api.id(56883223839158343397)
+ p_id=>wwv_flow_api.id(57274663032105404501)
 ,p_list_item_display_sequence=>30
 ,p_list_item_link_text=>'Application Error Log'
 ,p_list_item_link_target=>'f?p=&APP_ID.:10032:&SESSION.::&DEBUG.:10032:::'
@@ -45,7 +45,7 @@ wwv_flow_api.create_list_item(
 ,p_list_item_current_type=>'TARGET_PAGE'
 );
 wwv_flow_api.create_list_item(
- p_id=>wwv_flow_api.id(56883224264873343397)
+ p_id=>wwv_flow_api.id(57274663422801404501)
 ,p_list_item_display_sequence=>40
 ,p_list_item_link_text=>'Page Performance'
 ,p_list_item_link_target=>'f?p=&APP_ID.:10033:&SESSION.::&DEBUG.:10033:::'
@@ -54,7 +54,7 @@ wwv_flow_api.create_list_item(
 ,p_list_item_current_type=>'TARGET_PAGE'
 );
 wwv_flow_api.create_list_item(
- p_id=>wwv_flow_api.id(56883224657990343397)
+ p_id=>wwv_flow_api.id(57274663843901404501)
 ,p_list_item_display_sequence=>50
 ,p_list_item_link_text=>'Page Views'
 ,p_list_item_link_target=>'f?p=&APP_ID.:10034:&SESSION.::&DEBUG.:RR,10034:::'
@@ -63,7 +63,7 @@ wwv_flow_api.create_list_item(
 ,p_list_item_current_type=>'TARGET_PAGE'
 );
 wwv_flow_api.create_list_item(
- p_id=>wwv_flow_api.id(56883225010402343397)
+ p_id=>wwv_flow_api.id(57274664284506404501)
 ,p_list_item_display_sequence=>60
 ,p_list_item_link_text=>'Automations Log'
 ,p_list_item_link_target=>'f?p=&APP_ID.:10035:&SESSION.::&DEBUG.:RR,10035:::'

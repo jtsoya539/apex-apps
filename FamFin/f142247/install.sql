@@ -8,7 +8,6 @@ prompt --install
 @@application/shared_components/navigation/lists/user_interface.sql
 @@application/shared_components/navigation/lists/activity_reports.sql
 @@application/shared_components/navigation/lists/access_control.sql
-@@application/shared_components/navigation/lists/feedback.sql
 @@application/shared_components/files/app_icon_svg.sql
 @@application/shared_components/files/app_icon_css.sql
 @@application/plugin_settings.sql
@@ -25,8 +24,6 @@ prompt --install
 @@application/shared_components/user_interface/lovs/access_roles.sql
 @@application/shared_components/user_interface/lovs/desktop_theme_styles.sql
 @@application/shared_components/user_interface/lovs/email_username_format.sql
-@@application/shared_components/user_interface/lovs/feedback_rating.sql
-@@application/shared_components/user_interface/lovs/feedback_status.sql
 @@application/shared_components/user_interface/lovs/login_remember_username.sql
 @@application/shared_components/user_interface/lovs/timeframe_4_weeks.sql
 @@application/shared_components/user_interface/lovs/user_theme_preference.sql
@@ -134,8 +131,4 @@ prompt --install
 @@application/pages/page_10044.sql
 @@application/pages/page_10050.sql
 @@application/pages/page_10051.sql
-@@application/pages/page_10053.sql
-@@application/pages/page_10054.sql
-@@application/pages/page_10060.sql
-@@application/pages/page_10061.sql
 @@application/end_environment.sql

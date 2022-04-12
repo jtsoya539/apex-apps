@@ -9,14 +9,14 @@ wwv_flow_api.component_begin (
 ,p_default_owner=>'WKSP_JTSOYA539WS'
 );
 wwv_flow_api.create_plugin_setting(
- p_id=>wwv_flow_api.id(56882848016070342493)
+ p_id=>wwv_flow_api.id(57274234952528403669)
 ,p_plugin_type=>'ITEM TYPE'
 ,p_plugin=>'NATIVE_COLOR_PICKER'
 ,p_attribute_01=>'FULL'
 ,p_attribute_02=>'POPUP'
 );
 wwv_flow_api.create_plugin_setting(
- p_id=>wwv_flow_api.id(56882848360636342493)
+ p_id=>wwv_flow_api.id(57274235269522403669)
 ,p_plugin_type=>'ITEM TYPE'
 ,p_plugin=>'NATIVE_DATE_PICKER_JET'
 ,p_attribute_01=>'MONTH-PICKER:YEAR-PICKER'
@@ -25,7 +25,7 @@ wwv_flow_api.create_plugin_setting(
 ,p_attribute_04=>'FOCUS'
 );
 wwv_flow_api.create_plugin_setting(
- p_id=>wwv_flow_api.id(56882848631570342494)
+ p_id=>wwv_flow_api.id(57274235507922403669)
 ,p_plugin_type=>'ITEM TYPE'
 ,p_plugin=>'NATIVE_GEOCODED_ADDRESS'
 ,p_attribute_01=>'RELAX_HOUSE_NUMBER'
@@ -35,27 +35,27 @@ wwv_flow_api.create_plugin_setting(
 ,p_attribute_06=>'LIST'
 );
 wwv_flow_api.create_plugin_setting(
- p_id=>wwv_flow_api.id(56882848900768342494)
+ p_id=>wwv_flow_api.id(57274235839059403670)
 ,p_plugin_type=>'ITEM TYPE'
 ,p_plugin=>'NATIVE_RICH_TEXT_EDITOR'
 ,p_attribute_01=>'Y'
 );
 wwv_flow_api.create_plugin_setting(
- p_id=>wwv_flow_api.id(56882849261883342494)
+ p_id=>wwv_flow_api.id(57274236128315403670)
 ,p_plugin_type=>'ITEM TYPE'
 ,p_plugin=>'NATIVE_SINGLE_CHECKBOX'
 ,p_attribute_01=>'Y'
 ,p_attribute_02=>'N'
 );
 wwv_flow_api.create_plugin_setting(
- p_id=>wwv_flow_api.id(56882849532993342494)
+ p_id=>wwv_flow_api.id(57274336475350403670)
 ,p_plugin_type=>'ITEM TYPE'
 ,p_plugin=>'NATIVE_STAR_RATING'
 ,p_attribute_01=>'fa-star'
 ,p_attribute_04=>'#VALUE#'
 );
 wwv_flow_api.create_plugin_setting(
- p_id=>wwv_flow_api.id(56882849865447342494)
+ p_id=>wwv_flow_api.id(57274336758367403670)
 ,p_plugin_type=>'ITEM TYPE'
 ,p_plugin=>'NATIVE_YES_NO'
 ,p_attribute_01=>'Y'
@@ -63,18 +63,18 @@ wwv_flow_api.create_plugin_setting(
 ,p_attribute_05=>'SWITCH_CB'
 );
 wwv_flow_api.create_plugin_setting(
- p_id=>wwv_flow_api.id(56882850151718342494)
+ p_id=>wwv_flow_api.id(57274337071280403670)
 ,p_plugin_type=>'REGION TYPE'
 ,p_plugin=>'NATIVE_CSS_CALENDAR'
 );
 wwv_flow_api.create_plugin_setting(
- p_id=>wwv_flow_api.id(56882850496062342494)
+ p_id=>wwv_flow_api.id(57274337353460403670)
 ,p_plugin_type=>'REGION TYPE'
 ,p_plugin=>'NATIVE_DISPLAY_SELECTOR'
 ,p_attribute_01=>'Y'
 );
 wwv_flow_api.create_plugin_setting(
- p_id=>wwv_flow_api.id(56882850705776342494)
+ p_id=>wwv_flow_api.id(57274337672191403670)
 ,p_plugin_type=>'REGION TYPE'
 ,p_plugin=>'NATIVE_IR'
 ,p_attribute_01=>'IG'

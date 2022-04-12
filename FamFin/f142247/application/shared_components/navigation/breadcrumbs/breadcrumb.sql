@@ -12,17 +12,17 @@ wwv_flow_api.component_begin (
 ,p_default_owner=>'WKSP_JTSOYA539WS'
 );
 wwv_flow_api.create_menu(
- p_id=>wwv_flow_api.id(56882851656844342495)
+ p_id=>wwv_flow_api.id(57274338569985403671)
 ,p_name=>'Breadcrumb'
 );
 wwv_flow_api.create_menu_option(
- p_id=>wwv_flow_api.id(56882851817876342495)
+ p_id=>wwv_flow_api.id(57274338736460403671)
 ,p_short_name=>'Home'
 ,p_link=>'f?p=&APP_ID.:1:&APP_SESSION.::&DEBUG.'
 ,p_page_id=>1
 );
 wwv_flow_api.create_menu_option(
- p_id=>wwv_flow_api.id(56883221020248343395)
+ p_id=>wwv_flow_api.id(57274660231756404499)
 ,p_short_name=>'Administration'
 ,p_link=>'f?p=&APP_ID.:10000:&APP_SESSION.::&DEBUG.:::'
 ,p_page_id=>10000

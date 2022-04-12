@@ -12,13 +12,13 @@ wwv_flow_api.component_begin (
 ,p_default_owner=>'WKSP_JTSOYA539WS'
 );
 wwv_flow_api.create_list_of_values(
- p_id=>wwv_flow_api.id(56883172467477343221)
+ p_id=>wwv_flow_api.id(57274641120440404358)
 ,p_lov_name=>'EMAIL_USERNAME_FORMAT'
-,p_lov_query=>'.'||wwv_flow_api.id(56883172467477343221)||'.'
+,p_lov_query=>'.'||wwv_flow_api.id(57274641120440404358)||'.'
 ,p_location=>'STATIC'
 );
 wwv_flow_api.create_static_lov_data(
- p_id=>wwv_flow_api.id(56883172782725343221)
+ p_id=>wwv_flow_api.id(57274641417966404358)
 ,p_lov_disp_sequence=>1
 ,p_lov_disp_value=>'Email Addresses'
 ,p_lov_return_value=>'EMAIL'

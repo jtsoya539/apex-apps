@@ -12,7 +12,7 @@ wwv_flow_api.component_begin (
 ,p_default_owner=>'WKSP_JTSOYA539WS'
 );
 wwv_flow_api.create_user_interface(
- p_id=>wwv_flow_api.id(56883039773298342569)
+ p_id=>wwv_flow_api.id(57274526744128403746)
 ,p_ui_type_name=>'DESKTOP'
 ,p_display_name=>'Desktop'
 ,p_display_seq=>10
@@ -24,14 +24,14 @@ wwv_flow_api.create_user_interface(
 ,p_theme_style_by_user_pref=>false
 ,p_built_with_love=>false
 ,p_global_page_id=>0
-,p_navigation_list_id=>wwv_flow_api.id(56882852189901342495)
+,p_navigation_list_id=>wwv_flow_api.id(57274339091704403671)
 ,p_navigation_list_position=>'TOP'
-,p_navigation_list_template_id=>wwv_flow_api.id(56883008237979342555)
+,p_navigation_list_template_id=>wwv_flow_api.id(57274495124938403732)
 ,p_nav_list_template_options=>'#DEFAULT#'
 ,p_css_file_urls=>'#APP_FILES#app-icon.css?version=#APP_VERSION#'
 ,p_nav_bar_type=>'LIST'
-,p_nav_bar_list_id=>wwv_flow_api.id(56883039413346342568)
-,p_nav_bar_list_template_id=>wwv_flow_api.id(56883002414587342553)
+,p_nav_bar_list_id=>wwv_flow_api.id(57274526419368403746)
+,p_nav_bar_list_template_id=>wwv_flow_api.id(57274489343209403730)
 ,p_nav_bar_template_options=>'#DEFAULT#'
 );
 wwv_flow_api.component_end;

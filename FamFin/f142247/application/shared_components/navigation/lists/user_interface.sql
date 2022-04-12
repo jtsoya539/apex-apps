@@ -12,19 +12,19 @@ wwv_flow_api.component_begin (
 ,p_default_owner=>'WKSP_JTSOYA539WS'
 );
 wwv_flow_api.create_list(
- p_id=>wwv_flow_api.id(56883221958766343396)
+ p_id=>wwv_flow_api.id(57274661190419404500)
 ,p_name=>'User Interface'
 ,p_list_status=>'PUBLIC'
-,p_required_patch=>wwv_flow_api.id(56883042024630342573)
+,p_required_patch=>wwv_flow_api.id(57274529041488403750)
 );
 wwv_flow_api.create_list_item(
- p_id=>wwv_flow_api.id(56883222339377343396)
+ p_id=>wwv_flow_api.id(57274661505361404500)
 ,p_list_item_display_sequence=>10
 ,p_list_item_link_text=>'Theme Style Selection'
 ,p_list_item_link_target=>'f?p=&APP_ID.:10020:&SESSION.::&DEBUG.:10020:::'
 ,p_list_item_icon=>'fa-paint-brush'
 ,p_list_text_01=>'Set the default application look and feel'
-,p_required_patch=>wwv_flow_api.id(56883042024630342573)
+,p_required_patch=>wwv_flow_api.id(57274529041488403750)
 ,p_list_item_current_type=>'TARGET_PAGE'
 );
 wwv_flow_api.component_end;

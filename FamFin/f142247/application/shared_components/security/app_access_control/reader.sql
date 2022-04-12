@@ -12,7 +12,7 @@ wwv_flow_api.component_begin (
 ,p_default_owner=>'WKSP_JTSOYA539WS'
 );
 wwv_flow_api.create_acl_role(
- p_id=>wwv_flow_api.id(56883043839629342575)
+ p_id=>wwv_flow_api.id(57274530687969403751)
 ,p_static_id=>'READER'
 ,p_name=>'Reader'
 ,p_description=>'Role assigned to application readers.'

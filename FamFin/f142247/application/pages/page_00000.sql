@@ -13,13 +13,13 @@ wwv_flow_api.component_begin (
 );
 wwv_flow_api.create_page(
  p_id=>0
-,p_user_interface_id=>wwv_flow_api.id(56883039773298342569)
+,p_user_interface_id=>wwv_flow_api.id(57274526744128403746)
 ,p_name=>'Global Page'
 ,p_autocomplete_on_off=>'OFF'
 ,p_page_template_options=>'#DEFAULT#'
 ,p_protection_level=>'D'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20220411231857'
+,p_last_upd_yyyymmddhh24miss=>'20220412185548'
 );
 wwv_flow_api.component_end;
 end;

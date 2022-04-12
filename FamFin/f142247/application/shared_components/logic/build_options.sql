@@ -12,47 +12,40 @@ wwv_flow_api.component_begin (
 ,p_default_owner=>'WKSP_JTSOYA539WS'
 );
 wwv_flow_api.create_build_option(
- p_id=>wwv_flow_api.id(56882851010809342495)
+ p_id=>wwv_flow_api.id(57274337928632403671)
 ,p_build_option_name=>'Commented Out'
 ,p_build_option_status=>'EXCLUDE'
 );
 wwv_flow_api.create_build_option(
- p_id=>wwv_flow_api.id(56883041252844342573)
+ p_id=>wwv_flow_api.id(57274528204078403750)
 ,p_build_option_name=>'Feature: Access Control'
 ,p_build_option_status=>'INCLUDE'
 ,p_feature_identifier=>'APPLICATION_ACCESS_CONTROL'
 ,p_build_option_comment=>'Incorporate role based user authentication within your application and manage username mappings to application roles.'
 );
 wwv_flow_api.create_build_option(
- p_id=>wwv_flow_api.id(56883041316604342573)
+ p_id=>wwv_flow_api.id(57274528364105403750)
 ,p_build_option_name=>'Feature: Activity Reporting'
 ,p_build_option_status=>'INCLUDE'
 ,p_feature_identifier=>'APPLICATION_ACTIVITY_REPORTING'
 ,p_build_option_comment=>'Include numerous reports and charts on end user activity.'
 );
 wwv_flow_api.create_build_option(
- p_id=>wwv_flow_api.id(56883041407648342573)
-,p_build_option_name=>'Feature: Feedback'
-,p_build_option_status=>'INCLUDE'
-,p_feature_identifier=>'APPLICATION_FEEDBACK'
-,p_build_option_comment=>'Provide a mechanism for end users to post general comments back to the application administrators and developers.'
-);
-wwv_flow_api.create_build_option(
- p_id=>wwv_flow_api.id(56883041626545342573)
+ p_id=>wwv_flow_api.id(57274528684245403750)
 ,p_build_option_name=>'Feature: Configuration Options'
 ,p_build_option_status=>'INCLUDE'
 ,p_feature_identifier=>'APPLICATION_CONFIGURATION'
 ,p_build_option_comment=>'Allow application administrators to enable or disable specific functionality, associated with an Application Express build option, from within the application.'
 );
 wwv_flow_api.create_build_option(
- p_id=>wwv_flow_api.id(56883041929264342573)
+ p_id=>wwv_flow_api.id(57274528965608403750)
 ,p_build_option_name=>'Feature: About Page'
 ,p_build_option_status=>'INCLUDE'
 ,p_feature_identifier=>'APPLICATION_ABOUT_PAGE'
 ,p_build_option_comment=>'About this application page.'
 );
 wwv_flow_api.create_build_option(
- p_id=>wwv_flow_api.id(56883042024630342573)
+ p_id=>wwv_flow_api.id(57274529041488403750)
 ,p_build_option_name=>'Feature: Theme Style Selection'
 ,p_build_option_status=>'INCLUDE'
 ,p_feature_identifier=>'APPLICATION_THEME_STYLE_SELECTION'

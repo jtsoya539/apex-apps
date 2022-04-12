@@ -12,19 +12,19 @@ wwv_flow_api.component_begin (
 ,p_default_owner=>'WKSP_JTSOYA539WS'
 );
 wwv_flow_api.create_list(
- p_id=>wwv_flow_api.id(56883221282324343396)
+ p_id=>wwv_flow_api.id(57274660430536404500)
 ,p_name=>'Application Configuration'
 ,p_list_status=>'PUBLIC'
-,p_required_patch=>wwv_flow_api.id(56883041626545342573)
+,p_required_patch=>wwv_flow_api.id(57274528684245403750)
 );
 wwv_flow_api.create_list_item(
- p_id=>wwv_flow_api.id(56883221637250343396)
+ p_id=>wwv_flow_api.id(57274660808732404500)
 ,p_list_item_display_sequence=>10
 ,p_list_item_link_text=>'Configuration Options'
 ,p_list_item_link_target=>'f?p=&APP_ID.:10010:&SESSION.::&DEBUG.:10010:::'
 ,p_list_item_icon=>'fa-sliders'
 ,p_list_text_01=>'Enable or disable application features'
-,p_required_patch=>wwv_flow_api.id(56883041626545342573)
+,p_required_patch=>wwv_flow_api.id(57274528684245403750)
 ,p_list_item_current_type=>'TARGET_PAGE'
 );
 wwv_flow_api.component_end;

@@ -12,7 +12,7 @@ wwv_flow_api.component_begin (
 ,p_default_owner=>'WKSP_JTSOYA539WS'
 );
 wwv_flow_api.create_plug_template(
- p_id=>wwv_flow_api.id(56882895164550342513)
+ p_id=>wwv_flow_api.id(57274382025259403689)
 ,p_layout=>'TABLE'
 ,p_template=>'<div role="region" aria-label="#TITLE!ATTR#" class="t-CardsRegion #REGION_CSS_CLASSES#" id="#REGION_STATIC_ID#" #REGION_ATTRIBUTES#>#BODY##SUB_REGIONS#</div>'
 ,p_page_plug_template_name=>'Cards Container'
@@ -26,8 +26,8 @@ wwv_flow_api.create_plug_template(
 ,p_translate_this_template=>'N'
 );
 wwv_flow_api.create_plug_tmpl_display_point(
- p_id=>wwv_flow_api.id(56882895423483342513)
-,p_plug_template_id=>wwv_flow_api.id(56882895164550342513)
+ p_id=>wwv_flow_api.id(57274382319527403689)
+,p_plug_template_id=>wwv_flow_api.id(57274382025259403689)
 ,p_name=>'Region Body'
 ,p_placeholder=>'BODY'
 ,p_has_grid_support=>true
@@ -37,8 +37,8 @@ wwv_flow_api.create_plug_tmpl_display_point(
 ,p_glv_new_row=>true
 );
 wwv_flow_api.create_plug_tmpl_display_point(
- p_id=>wwv_flow_api.id(56882895773388342513)
-,p_plug_template_id=>wwv_flow_api.id(56882895164550342513)
+ p_id=>wwv_flow_api.id(57274382659222403689)
+,p_plug_template_id=>wwv_flow_api.id(57274382025259403689)
 ,p_name=>'Sub Regions'
 ,p_placeholder=>'SUB_REGIONS'
 ,p_has_grid_support=>true

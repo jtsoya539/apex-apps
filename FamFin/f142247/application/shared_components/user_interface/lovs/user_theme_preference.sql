@@ -12,13 +12,13 @@ wwv_flow_api.component_begin (
 ,p_default_owner=>'WKSP_JTSOYA539WS'
 );
 wwv_flow_api.create_list_of_values(
- p_id=>wwv_flow_api.id(56883063664791342604)
+ p_id=>wwv_flow_api.id(57274550012045403770)
 ,p_lov_name=>'USER_THEME_PREFERENCE'
-,p_lov_query=>'.'||wwv_flow_api.id(56883063664791342604)||'.'
+,p_lov_query=>'.'||wwv_flow_api.id(57274550012045403770)||'.'
 ,p_location=>'STATIC'
 );
 wwv_flow_api.create_static_lov_data(
- p_id=>wwv_flow_api.id(56883063917716342604)
+ p_id=>wwv_flow_api.id(57274550300817403770)
 ,p_lov_disp_sequence=>1
 ,p_lov_disp_value=>'Allow End Users to choose Theme Style'
 ,p_lov_return_value=>'Yes'

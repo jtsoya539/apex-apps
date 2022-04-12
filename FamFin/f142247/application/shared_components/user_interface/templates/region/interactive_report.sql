@@ -12,7 +12,7 @@ wwv_flow_api.component_begin (
 ,p_default_owner=>'WKSP_JTSOYA539WS'
 );
 wwv_flow_api.create_plug_template(
- p_id=>wwv_flow_api.id(56882938179868342529)
+ p_id=>wwv_flow_api.id(57274425070863403705)
 ,p_layout=>'TABLE'
 ,p_template=>wwv_flow_string.join(wwv_flow_t_varchar2(
 '<div role="region" aria-label="#TITLE!ATTR#" id="#REGION_STATIC_ID#" #REGION_ATTRIBUTES# class="t-IRR-region #REGION_CSS_CLASSES#">#PREVIOUS##BODY##SUB_REGIONS##NEXT#</div>',
@@ -27,8 +27,8 @@ wwv_flow_api.create_plug_template(
 ,p_translate_this_template=>'N'
 );
 wwv_flow_api.create_plug_tmpl_display_point(
- p_id=>wwv_flow_api.id(56882938472282342529)
-,p_plug_template_id=>wwv_flow_api.id(56882938179868342529)
+ p_id=>wwv_flow_api.id(57274425353073403705)
+,p_plug_template_id=>wwv_flow_api.id(57274425070863403705)
 ,p_name=>'Region Body'
 ,p_placeholder=>'BODY'
 ,p_has_grid_support=>true
@@ -38,8 +38,8 @@ wwv_flow_api.create_plug_tmpl_display_point(
 ,p_glv_new_row=>true
 );
 wwv_flow_api.create_plug_tmpl_display_point(
- p_id=>wwv_flow_api.id(56882938785596342529)
-,p_plug_template_id=>wwv_flow_api.id(56882938179868342529)
+ p_id=>wwv_flow_api.id(57274425650211403705)
+,p_plug_template_id=>wwv_flow_api.id(57274425070863403705)
 ,p_name=>'Next'
 ,p_placeholder=>'NEXT'
 ,p_has_grid_support=>false
@@ -49,8 +49,8 @@ wwv_flow_api.create_plug_tmpl_display_point(
 ,p_glv_new_row=>true
 );
 wwv_flow_api.create_plug_tmpl_display_point(
- p_id=>wwv_flow_api.id(56882939082938342529)
-,p_plug_template_id=>wwv_flow_api.id(56882938179868342529)
+ p_id=>wwv_flow_api.id(57274425965469403705)
+,p_plug_template_id=>wwv_flow_api.id(57274425070863403705)
 ,p_name=>'Previous'
 ,p_placeholder=>'PREVIOUS'
 ,p_has_grid_support=>false
@@ -60,8 +60,8 @@ wwv_flow_api.create_plug_tmpl_display_point(
 ,p_glv_new_row=>true
 );
 wwv_flow_api.create_plug_tmpl_display_point(
- p_id=>wwv_flow_api.id(56882939361747342529)
-,p_plug_template_id=>wwv_flow_api.id(56882938179868342529)
+ p_id=>wwv_flow_api.id(57274426229681403705)
+,p_plug_template_id=>wwv_flow_api.id(57274425070863403705)
 ,p_name=>'Sub Regions'
 ,p_placeholder=>'SUB_REGIONS'
 ,p_has_grid_support=>true

@@ -12,7 +12,7 @@ wwv_flow_api.component_begin (
 ,p_default_owner=>'WKSP_JTSOYA539WS'
 );
 wwv_flow_api.create_security_scheme(
- p_id=>wwv_flow_api.id(56883043949700342575)
+ p_id=>wwv_flow_api.id(57274530720703403751)
 ,p_name=>'Administration Rights'
 ,p_scheme_type=>'NATIVE_IS_IN_GROUP'
 ,p_attribute_01=>'Administrator'

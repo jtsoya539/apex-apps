@@ -12,13 +12,13 @@ wwv_flow_api.component_begin (
 ,p_default_owner=>'WKSP_JTSOYA539WS'
 );
 wwv_flow_api.create_list_of_values(
- p_id=>wwv_flow_api.id(56883047594516342581)
+ p_id=>wwv_flow_api.id(57274534061063403755)
 ,p_lov_name=>'LOGIN_REMEMBER_USERNAME'
-,p_lov_query=>'.'||wwv_flow_api.id(56883047594516342581)||'.'
+,p_lov_query=>'.'||wwv_flow_api.id(57274534061063403755)||'.'
 ,p_location=>'STATIC'
 );
 wwv_flow_api.create_static_lov_data(
- p_id=>wwv_flow_api.id(56883047915665342582)
+ p_id=>wwv_flow_api.id(57274534490263403755)
 ,p_lov_disp_sequence=>10
 ,p_lov_disp_value=>'Remember username'
 ,p_lov_return_value=>'Y'

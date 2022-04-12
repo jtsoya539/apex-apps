@@ -13,17 +13,17 @@ wwv_flow_api.component_begin (
 );
 wwv_flow_api.create_page(
  p_id=>10035
-,p_user_interface_id=>wwv_flow_api.id(56883039773298342569)
+,p_user_interface_id=>wwv_flow_api.id(57274526744128403746)
 ,p_name=>'Automations Log'
 ,p_alias=>'AUTOMATIONS-LOG'
 ,p_page_mode=>'MODAL'
 ,p_step_title=>'Automations Log'
 ,p_warn_on_unsaved_changes=>'N'
 ,p_autocomplete_on_off=>'OFF'
-,p_group_id=>wwv_flow_api.id(56883045516327342578)
+,p_group_id=>wwv_flow_api.id(57274532069749403752)
 ,p_page_template_options=>'#DEFAULT#:ui-dialog--stretch:t-Dialog--noPadding'
-,p_required_role=>wwv_flow_api.id(56883043949700342575)
-,p_required_patch=>wwv_flow_api.id(56883041316604342573)
+,p_required_role=>wwv_flow_api.id(57274530720703403751)
+,p_required_patch=>wwv_flow_api.id(57274528364105403750)
 ,p_protection_level=>'C'
 ,p_help_text=>wwv_flow_string.join(wwv_flow_t_varchar2(
 '<p>This page provides an interactive report of the automations log.</p>',
@@ -31,13 +31,13 @@ wwv_flow_api.create_page(
 ||'</p>',
 ''))
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20220411231901'
+,p_last_upd_yyyymmddhh24miss=>'20220412185553'
 );
 wwv_flow_api.create_page_plug(
- p_id=>wwv_flow_api.id(56883137723793343055)
+ p_id=>wwv_flow_api.id(57274606101359404208)
 ,p_plug_name=>'Automations Log'
 ,p_region_template_options=>'#DEFAULT#:t-IRR-region--noBorders'
-,p_plug_template=>wwv_flow_api.id(56882938179868342529)
+,p_plug_template=>wwv_flow_api.id(57274425070863403705)
 ,p_plug_display_sequence=>10
 ,p_query_type=>'SQL'
 ,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
@@ -57,7 +57,7 @@ wwv_flow_api.create_page_plug(
 ,p_prn_page_header=>'Automations Log'
 );
 wwv_flow_api.create_worksheet(
- p_id=>wwv_flow_api.id(56883138619293343055)
+ p_id=>wwv_flow_api.id(57274607090773404208)
 ,p_name=>'Automations Log'
 ,p_max_row_count=>'1000000'
 ,p_max_row_count_message=>'The maximum row count for this report is #MAX_ROW_COUNT# rows.  Please apply a filter to reduce the number of records in your query.'
@@ -71,10 +71,10 @@ wwv_flow_api.create_worksheet(
 ,p_enable_mail_download=>'Y'
 ,p_detail_link_text=>'<span aria-label="Edit"><span class="fa fa-edit" aria-hidden="true" title="Edit"></span></span>'
 ,p_owner=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_internal_uid=>56883138619293343055
+,p_internal_uid=>57274607090773404208
 );
 wwv_flow_api.create_worksheet_column(
- p_id=>wwv_flow_api.id(56883138770065343055)
+ p_id=>wwv_flow_api.id(57274607180301404209)
 ,p_db_column_name=>'ID'
 ,p_display_order=>10
 ,p_column_identifier=>'A'
@@ -86,7 +86,7 @@ wwv_flow_api.create_worksheet_column(
 ,p_tz_dependent=>'N'
 );
 wwv_flow_api.create_worksheet_column(
- p_id=>wwv_flow_api.id(56883139142329343056)
+ p_id=>wwv_flow_api.id(57274607525268404209)
 ,p_db_column_name=>'START_TIMESTAMP'
 ,p_display_order=>20
 ,p_column_identifier=>'B'
@@ -96,7 +96,7 @@ wwv_flow_api.create_worksheet_column(
 ,p_tz_dependent=>'N'
 );
 wwv_flow_api.create_worksheet_column(
- p_id=>wwv_flow_api.id(56883139507455343056)
+ p_id=>wwv_flow_api.id(57274607953754404210)
 ,p_db_column_name=>'AUTOMATION_NAME'
 ,p_display_order=>30
 ,p_column_identifier=>'C'
@@ -106,7 +106,7 @@ wwv_flow_api.create_worksheet_column(
 ,p_tz_dependent=>'N'
 );
 wwv_flow_api.create_worksheet_column(
- p_id=>wwv_flow_api.id(56883139963667343057)
+ p_id=>wwv_flow_api.id(57274608309804404210)
 ,p_db_column_name=>'STATUS'
 ,p_display_order=>40
 ,p_column_identifier=>'D'
@@ -116,7 +116,7 @@ wwv_flow_api.create_worksheet_column(
 ,p_tz_dependent=>'N'
 );
 wwv_flow_api.create_worksheet_column(
- p_id=>wwv_flow_api.id(56883140356297343057)
+ p_id=>wwv_flow_api.id(57274608763364404211)
 ,p_db_column_name=>'SUCCESSFUL_ROW_COUNT'
 ,p_display_order=>50
 ,p_column_identifier=>'E'
@@ -127,7 +127,7 @@ wwv_flow_api.create_worksheet_column(
 ,p_tz_dependent=>'N'
 );
 wwv_flow_api.create_worksheet_column(
- p_id=>wwv_flow_api.id(56883140793889343057)
+ p_id=>wwv_flow_api.id(57274609133286404211)
 ,p_db_column_name=>'ERROR_ROW_COUNT'
 ,p_display_order=>60
 ,p_column_identifier=>'F'
@@ -138,7 +138,7 @@ wwv_flow_api.create_worksheet_column(
 ,p_tz_dependent=>'N'
 );
 wwv_flow_api.create_worksheet_column(
- p_id=>wwv_flow_api.id(56883141127963343058)
+ p_id=>wwv_flow_api.id(57274609545815404211)
 ,p_db_column_name=>'MSG_COUNT'
 ,p_display_order=>70
 ,p_column_identifier=>'G'
@@ -151,7 +151,7 @@ wwv_flow_api.create_worksheet_column(
 ,p_tz_dependent=>'N'
 );
 wwv_flow_api.create_worksheet_column(
- p_id=>wwv_flow_api.id(56883141516780343058)
+ p_id=>wwv_flow_api.id(57274609992770404212)
 ,p_db_column_name=>'IS_JOB'
 ,p_display_order=>80
 ,p_column_identifier=>'H'
@@ -161,7 +161,7 @@ wwv_flow_api.create_worksheet_column(
 ,p_tz_dependent=>'N'
 );
 wwv_flow_api.create_worksheet_column(
- p_id=>wwv_flow_api.id(56883141933664343059)
+ p_id=>wwv_flow_api.id(57274610342481404212)
 ,p_db_column_name=>'END_TIMESTAMP'
 ,p_display_order=>90
 ,p_column_identifier=>'I'
@@ -171,10 +171,10 @@ wwv_flow_api.create_worksheet_column(
 ,p_tz_dependent=>'N'
 );
 wwv_flow_api.create_worksheet_rpt(
- p_id=>wwv_flow_api.id(56883142998871343059)
+ p_id=>wwv_flow_api.id(57274611386320404213)
 ,p_application_user=>'APXWS_DEFAULT'
 ,p_report_seq=>10
-,p_report_alias=>'568831430'
+,p_report_alias=>'572746114'
 ,p_status=>'PUBLIC'
 ,p_is_default=>'Y'
 ,p_report_columns=>'START_TIMESTAMP:AUTOMATION_NAME:STATUS:SUCCESSFUL_ROW_COUNT:ERROR_ROW_COUNT:MSG_COUNT'
@@ -182,13 +182,13 @@ wwv_flow_api.create_worksheet_rpt(
 ,p_sort_direction_1=>'DESC'
 );
 wwv_flow_api.create_page_button(
- p_id=>wwv_flow_api.id(56883143821346343060)
+ p_id=>wwv_flow_api.id(57274612251563404213)
 ,p_button_sequence=>20
-,p_button_plug_id=>wwv_flow_api.id(56883137723793343055)
+,p_button_plug_id=>wwv_flow_api.id(57274606101359404208)
 ,p_button_name=>'RESET_REPORT'
 ,p_button_action=>'REDIRECT_PAGE'
 ,p_button_template_options=>'t-Button--iconLeft'
-,p_button_template_id=>wwv_flow_api.id(56883015108004342558)
+,p_button_template_id=>wwv_flow_api.id(57274502083070403736)
 ,p_button_image_alt=>'Reset'
 ,p_button_position=>'RIGHT_OF_IR_SEARCH_BAR'
 ,p_button_redirect_url=>'f?p=&APP_ID.:&APP_PAGE_ID.:&SESSION.::&DEBUG.:&APP_PAGE_ID.,RR::'

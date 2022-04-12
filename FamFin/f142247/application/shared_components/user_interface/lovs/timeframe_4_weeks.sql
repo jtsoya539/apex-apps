@@ -12,7 +12,7 @@ wwv_flow_api.component_begin (
 ,p_default_owner=>'WKSP_JTSOYA539WS'
 );
 wwv_flow_api.create_list_of_values(
- p_id=>wwv_flow_api.id(56883082956555342878)
+ p_id=>wwv_flow_api.id(57274568930106404034)
 ,p_lov_name=>'TIMEFRAME (4 WEEKS)'
 ,p_lov_query=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'select disp,',

@@ -12,7 +12,7 @@ wwv_flow_api.component_begin (
 ,p_default_owner=>'WKSP_JTSOYA539WS'
 );
 wwv_flow_api.create_template(
- p_id=>wwv_flow_api.id(56882881323169342507)
+ p_id=>wwv_flow_api.id(57274368292388403684)
 ,p_theme_id=>42
 ,p_name=>'Wizard Modal Dialog'
 ,p_internal_name=>'WIZARD_MODAL_DIALOG'
@@ -142,8 +142,8 @@ wwv_flow_api.create_template(
 ,p_reference_id=>2120348229686426515
 );
 wwv_flow_api.create_page_tmpl_display_point(
- p_id=>wwv_flow_api.id(56882881622677342508)
-,p_page_template_id=>wwv_flow_api.id(56882881323169342507)
+ p_id=>wwv_flow_api.id(57274368591251403684)
+,p_page_template_id=>wwv_flow_api.id(57274368292388403684)
 ,p_name=>'Wizard Body'
 ,p_placeholder=>'BODY'
 ,p_has_grid_support=>true
@@ -154,8 +154,8 @@ wwv_flow_api.create_page_tmpl_display_point(
 ,p_max_fixed_grid_columns=>12
 );
 wwv_flow_api.create_page_tmpl_display_point(
- p_id=>wwv_flow_api.id(56882881972112342508)
-,p_page_template_id=>wwv_flow_api.id(56882881323169342507)
+ p_id=>wwv_flow_api.id(57274368888493403684)
+,p_page_template_id=>wwv_flow_api.id(57274368292388403684)
 ,p_name=>'Wizard Progress Bar'
 ,p_placeholder=>'REGION_POSITION_01'
 ,p_has_grid_support=>false
@@ -165,8 +165,8 @@ wwv_flow_api.create_page_tmpl_display_point(
 ,p_glv_new_row=>true
 );
 wwv_flow_api.create_page_tmpl_display_point(
- p_id=>wwv_flow_api.id(56882882254880342508)
-,p_page_template_id=>wwv_flow_api.id(56882881323169342507)
+ p_id=>wwv_flow_api.id(57274369125300403684)
+,p_page_template_id=>wwv_flow_api.id(57274368292388403684)
 ,p_name=>'Wizard Buttons'
 ,p_placeholder=>'REGION_POSITION_03'
 ,p_has_grid_support=>false

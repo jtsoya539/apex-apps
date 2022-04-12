@@ -13,59 +13,62 @@ wwv_flow_api.component_begin (
 );
 wwv_flow_api.create_page(
  p_id=>10051
-,p_user_interface_id=>wwv_flow_api.id(56883039773298342569)
-,p_name=>'Feedback Submitted'
-,p_alias=>'FEEDBACK-SUBMITTED'
+,p_user_interface_id=>wwv_flow_api.id(57274526744128403746)
+,p_name=>'Help'
+,p_alias=>'PAGE_HELP'
 ,p_page_mode=>'MODAL'
-,p_step_title=>'Feedback Submitted'
+,p_step_title=>'Help'
+,p_warn_on_unsaved_changes=>'N'
 ,p_autocomplete_on_off=>'OFF'
-,p_group_id=>wwv_flow_api.id(56883045516327342578)
-,p_required_patch=>wwv_flow_api.id(56883041407648342573)
+,p_page_template_options=>'#DEFAULT#'
+,p_required_patch=>wwv_flow_api.id(57274528965608403750)
+,p_dialog_chained=>'N'
 ,p_protection_level=>'C'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20220411231905'
+,p_last_upd_yyyymmddhh24miss=>'20220412185556'
 );
 wwv_flow_api.create_page_plug(
- p_id=>wwv_flow_api.id(56883184986675343368)
-,p_plug_name=>'Feedback Submitted'
-,p_icon_css_classes=>'fa-check-circle'
-,p_region_template_options=>'#DEFAULT#:t-Alert--wizard:t-Alert--customIcons:t-Alert--success'
+ p_id=>wwv_flow_api.id(57274654944533404485)
+,p_plug_name=>'Search Dialog'
+,p_region_template_options=>'#DEFAULT#'
 ,p_escape_on_http_output=>'Y'
-,p_plug_template=>wwv_flow_api.id(56882882833263342508)
+,p_plug_template=>wwv_flow_api.id(57274374998537403687)
 ,p_plug_display_sequence=>10
+,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'for c1 in ',
+'(',
+'    select page_title, help_text ',
+'      from apex_application_pages',
+'     where page_id = :P10051_PAGE_ID ',
+'       and application_id = :APP_ID',
+')',
+'loop',
+'    if c1.help_text is null then',
+'        sys.htp.p(''No help is available for this page.'');',
+'    else',
+'        if substr(c1.help_text, 1, 3) != ''<p>'' then',
+'            sys.htp.p(''<p>'');',
+'        end if;',
+'',
+'        sys.htp.p(apex_application.do_substitutions(c1.help_text));',
+'',
+'        if substr(trim(c1.help_text), -4) != ''</p>'' then',
+'            sys.htp.p(''</p>'');',
+'        end if;',
+'    end if;',
+'end loop;'))
+,p_plug_source_type=>'NATIVE_PLSQL'
 ,p_plug_query_num_rows=>15
-,p_attribute_01=>'N'
-,p_attribute_02=>'HTML'
-,p_attribute_03=>'Y'
 );
-wwv_flow_api.create_page_button(
- p_id=>wwv_flow_api.id(56883184862563343368)
-,p_button_sequence=>20
-,p_button_plug_id=>wwv_flow_api.id(56883184986675343368)
-,p_button_name=>'CLOSE'
-,p_button_action=>'DEFINED_BY_DA'
-,p_button_template_options=>'#DEFAULT#'
-,p_button_template_id=>wwv_flow_api.id(56883015029501342558)
-,p_button_image_alt=>'Close'
-,p_button_position=>'EDIT'
-,p_button_css_classes=>'w40p'
-);
-wwv_flow_api.create_page_da_event(
- p_id=>wwv_flow_api.id(56883185026698343368)
-,p_name=>'Cancel Dialog'
-,p_event_sequence=>10
-,p_triggering_element_type=>'BUTTON'
-,p_triggering_button_id=>wwv_flow_api.id(56883184862563343368)
-,p_bind_type=>'bind'
-,p_bind_event_type=>'click'
-);
-wwv_flow_api.create_page_da_action(
- p_id=>wwv_flow_api.id(56883194817057343373)
-,p_event_id=>wwv_flow_api.id(56883185026698343368)
-,p_event_result=>'TRUE'
-,p_action_sequence=>10
-,p_execute_on_page_init=>'N'
-,p_action=>'NATIVE_DIALOG_CANCEL'
+wwv_flow_api.create_page_item(
+ p_id=>wwv_flow_api.id(57274655369729404485)
+,p_name=>'P10051_PAGE_ID'
+,p_item_sequence=>10
+,p_item_plug_id=>wwv_flow_api.id(57274654944533404485)
+,p_display_as=>'NATIVE_HIDDEN'
+,p_lov_display_extra=>'NO'
+,p_protection_level=>'S'
+,p_attribute_01=>'Y'
 );
 wwv_flow_api.component_end;
 end;
