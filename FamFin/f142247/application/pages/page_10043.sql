@@ -3,38 +3,39 @@ begin
 --   Manifest
 --     PAGE: 10043
 --   Manifest End
-wwv_flow_api.component_begin (
- p_version_yyyy_mm_dd=>'2021.10.15'
-,p_release=>'21.2.5'
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2022.04.12'
+,p_release=>'22.1.0-16'
 ,p_default_workspace_id=>38438218948969634094
 ,p_default_application_id=>142247
 ,p_default_id_offset=>0
 ,p_default_owner=>'WKSP_JTSOYA539WS'
 );
-wwv_flow_api.create_page(
+wwv_flow_imp_page.create_page(
  p_id=>10043
-,p_user_interface_id=>wwv_flow_api.id(57274526744128403746)
+,p_user_interface_id=>wwv_flow_imp.id(708524033499684523)
 ,p_name=>'Add Multiple Users - Step 1'
 ,p_alias=>'ADD-MULTIPLE-USERS-STEP-1'
 ,p_page_mode=>'MODAL'
 ,p_step_title=>'Add Multiple Users'
 ,p_first_item=>'AUTO_FIRST_ITEM'
 ,p_autocomplete_on_off=>'OFF'
-,p_group_id=>wwv_flow_api.id(57274532069749403752)
-,p_required_role=>wwv_flow_api.id(57274530720703403751)
-,p_required_patch=>wwv_flow_api.id(57274528204078403750)
+,p_group_id=>wwv_flow_imp.id(708529805916684528)
+,p_required_role=>wwv_flow_imp.id(708528541912684527)
+,p_required_patch=>wwv_flow_imp.id(708526029383684526)
 ,p_dialog_chained=>'N'
 ,p_protection_level=>'C'
 ,p_deep_linking=>'N'
+,p_page_component_map=>'16'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20220412185554'
+,p_last_upd_yyyymmddhh24miss=>'20220415002921'
 );
-wwv_flow_api.create_page_plug(
- p_id=>wwv_flow_api.id(57274636344988404355)
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(708649643720684984)
 ,p_plug_name=>'Buttons'
 ,p_region_template_options=>'#DEFAULT#'
 ,p_escape_on_http_output=>'Y'
-,p_plug_template=>wwv_flow_api.id(57274377736971403688)
+,p_plug_template=>wwv_flow_imp.id(708368635414684461)
 ,p_plug_display_sequence=>10
 ,p_plug_display_point=>'REGION_POSITION_03'
 ,p_query_type=>'SQL'
@@ -43,13 +44,13 @@ wwv_flow_api.create_page_plug(
 ,p_attribute_02=>'HTML'
 ,p_attribute_03=>'Y'
 );
-wwv_flow_api.create_page_plug(
- p_id=>wwv_flow_api.id(57274636496476404356)
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(708649707114684984)
 ,p_plug_name=>'Wizard Container'
 ,p_region_template_options=>'#DEFAULT#:t-Form--stretchInputs'
 ,p_component_template_options=>'#DEFAULT#:t-WizardSteps--displayCurrentLabelOnly'
 ,p_escape_on_http_output=>'Y'
-,p_plug_template=>wwv_flow_api.id(57274374998537403687)
+,p_plug_template=>wwv_flow_imp.id(708365832311684460)
 ,p_plug_display_sequence=>10
 ,p_query_type=>'SQL'
 ,p_plug_query_num_rows=>15
@@ -57,45 +58,45 @@ wwv_flow_api.create_page_plug(
 ,p_attribute_02=>'HTML'
 ,p_attribute_03=>'Y'
 );
-wwv_flow_api.create_page_button(
- p_id=>wwv_flow_api.id(57274636578496404356)
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(708649851653684984)
 ,p_button_sequence=>10
-,p_button_plug_id=>wwv_flow_api.id(57274636344988404355)
+,p_button_plug_id=>wwv_flow_imp.id(708649643720684984)
 ,p_button_name=>'NEXT'
 ,p_button_action=>'SUBMIT'
 ,p_button_template_options=>'#DEFAULT#:t-Button--iconRight'
-,p_button_template_id=>wwv_flow_api.id(57274502083070403736)
+,p_button_template_id=>wwv_flow_imp.id(708499272695684511)
 ,p_button_is_hot=>'Y'
 ,p_button_image_alt=>'Next'
 ,p_button_position=>'NEXT'
 ,p_icon_css_classes=>'fa-chevron-right'
 );
-wwv_flow_api.create_page_button(
- p_id=>wwv_flow_api.id(57274638539448404357)
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(708651830466684985)
 ,p_button_sequence=>10
-,p_button_plug_id=>wwv_flow_api.id(57274636344988404355)
+,p_button_plug_id=>wwv_flow_imp.id(708649643720684984)
 ,p_button_name=>'CANCEL'
 ,p_button_action=>'DEFINED_BY_DA'
 ,p_button_template_options=>'#DEFAULT#'
-,p_button_template_id=>wwv_flow_api.id(57274501904060403736)
+,p_button_template_id=>wwv_flow_imp.id(708499111361684511)
 ,p_button_image_alt=>'Cancel'
 ,p_button_position=>'PREVIOUS'
 ,p_button_execute_validations=>'N'
 );
-wwv_flow_api.create_page_branch(
- p_id=>wwv_flow_api.id(57274639842124404358)
+wwv_flow_imp_page.create_page_branch(
+ p_id=>wwv_flow_imp.id(708653157650684986)
 ,p_branch_action=>'f?p=&APP_ID.:10044:&SESSION.::&DEBUG.:RP,10044::&success_msg=#SUCCESS_MSG#'
 ,p_branch_point=>'AFTER_PROCESSING'
 ,p_branch_type=>'REDIRECT_URL'
-,p_branch_when_button_id=>wwv_flow_api.id(57274636578496404356)
+,p_branch_when_button_id=>wwv_flow_imp.id(708649851653684984)
 ,p_branch_sequence=>10
 );
-wwv_flow_api.create_page_item(
- p_id=>wwv_flow_api.id(57274640278716404358)
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(708653580685684986)
 ,p_name=>'P10043_ROLE'
 ,p_is_required=>true
 ,p_item_sequence=>20
-,p_item_plug_id=>wwv_flow_api.id(57274636496476404356)
+,p_item_plug_id=>wwv_flow_imp.id(708649707114684984)
 ,p_item_default=>'2'
 ,p_prompt=>'Roles'
 ,p_display_as=>'NATIVE_CHECKBOX'
@@ -104,25 +105,25 @@ wwv_flow_api.create_page_item(
 'select role_name d, role_id r',
 'from APEX_APPL_ACL_ROLES where application_id = :APP_ID ',
 'order by 1'))
-,p_field_template=>wwv_flow_api.id(57274500775215403735)
+,p_field_template=>wwv_flow_imp.id(708497965849684511)
 ,p_item_template_options=>'#DEFAULT#'
 ,p_lov_display_extra=>'NO'
 ,p_attribute_01=>'3'
 ,p_attribute_02=>'VERTICAL'
 );
-wwv_flow_api.create_page_item(
- p_id=>wwv_flow_api.id(57274640604483404358)
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(708653930007684986)
 ,p_name=>'P10043_PRELIM_USERS'
 ,p_is_required=>true
 ,p_item_sequence=>30
-,p_item_plug_id=>wwv_flow_api.id(57274636496476404356)
+,p_item_plug_id=>wwv_flow_imp.id(708649707114684984)
 ,p_prompt=>'Usernames'
 ,p_placeholder=>'Enter usernames here'
 ,p_display_as=>'NATIVE_TEXTAREA'
 ,p_cSize=>80
 ,p_cMaxlength=>4000
 ,p_cHeight=>5
-,p_field_template=>wwv_flow_api.id(57274500775215403735)
+,p_field_template=>wwv_flow_imp.id(708497965849684511)
 ,p_item_template_options=>'#DEFAULT#'
 ,p_lov_display_extra=>'NO'
 ,p_protection_level=>'I'
@@ -132,40 +133,40 @@ wwv_flow_api.create_page_item(
 ,p_attribute_03=>'N'
 ,p_attribute_04=>'BOTH'
 );
-wwv_flow_api.create_page_item(
- p_id=>wwv_flow_api.id(57274641068080404358)
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(708654321429684987)
 ,p_name=>'P10043_USERNAME_FORMAT'
 ,p_item_sequence=>40
-,p_item_plug_id=>wwv_flow_api.id(57274636496476404356)
+,p_item_plug_id=>wwv_flow_imp.id(708649707114684984)
 ,p_prompt=>'Username Format'
 ,p_display_as=>'NATIVE_CHECKBOX'
 ,p_named_lov=>'EMAIL_USERNAME_FORMAT'
-,p_lov=>'.'||wwv_flow_api.id(57274641120440404358)||'.'
-,p_field_template=>wwv_flow_api.id(57274500775215403735)
+,p_lov=>'.'||wwv_flow_imp.id(708654482598684987)||'.'
+,p_field_template=>wwv_flow_imp.id(708497965849684511)
 ,p_item_template_options=>'#DEFAULT#'
 ,p_lov_display_extra=>'NO'
 ,p_attribute_01=>'1'
 ,p_attribute_02=>'VERTICAL'
 );
-wwv_flow_api.create_page_da_event(
- p_id=>wwv_flow_api.id(57274638601793404357)
+wwv_flow_imp_page.create_page_da_event(
+ p_id=>wwv_flow_imp.id(708651922306684985)
 ,p_name=>'Cancel Dialog'
 ,p_event_sequence=>10
 ,p_triggering_element_type=>'BUTTON'
-,p_triggering_button_id=>wwv_flow_api.id(57274638539448404357)
+,p_triggering_button_id=>wwv_flow_imp.id(708651830466684985)
 ,p_bind_type=>'bind'
 ,p_bind_event_type=>'click'
 );
-wwv_flow_api.create_page_da_action(
- p_id=>wwv_flow_api.id(57274639361011404357)
-,p_event_id=>wwv_flow_api.id(57274638601793404357)
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(708652659383684985)
+,p_event_id=>wwv_flow_imp.id(708651922306684985)
 ,p_event_result=>'TRUE'
 ,p_action_sequence=>10
 ,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_DIALOG_CANCEL'
 );
-wwv_flow_api.create_page_process(
- p_id=>wwv_flow_api.id(57274642187496404359)
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(708655407498684987)
 ,p_process_sequence=>10
 ,p_process_point=>'AFTER_SUBMIT'
 ,p_process_type=>'NATIVE_PLSQL'
@@ -305,8 +306,8 @@ wwv_flow_api.create_page_process(
 'end;'))
 ,p_process_clob_language=>'PLSQL'
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
-,p_process_when_button_id=>wwv_flow_api.id(57274636578496404356)
+,p_process_when_button_id=>wwv_flow_imp.id(708649851653684984)
 );
-wwv_flow_api.component_end;
+wwv_flow_imp.component_end;
 end;
 /

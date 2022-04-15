@@ -3,20 +3,21 @@ begin
 --   Manifest
 --     REGION TEMPLATE: LOGIN
 --   Manifest End
-wwv_flow_api.component_begin (
- p_version_yyyy_mm_dd=>'2021.10.15'
-,p_release=>'21.2.5'
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2022.04.12'
+,p_release=>'22.1.0-16'
 ,p_default_workspace_id=>38438218948969634094
 ,p_default_application_id=>142247
 ,p_default_id_offset=>0
 ,p_default_owner=>'WKSP_JTSOYA539WS'
 );
-wwv_flow_api.create_plug_template(
- p_id=>wwv_flow_api.id(57274426850267403705)
+wwv_flow_imp_shared.create_plug_template(
+ p_id=>wwv_flow_imp.id(708423794132684481)
 ,p_layout=>'TABLE'
 ,p_template=>wwv_flow_string.join(wwv_flow_t_varchar2(
 '<div role="region" aria-label="#TITLE!ATTR#" class="t-Login-region t-Form--stretchInputs t-Form--labelsAbove #REGION_CSS_CLASSES#" id="#REGION_ID#" #REGION_ATTRIBUTES#>',
 '  <div class="t-Login-header">',
+'    #REGION_IMAGE#',
 '    <span class="t-Login-logo #ICON_CSS_CLASSES#" aria-hidden="true"></span>',
 '    <h1 class="t-Login-title" id="#REGION_STATIC_ID#_heading" data-apex-heading>#TITLE#</h1>',
 '  </div>',
@@ -27,6 +28,7 @@ wwv_flow_api.create_plug_template(
 '</div>'))
 ,p_page_plug_template_name=>'Login'
 ,p_internal_name=>'LOGIN'
+,p_image_template=>'<img class="t-Login-logo" src="#REGION_IMAGE_URL#" alt="" data-app-icon />'
 ,p_theme_id=>42
 ,p_theme_class_id=>23
 ,p_default_label_alignment=>'RIGHT'
@@ -34,9 +36,9 @@ wwv_flow_api.create_plug_template(
 ,p_reference_id=>2672711194551076376
 ,p_translate_this_template=>'N'
 );
-wwv_flow_api.create_plug_tmpl_display_point(
- p_id=>wwv_flow_api.id(57274427150903403705)
-,p_plug_template_id=>wwv_flow_api.id(57274426850267403705)
+wwv_flow_imp_shared.create_plug_tmpl_display_point(
+ p_id=>wwv_flow_imp.id(708424092606684481)
+,p_plug_template_id=>wwv_flow_imp.id(708423794132684481)
 ,p_name=>'Region Body'
 ,p_placeholder=>'BODY'
 ,p_has_grid_support=>false
@@ -45,9 +47,9 @@ wwv_flow_api.create_plug_tmpl_display_point(
 ,p_has_button_support=>true
 ,p_glv_new_row=>true
 );
-wwv_flow_api.create_plug_tmpl_display_point(
- p_id=>wwv_flow_api.id(57274427404863403706)
-,p_plug_template_id=>wwv_flow_api.id(57274426850267403705)
+wwv_flow_imp_shared.create_plug_tmpl_display_point(
+ p_id=>wwv_flow_imp.id(708424336670684481)
+,p_plug_template_id=>wwv_flow_imp.id(708423794132684481)
 ,p_name=>'Create'
 ,p_placeholder=>'CREATE'
 ,p_has_grid_support=>false
@@ -56,9 +58,9 @@ wwv_flow_api.create_plug_tmpl_display_point(
 ,p_has_button_support=>true
 ,p_glv_new_row=>true
 );
-wwv_flow_api.create_plug_tmpl_display_point(
- p_id=>wwv_flow_api.id(57274427775157403706)
-,p_plug_template_id=>wwv_flow_api.id(57274426850267403705)
+wwv_flow_imp_shared.create_plug_tmpl_display_point(
+ p_id=>wwv_flow_imp.id(708424671934684481)
+,p_plug_template_id=>wwv_flow_imp.id(708423794132684481)
 ,p_name=>'Edit'
 ,p_placeholder=>'EDIT'
 ,p_has_grid_support=>false
@@ -67,9 +69,9 @@ wwv_flow_api.create_plug_tmpl_display_point(
 ,p_has_button_support=>true
 ,p_glv_new_row=>true
 );
-wwv_flow_api.create_plug_tmpl_display_point(
- p_id=>wwv_flow_api.id(57274428077017403706)
-,p_plug_template_id=>wwv_flow_api.id(57274426850267403705)
+wwv_flow_imp_shared.create_plug_tmpl_display_point(
+ p_id=>wwv_flow_imp.id(708424907279684481)
+,p_plug_template_id=>wwv_flow_imp.id(708423794132684481)
 ,p_name=>'Next'
 ,p_placeholder=>'NEXT'
 ,p_has_grid_support=>false
@@ -78,9 +80,9 @@ wwv_flow_api.create_plug_tmpl_display_point(
 ,p_has_button_support=>true
 ,p_glv_new_row=>true
 );
-wwv_flow_api.create_plug_tmpl_display_point(
- p_id=>wwv_flow_api.id(57274428396909403706)
-,p_plug_template_id=>wwv_flow_api.id(57274426850267403705)
+wwv_flow_imp_shared.create_plug_tmpl_display_point(
+ p_id=>wwv_flow_imp.id(708425216670684481)
+,p_plug_template_id=>wwv_flow_imp.id(708423794132684481)
 ,p_name=>'Sub Regions'
 ,p_placeholder=>'SUB_REGIONS'
 ,p_has_grid_support=>true
@@ -89,6 +91,6 @@ wwv_flow_api.create_plug_tmpl_display_point(
 ,p_has_button_support=>false
 ,p_glv_new_row=>true
 );
-wwv_flow_api.component_end;
+wwv_flow_imp.component_end;
 end;
 /

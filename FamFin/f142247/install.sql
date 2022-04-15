@@ -8,8 +8,9 @@ prompt --install
 @@application/shared_components/navigation/lists/user_interface.sql
 @@application/shared_components/navigation/lists/activity_reports.sql
 @@application/shared_components/navigation/lists/access_control.sql
-@@application/shared_components/files/app_icon_svg.sql
-@@application/shared_components/files/app_icon_css.sql
+@@application/shared_components/files/icons_app_icon_32_png.sql
+@@application/shared_components/files/icons_app_icon_192_png.sql
+@@application/shared_components/files/icons_app_icon_512_png.sql
 @@application/plugin_settings.sql
 @@application/shared_components/security/authorizations/administration_rights.sql
 @@application/shared_components/security/authorizations/reader_rights.sql
@@ -24,7 +25,6 @@ prompt --install
 @@application/shared_components/user_interface/lovs/access_roles.sql
 @@application/shared_components/user_interface/lovs/desktop_theme_styles.sql
 @@application/shared_components/user_interface/lovs/email_username_format.sql
-@@application/shared_components/user_interface/lovs/login_remember_username.sql
 @@application/shared_components/user_interface/lovs/timeframe_4_weeks.sql
 @@application/shared_components/user_interface/lovs/user_theme_preference.sql
 @@application/shared_components/user_interface/lovs/view_as_report_chart.sql
@@ -54,6 +54,7 @@ prompt --install
 @@application/shared_components/user_interface/templates/region/collapsible.sql
 @@application/shared_components/user_interface/templates/region/content_block.sql
 @@application/shared_components/user_interface/templates/region/hero.sql
+@@application/shared_components/user_interface/templates/region/image.sql
 @@application/shared_components/user_interface/templates/region/inline_dialog.sql
 @@application/shared_components/user_interface/templates/region/inline_drawer.sql
 @@application/shared_components/user_interface/templates/region/inline_popup.sql
@@ -108,7 +109,7 @@ prompt --install
 @@application/shared_components/logic/build_options.sql
 @@application/shared_components/globalization/messages.sql
 @@application/shared_components/globalization/dyntranslations.sql
-@@application/shared_components/security/authentications/application_express_accounts.sql
+@@application/shared_components/security/authentications/oracle_apex_accounts.sql
 @@application/user_interfaces.sql
 @@application/user_interfaces/combined_files.sql
 @@application/pages/page_00000.sql

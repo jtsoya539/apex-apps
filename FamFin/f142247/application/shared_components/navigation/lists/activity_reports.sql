@@ -3,22 +3,22 @@ begin
 --   Manifest
 --     LIST: Activity Reports
 --   Manifest End
-wwv_flow_api.component_begin (
- p_version_yyyy_mm_dd=>'2021.10.15'
-,p_release=>'21.2.5'
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2022.04.12'
+,p_release=>'22.1.0-16'
 ,p_default_workspace_id=>38438218948969634094
 ,p_default_application_id=>142247
 ,p_default_id_offset=>0
 ,p_default_owner=>'WKSP_JTSOYA539WS'
 );
-wwv_flow_api.create_list(
- p_id=>wwv_flow_api.id(57274661889844404500)
+wwv_flow_imp_shared.create_list(
+ p_id=>wwv_flow_imp.id(708673808653685134)
 ,p_name=>'Activity Reports'
 ,p_list_status=>'PUBLIC'
-,p_required_patch=>wwv_flow_api.id(57274528364105403750)
+,p_required_patch=>wwv_flow_imp.id(708526124659684526)
 );
-wwv_flow_api.create_list_item(
- p_id=>wwv_flow_api.id(57274662287410404500)
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(708674212233685134)
 ,p_list_item_display_sequence=>10
 ,p_list_item_link_text=>'Dashboard'
 ,p_list_item_link_target=>'f?p=&APP_ID.:10030:&SESSION.::&DEBUG.:10030:::'
@@ -26,8 +26,8 @@ wwv_flow_api.create_list_item(
 ,p_list_text_01=>'View application activity metrics'
 ,p_list_item_current_type=>'TARGET_PAGE'
 );
-wwv_flow_api.create_list_item(
- p_id=>wwv_flow_api.id(57274662672932404501)
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(708674678184685135)
 ,p_list_item_display_sequence=>20
 ,p_list_item_link_text=>'Top Users'
 ,p_list_item_link_target=>'f?p=&APP_ID.:10031:&SESSION.::&DEBUG.:10031:::'
@@ -35,8 +35,8 @@ wwv_flow_api.create_list_item(
 ,p_list_text_01=>'Report of page views aggregated by user'
 ,p_list_item_current_type=>'TARGET_PAGE'
 );
-wwv_flow_api.create_list_item(
- p_id=>wwv_flow_api.id(57274663032105404501)
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(708675093011685135)
 ,p_list_item_display_sequence=>30
 ,p_list_item_link_text=>'Application Error Log'
 ,p_list_item_link_target=>'f?p=&APP_ID.:10032:&SESSION.::&DEBUG.:10032:::'
@@ -44,8 +44,8 @@ wwv_flow_api.create_list_item(
 ,p_list_text_01=>'Report of errors logged by this application'
 ,p_list_item_current_type=>'TARGET_PAGE'
 );
-wwv_flow_api.create_list_item(
- p_id=>wwv_flow_api.id(57274663422801404501)
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(708675416269685135)
 ,p_list_item_display_sequence=>40
 ,p_list_item_link_text=>'Page Performance'
 ,p_list_item_link_target=>'f?p=&APP_ID.:10033:&SESSION.::&DEBUG.:10033:::'
@@ -53,8 +53,8 @@ wwv_flow_api.create_list_item(
 ,p_list_text_01=>'Report of activity and performance by application page'
 ,p_list_item_current_type=>'TARGET_PAGE'
 );
-wwv_flow_api.create_list_item(
- p_id=>wwv_flow_api.id(57274663843901404501)
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(708675876548685135)
 ,p_list_item_display_sequence=>50
 ,p_list_item_link_text=>'Page Views'
 ,p_list_item_link_target=>'f?p=&APP_ID.:10034:&SESSION.::&DEBUG.:RR,10034:::'
@@ -62,8 +62,8 @@ wwv_flow_api.create_list_item(
 ,p_list_text_01=>'Report of each page view by user including date of access and elapsed time'
 ,p_list_item_current_type=>'TARGET_PAGE'
 );
-wwv_flow_api.create_list_item(
- p_id=>wwv_flow_api.id(57274664284506404501)
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(708676200296685135)
 ,p_list_item_display_sequence=>60
 ,p_list_item_link_text=>'Automations Log'
 ,p_list_item_link_target=>'f?p=&APP_ID.:10035:&SESSION.::&DEBUG.:RR,10035:::'
@@ -77,6 +77,6 @@ wwv_flow_api.create_list_item(
 ,p_list_text_01=>'Report of automation executions and messages logged by this application'
 ,p_list_item_current_type=>'TARGET_PAGE'
 );
-wwv_flow_api.component_end;
+wwv_flow_imp.component_end;
 end;
 /

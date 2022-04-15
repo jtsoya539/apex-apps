@@ -3,39 +3,40 @@ begin
 --   Manifest
 --     PAGE: 10020
 --   Manifest End
-wwv_flow_api.component_begin (
- p_version_yyyy_mm_dd=>'2021.10.15'
-,p_release=>'21.2.5'
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2022.04.12'
+,p_release=>'22.1.0-16'
 ,p_default_workspace_id=>38438218948969634094
 ,p_default_application_id=>142247
 ,p_default_id_offset=>0
 ,p_default_owner=>'WKSP_JTSOYA539WS'
 );
-wwv_flow_api.create_page(
+wwv_flow_imp_page.create_page(
  p_id=>10020
-,p_user_interface_id=>wwv_flow_api.id(57274526744128403746)
+,p_user_interface_id=>wwv_flow_imp.id(708524033499684523)
 ,p_name=>'Application Appearance'
 ,p_alias=>'APPLICATION-APPEARANCE'
 ,p_page_mode=>'MODAL'
 ,p_step_title=>'Application Appearance'
 ,p_autocomplete_on_off=>'OFF'
-,p_group_id=>wwv_flow_api.id(57274532069749403752)
+,p_group_id=>wwv_flow_imp.id(708529805916684528)
 ,p_page_template_options=>'#DEFAULT#'
-,p_required_role=>wwv_flow_api.id(57274530720703403751)
-,p_required_patch=>wwv_flow_api.id(57274529041488403750)
+,p_required_role=>wwv_flow_imp.id(708528541912684527)
+,p_required_patch=>wwv_flow_imp.id(708526841667684526)
 ,p_protection_level=>'C'
 ,p_help_text=>wwv_flow_string.join(wwv_flow_t_varchar2(
 '<p>Select the default color scheme used to display the application.</p>',
 '<p>If <strong>Allow End Users to choose Theme Style</strong> is checked, then each end user can select from the available theme styles by clicking the <em>Customize</em> link in the bottom left corner of the Home page.</p>'))
+,p_page_component_map=>'16'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20220412185549'
+,p_last_upd_yyyymmddhh24miss=>'20220415002916'
 );
-wwv_flow_api.create_page_plug(
- p_id=>wwv_flow_api.id(57274546021870403766)
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(708545124910684543)
 ,p_plug_name=>'Buttons'
 ,p_region_template_options=>'#DEFAULT#'
 ,p_escape_on_http_output=>'Y'
-,p_plug_template=>wwv_flow_api.id(57274377736971403688)
+,p_plug_template=>wwv_flow_imp.id(708368635414684461)
 ,p_plug_display_sequence=>10
 ,p_plug_display_point=>'REGION_POSITION_03'
 ,p_plug_query_num_rows=>15
@@ -43,13 +44,13 @@ wwv_flow_api.create_page_plug(
 ,p_attribute_02=>'HTML'
 ,p_attribute_03=>'Y'
 );
-wwv_flow_api.create_page_plug(
- p_id=>wwv_flow_api.id(57274546141853403766)
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(708545229365684543)
 ,p_plug_name=>'Configure Appearance'
 ,p_region_template_options=>'#DEFAULT#'
 ,p_component_template_options=>'#DEFAULT#'
 ,p_escape_on_http_output=>'Y'
-,p_plug_template=>wwv_flow_api.id(57274374998537403687)
+,p_plug_template=>wwv_flow_imp.id(708365832311684460)
 ,p_plug_display_sequence=>20
 ,p_plug_item_display_point=>'BELOW'
 ,p_plug_query_num_rows=>15
@@ -57,44 +58,44 @@ wwv_flow_api.create_page_plug(
 ,p_attribute_02=>'HTML'
 ,p_attribute_03=>'Y'
 );
-wwv_flow_api.create_page_button(
- p_id=>wwv_flow_api.id(57274548507118403768)
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(708547669819684545)
 ,p_button_sequence=>20
-,p_button_plug_id=>wwv_flow_api.id(57274546021870403766)
+,p_button_plug_id=>wwv_flow_imp.id(708545124910684543)
 ,p_button_name=>'SAVE'
 ,p_button_action=>'SUBMIT'
 ,p_button_template_options=>'#DEFAULT#'
-,p_button_template_id=>wwv_flow_api.id(57274501904060403736)
+,p_button_template_id=>wwv_flow_imp.id(708499111361684511)
 ,p_button_is_hot=>'Y'
 ,p_button_image_alt=>'Apply Changes'
 ,p_button_position=>'NEXT'
 );
-wwv_flow_api.create_page_button(
- p_id=>wwv_flow_api.id(57274547187088403767)
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(708546279792684544)
 ,p_button_sequence=>10
-,p_button_plug_id=>wwv_flow_api.id(57274546021870403766)
+,p_button_plug_id=>wwv_flow_imp.id(708545124910684543)
 ,p_button_name=>'CANCEL'
 ,p_button_action=>'DEFINED_BY_DA'
 ,p_button_template_options=>'#DEFAULT#'
-,p_button_template_id=>wwv_flow_api.id(57274501904060403736)
+,p_button_template_id=>wwv_flow_imp.id(708499111361684511)
 ,p_button_image_alt=>'Cancel'
 ,p_button_position=>'PREVIOUS'
 ,p_button_execute_validations=>'N'
 );
-wwv_flow_api.create_page_branch(
- p_id=>wwv_flow_api.id(57274548902261403768)
+wwv_flow_imp_page.create_page_branch(
+ p_id=>wwv_flow_imp.id(708548013499684545)
 ,p_branch_name=>'Branch to Admin Page'
 ,p_branch_action=>'f?p=&APP_ID.:10000:&SESSION.::&DEBUG.:RP::&success_msg=#SUCCESS_MSG#'
 ,p_branch_point=>'AFTER_PROCESSING'
 ,p_branch_type=>'REDIRECT_URL'
 ,p_branch_sequence=>10
 );
-wwv_flow_api.create_page_item(
- p_id=>wwv_flow_api.id(57274549220186403768)
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(708548388529684545)
 ,p_name=>'P10020_DESKTOP_THEME_STYLE_ID'
 ,p_is_required=>true
 ,p_item_sequence=>10
-,p_item_plug_id=>wwv_flow_api.id(57274546141853403766)
+,p_item_plug_id=>wwv_flow_imp.id(708545229365684543)
 ,p_use_cache_before_default=>'NO'
 ,p_prompt=>'Desktop Theme Style'
 ,p_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
@@ -131,7 +132,7 @@ wwv_flow_api.create_page_item(
 '   and s.application_id = :app_id',
 '   and t.ui_type_name   = ''DESKTOP'''))
 ,p_display_when_type=>'EXISTS'
-,p_field_template=>wwv_flow_api.id(57274499454838403734)
+,p_field_template=>wwv_flow_imp.id(708496694473684510)
 ,p_item_template_options=>'#DEFAULT#'
 ,p_lov_display_extra=>'NO'
 ,p_restricted_characters=>'WEB_SAFE'
@@ -140,11 +141,11 @@ wwv_flow_api.create_page_item(
 ,p_attribute_02=>'N'
 ,p_attribute_03=>'Y'
 );
-wwv_flow_api.create_page_item(
- p_id=>wwv_flow_api.id(57274549937534403770)
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(708549060648684546)
 ,p_name=>'P10020_END_USER_STYLE'
 ,p_item_sequence=>30
-,p_item_plug_id=>wwv_flow_api.id(57274546141853403766)
+,p_item_plug_id=>wwv_flow_imp.id(708545229365684543)
 ,p_use_cache_before_default=>'NO'
 ,p_prompt=>'End User Theme Preference'
 ,p_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
@@ -158,34 +159,34 @@ wwv_flow_api.create_page_item(
 ,p_source_type=>'QUERY'
 ,p_display_as=>'NATIVE_CHECKBOX'
 ,p_named_lov=>'USER_THEME_PREFERENCE'
-,p_lov=>'.'||wwv_flow_api.id(57274550012045403770)||'.'
+,p_lov=>'.'||wwv_flow_imp.id(708549166962684546)||'.'
 ,p_grid_label_column_span=>0
-,p_field_template=>wwv_flow_api.id(57274499190087403734)
+,p_field_template=>wwv_flow_imp.id(708496365074684509)
 ,p_item_template_options=>'#DEFAULT#'
 ,p_lov_display_extra=>'NO'
 ,p_inline_help_text=>'If checked, end users may choose their own Theme Style using the Customize link.'
 ,p_attribute_01=>'1'
 ,p_attribute_02=>'VERTICAL'
 );
-wwv_flow_api.create_page_da_event(
- p_id=>wwv_flow_api.id(57274547205337403767)
+wwv_flow_imp_page.create_page_da_event(
+ p_id=>wwv_flow_imp.id(708546338525684544)
 ,p_name=>'Cancel Dialog'
 ,p_event_sequence=>10
 ,p_triggering_element_type=>'BUTTON'
-,p_triggering_button_id=>wwv_flow_api.id(57274547187088403767)
+,p_triggering_button_id=>wwv_flow_imp.id(708546279792684544)
 ,p_bind_type=>'bind'
 ,p_bind_event_type=>'click'
 );
-wwv_flow_api.create_page_da_action(
- p_id=>wwv_flow_api.id(57274547959231403768)
-,p_event_id=>wwv_flow_api.id(57274547205337403767)
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(708547018670684544)
+,p_event_id=>wwv_flow_imp.id(708546338525684544)
 ,p_event_result=>'TRUE'
 ,p_action_sequence=>10
 ,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_DIALOG_CANCEL'
 );
-wwv_flow_api.create_page_process(
- p_id=>wwv_flow_api.id(57274551142554403770)
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(708550264294684547)
 ,p_process_sequence=>10
 ,p_process_point=>'AFTER_SUBMIT'
 ,p_process_type=>'NATIVE_PLSQL'
@@ -208,8 +209,8 @@ wwv_flow_api.create_page_process(
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
 ,p_process_success_message=>'Application Appearance Settings Saved.'
 );
-wwv_flow_api.create_page_process(
- p_id=>wwv_flow_api.id(57274551525209403771)
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(708550623348684547)
 ,p_process_sequence=>20
 ,p_process_point=>'AFTER_SUBMIT'
 ,p_process_type=>'NATIVE_PLSQL'
@@ -243,6 +244,6 @@ wwv_flow_api.create_page_process(
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
 ,p_process_success_message=>'Application Appearance Settings Saved.'
 );
-wwv_flow_api.component_end;
+wwv_flow_imp.component_end;
 end;
 /

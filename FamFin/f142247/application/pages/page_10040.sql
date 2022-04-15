@@ -3,25 +3,25 @@ begin
 --   Manifest
 --     PAGE: 10040
 --   Manifest End
-wwv_flow_api.component_begin (
- p_version_yyyy_mm_dd=>'2021.10.15'
-,p_release=>'21.2.5'
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2022.04.12'
+,p_release=>'22.1.0-16'
 ,p_default_workspace_id=>38438218948969634094
 ,p_default_application_id=>142247
 ,p_default_id_offset=>0
 ,p_default_owner=>'WKSP_JTSOYA539WS'
 );
-wwv_flow_api.create_page(
+wwv_flow_imp_page.create_page(
  p_id=>10040
-,p_user_interface_id=>wwv_flow_api.id(57274526744128403746)
+,p_user_interface_id=>wwv_flow_imp.id(708524033499684523)
 ,p_name=>'Configure Access Control'
 ,p_alias=>'CONFIGURE-ACCESS-CONTROL'
 ,p_page_mode=>'MODAL'
 ,p_step_title=>'Configure Access Control'
 ,p_autocomplete_on_off=>'OFF'
-,p_group_id=>wwv_flow_api.id(57274532069749403752)
-,p_required_role=>wwv_flow_api.id(57274530720703403751)
-,p_required_patch=>wwv_flow_api.id(57274528204078403750)
+,p_group_id=>wwv_flow_imp.id(708529805916684528)
+,p_required_role=>wwv_flow_imp.id(708528541912684527)
+,p_required_patch=>wwv_flow_imp.id(708526029383684526)
 ,p_protection_level=>'U'
 ,p_help_text=>wwv_flow_string.join(wwv_flow_t_varchar2(
 '<p>Select the appropriate choice for any authenticated users.<br> ',
@@ -37,15 +37,16 @@ wwv_flow_api.create_page(
 '  <li><strong>Administrators</strong>, in addition to Contributors capability, can also perform configuration of the application by accessing the Administration section of the application.</li>',
 '</ul>',
 '</em></p>'))
+,p_page_component_map=>'16'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20220412185553'
+,p_last_upd_yyyymmddhh24miss=>'20220415002921'
 );
-wwv_flow_api.create_page_plug(
- p_id=>wwv_flow_api.id(57274619029660404220)
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(708631521762684971)
 ,p_plug_name=>'Access Control Configuration'
 ,p_region_template_options=>'#DEFAULT#'
 ,p_escape_on_http_output=>'Y'
-,p_plug_template=>wwv_flow_api.id(57274374998537403687)
+,p_plug_template=>wwv_flow_imp.id(708365832311684460)
 ,p_plug_display_sequence=>10
 ,p_query_type=>'SQL'
 ,p_plug_query_num_rows=>15
@@ -53,12 +54,12 @@ wwv_flow_api.create_page_plug(
 ,p_attribute_02=>'HTML'
 ,p_attribute_03=>'Y'
 );
-wwv_flow_api.create_page_plug(
- p_id=>wwv_flow_api.id(57274619125817404220)
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(708631640382684971)
 ,p_plug_name=>'Buttons'
 ,p_region_template_options=>'#DEFAULT#'
 ,p_escape_on_http_output=>'Y'
-,p_plug_template=>wwv_flow_api.id(57274377736971403688)
+,p_plug_template=>wwv_flow_imp.id(708368635414684461)
 ,p_plug_display_sequence=>10
 ,p_plug_display_point=>'REGION_POSITION_03'
 ,p_query_type=>'SQL'
@@ -67,44 +68,44 @@ wwv_flow_api.create_page_plug(
 ,p_attribute_02=>'HTML'
 ,p_attribute_03=>'Y'
 );
-wwv_flow_api.create_page_button(
- p_id=>wwv_flow_api.id(57274620380190404221)
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(708632816573684972)
 ,p_button_sequence=>20
-,p_button_plug_id=>wwv_flow_api.id(57274619125817404220)
+,p_button_plug_id=>wwv_flow_imp.id(708631640382684971)
 ,p_button_name=>'APPLY_CHANGES'
 ,p_button_action=>'SUBMIT'
 ,p_button_template_options=>'#DEFAULT#'
-,p_button_template_id=>wwv_flow_api.id(57274501904060403736)
+,p_button_template_id=>wwv_flow_imp.id(708499111361684511)
 ,p_button_is_hot=>'Y'
 ,p_button_image_alt=>'Apply Changes'
 ,p_button_position=>'CREATE'
 );
-wwv_flow_api.create_page_button(
- p_id=>wwv_flow_api.id(57274620616944404221)
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(708633113467684973)
 ,p_button_sequence=>10
-,p_button_plug_id=>wwv_flow_api.id(57274619125817404220)
+,p_button_plug_id=>wwv_flow_imp.id(708631640382684971)
 ,p_button_name=>'CANCEL'
 ,p_button_action=>'DEFINED_BY_DA'
 ,p_button_template_options=>'#DEFAULT#'
-,p_button_template_id=>wwv_flow_api.id(57274501904060403736)
+,p_button_template_id=>wwv_flow_imp.id(708499111361684511)
 ,p_button_image_alt=>'Cancel'
 ,p_button_position=>'PREVIOUS'
 ,p_button_execute_validations=>'N'
 );
-wwv_flow_api.create_page_branch(
- p_id=>wwv_flow_api.id(57274622080593404222)
+wwv_flow_imp_page.create_page_branch(
+ p_id=>wwv_flow_imp.id(708634507244684973)
 ,p_branch_name=>'Branch to Admin Page'
 ,p_branch_action=>'f?p=&APP_ID.:10000:&SESSION.::&DEBUG.:::&success_msg=#SUCCESS_MSG#'
 ,p_branch_point=>'AFTER_PROCESSING'
 ,p_branch_type=>'REDIRECT_URL'
 ,p_branch_sequence=>10
 );
-wwv_flow_api.create_page_item(
- p_id=>wwv_flow_api.id(57274622344277404222)
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(708634837111684973)
 ,p_name=>'P10040_ALLOW_OTHER_USERS'
 ,p_is_required=>true
 ,p_item_sequence=>30
-,p_item_plug_id=>wwv_flow_api.id(57274619029660404220)
+,p_item_plug_id=>wwv_flow_imp.id(708631521762684971)
 ,p_prompt=>'Any authenticated user may access this application'
 ,p_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'if apex_app_setting.get_value( p_name => ''ACCESS_CONTROL_SCOPE'' ) = ''ACL_ONLY'' then',
@@ -119,31 +120,31 @@ wwv_flow_api.create_page_item(
 ,p_cMaxlength=>4000
 ,p_cHeight=>4
 ,p_grid_label_column_span=>3
-,p_field_template=>wwv_flow_api.id(57274499273563403734)
+,p_field_template=>wwv_flow_imp.id(708496499879684510)
 ,p_item_template_options=>'#DEFAULT#'
 ,p_lov_display_extra=>'NO'
 ,p_inline_help_text=>'Choose <strong>No</strong> if all users are defined in the access control list. Choose <strong>Yes</strong> if authenticated users not in the access control list may also use this application.'
 ,p_attribute_01=>'Y'
 );
-wwv_flow_api.create_page_da_event(
- p_id=>wwv_flow_api.id(57274620759698404221)
+wwv_flow_imp_page.create_page_da_event(
+ p_id=>wwv_flow_imp.id(708633250265684973)
 ,p_name=>'Cancel Dialog'
 ,p_event_sequence=>10
 ,p_triggering_element_type=>'BUTTON'
-,p_triggering_button_id=>wwv_flow_api.id(57274620616944404221)
+,p_triggering_button_id=>wwv_flow_imp.id(708633113467684973)
 ,p_bind_type=>'bind'
 ,p_bind_event_type=>'click'
 );
-wwv_flow_api.create_page_da_action(
- p_id=>wwv_flow_api.id(57274621488969404221)
-,p_event_id=>wwv_flow_api.id(57274620759698404221)
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(708633980774684973)
+,p_event_id=>wwv_flow_imp.id(708633250265684973)
 ,p_event_result=>'TRUE'
 ,p_action_sequence=>10
 ,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_DIALOG_CANCEL'
 );
-wwv_flow_api.create_page_process(
- p_id=>wwv_flow_api.id(57274622727412404222)
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(708635266898684974)
 ,p_process_sequence=>10
 ,p_process_point=>'AFTER_SUBMIT'
 ,p_process_type=>'NATIVE_PLSQL'
@@ -164,6 +165,6 @@ wwv_flow_api.create_page_process(
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
 ,p_process_success_message=>'Access Control settings saved.'
 );
-wwv_flow_api.component_end;
+wwv_flow_imp.component_end;
 end;
 /

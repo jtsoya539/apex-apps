@@ -3,16 +3,16 @@ begin
 --   Manifest
 --     SECURITY SCHEME: Reader Rights
 --   Manifest End
-wwv_flow_api.component_begin (
- p_version_yyyy_mm_dd=>'2021.10.15'
-,p_release=>'21.2.5'
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2022.04.12'
+,p_release=>'22.1.0-16'
 ,p_default_workspace_id=>38438218948969634094
 ,p_default_application_id=>142247
 ,p_default_id_offset=>0
 ,p_default_owner=>'WKSP_JTSOYA539WS'
 );
-wwv_flow_api.create_security_scheme(
- p_id=>wwv_flow_api.id(57274530886839403751)
+wwv_flow_imp_shared.create_security_scheme(
+ p_id=>wwv_flow_imp.id(708528636708684527)
 ,p_name=>'Reader Rights'
 ,p_scheme_type=>'NATIVE_FUNCTION_BODY'
 ,p_attribute_01=>wwv_flow_string.join(wwv_flow_t_varchar2(
@@ -29,6 +29,6 @@ wwv_flow_api.create_security_scheme(
 ,p_error_message=>'You are not authorized to view this application, either because you have not been granted access, or your account has been locked. Please contact the application administrator.'
 ,p_caching=>'BY_USER_BY_SESSION'
 );
-wwv_flow_api.component_end;
+wwv_flow_imp.component_end;
 end;
 /
