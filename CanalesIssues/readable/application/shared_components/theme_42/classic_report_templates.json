@@ -1,0 +1,2135 @@
+[
+  {
+    "id":"66971357131822773938"
+   ,"Identification":{
+      "Name":"Alerts"
+     ,"Identifier":"ALERTS"
+     ,"Class":"Custom 8"
+    }
+   ,"Subscription":{
+      "Master":{
+        "Referenced Id":"2881456138952347027"
+      }
+    }
+   ,"Advanced":{
+      "Translatable":false
+    }
+   ,"Attributes":{
+      "Type":"Named Column (row template)"
+    }
+   ,"Report Template":{
+      "Top":"\u003Cdiv class=\"t-Alerts #COMPONENT_CSS_CLASSES#\" #REPORT_ATTRIBUTES# id=\"#REGION_STATIC_ID#_alerts\" data-region-id=\"#REGION_STATIC_ID#\"\u003E"
+     ,"Bottom":"\u003C\/div\u003E\n\u003Ctable class=\"t-Report-pagination\" role=\"presentation\"\u003E#PAGINATION#\u003C\/table\u003E"
+    }
+   ,"Row Template 1":{
+      "Template":"\u003Cdiv class=\"t-Alert t-Alert--horizontal t-Alert--colorBG t-Alert--defaultIcons t-Alert--#ALERT_TYPE#\" role=\"alert\"\u003E\n  \u003Cdiv class=\"t-Alert-wrap\"\u003E\n    \u003Cdiv class=\"t-Alert-icon\"\u003E\n      \u003Cspan class=\"t-Icon\" aria-hidden=\"true\"\u003E\u003C\/span\u003E\n    \u003C\/div\u003E\n    \u003Cdiv class=\"t-Alert-content\"\u003E\n      \u003Cdiv class=\"t-Alert-header\"\u003E\n        \u003Ch2 class=\"t-Alert-title\"\u003E#ALERT_TITLE#\u003C\/h2\u003E\n      \u003C\/div\u003E\n      \u003Cdiv class=\"t-Alert-body\"\u003E\n        #ALERT_DESC#\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n    \u003Cdiv class=\"t-Alert-buttons\"\u003E\n      #ALERT_ACTION#\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E"
+     ,"Condition":"0"
+    }
+   ,"Pagination Subtemplates":{
+      "Pagination":"\u003Cspan class=\"t-Report-paginationText\"\u003E#TEXT#\u003C\/span\u003E"
+     ,"Next Page":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--next\"\u003E\n  #PAGINATION_NEXT#\u003Cspan class=\"a-Icon icon-right-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E\n\u003C\/a\u003E"
+     ,"Previous Page":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--prev\"\u003E\n  \u003Cspan class=\"a-Icon icon-left-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E#PAGINATION_PREVIOUS#\n\u003C\/a\u003E"
+     ,"Next Set":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--next\"\u003E\n  #PAGINATION_NEXT_SET#\u003Cspan class=\"a-Icon icon-right-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E\n\u003C\/a\u003E"
+     ,"Previous Set":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--prev\"\u003E\n  \u003Cspan class=\"a-Icon icon-left-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E#PAGINATION_PREVIOUS_SET#\n\u003C\/a\u003E"
+    }
+  }
+ ,{
+    "id":"66971357326178773939"
+   ,"Identification":{
+      "Name":"Badge List"
+     ,"Identifier":"BADGE_LIST"
+     ,"Class":"Value Attribute Pairs"
+    }
+   ,"Subscription":{
+      "Master":{
+        "Referenced Id":"2103197159775914759"
+      }
+    }
+   ,"Advanced":{
+      "Translatable":false
+    }
+   ,"Template Options":{
+      "Preset":[
+        "t-BadgeList--large"
+       ,"t-BadgeList--fixed"
+       ,"t-BadgeList--circular"
+      ]
+    }
+   ,"Attributes":{
+      "Type":"Generic Columns (column template)"
+    }
+   ,"Report Template":{
+      "Top":"\u003Cul class=\"t-BadgeList #COMPONENT_CSS_CLASSES#\" data-region-id=\"#REGION_STATIC_ID#\"\u003E"
+     ,"Bottom":"\u003C\/ul\u003E\n\u003Ctable class=\"t-Report-pagination\" role=\"presentation\"\u003E#PAGINATION#\u003C\/table\u003E"
+    }
+   ,"Column Template 1":{
+      "Template":"\u003Cli class=\"t-BadgeList-item\"\u003E\n  \u003Cspan class=\"t-BadgeList-wrap u-color\"\u003E\n    \u003Cspan class=\"t-BadgeList-label\"\u003E#COLUMN_HEADER#\u003C\/span\u003E\n    \u003Cspan class=\"t-BadgeList-value\"\u003E#COLUMN_VALUE#\u003C\/span\u003E\n  \u003C\/span\u003E\n\u003C\/li\u003E"
+     ,"Condition":"0"
+    }
+   ,"Pagination Subtemplates":{
+      "Pagination":"\u003Cspan class=\"t-Report-paginationText\"\u003E#TEXT#\u003C\/span\u003E"
+     ,"Next Page":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--next\"\u003E\n  #PAGINATION_NEXT#\u003Cspan class=\"a-Icon icon-right-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E\n\u003C\/a\u003E"
+     ,"Previous Page":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--prev\"\u003E\n  \u003Cspan class=\"a-Icon icon-left-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E#PAGINATION_PREVIOUS#\n\u003C\/a\u003E"
+     ,"Next Set":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--next\"\u003E\n  #PAGINATION_NEXT_SET#\u003Cspan class=\"a-Icon icon-right-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E\n\u003C\/a\u003E"
+     ,"Previous Set":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--prev\"\u003E\n  \u003Cspan class=\"a-Icon icon-left-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E#PAGINATION_PREVIOUS_SET#\n\u003C\/a\u003E"
+    }
+   ,"Template Options":[
+      {
+        "id":"66971357889344773939"
+       ,"Identification":{
+          "Name":"128px"
+         ,"Identifier":"128PX"
+         ,"Group":"Badge Size (66971357646267773939)"
+         ,"Sequence":50
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-BadgeList--xxlarge"
+          ]
+        }
+      }
+     ,{
+        "id":"66971358249683773939"
+       ,"Identification":{
+          "Name":"2 Column Grid"
+         ,"Identifier":"2COLUMNGRID"
+         ,"Group":"Layout (66971358022765773939)"
+         ,"Sequence":20
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-BadgeList--cols"
+          ]
+        }
+       ,"Help":{
+          "Help Text":"Arrange badges in a two column grid"
+        }
+      }
+     ,{
+        "id":"66971358477074773939"
+       ,"Identification":{
+          "Name":"32px"
+         ,"Identifier":"32PX"
+         ,"Group":"Badge Size (66971357646267773939)"
+         ,"Sequence":10
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-BadgeList--small"
+          ]
+        }
+      }
+     ,{
+        "id":"66971358614139773939"
+       ,"Identification":{
+          "Name":"3 Column Grid"
+         ,"Identifier":"3COLUMNGRID"
+         ,"Group":"Layout (66971358022765773939)"
+         ,"Sequence":30
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-BadgeList--cols"
+           ,"t-BadgeList--3cols"
+          ]
+        }
+       ,"Help":{
+          "Help Text":"Arrange badges in a 3 column grid"
+        }
+      }
+     ,{
+        "id":"66971358873074773940"
+       ,"Identification":{
+          "Name":"48px"
+         ,"Identifier":"48PX"
+         ,"Group":"Badge Size (66971357646267773939)"
+         ,"Sequence":20
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-BadgeList--medium"
+          ]
+        }
+      }
+     ,{
+        "id":"66971359073587773940"
+       ,"Identification":{
+          "Name":"4 Column Grid"
+         ,"Identifier":"4COLUMNGRID"
+         ,"Group":"Layout (66971358022765773939)"
+         ,"Sequence":40
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-BadgeList--cols"
+           ,"t-BadgeList--4cols"
+          ]
+        }
+      }
+     ,{
+        "id":"66971359247275773940"
+       ,"Identification":{
+          "Name":"5 Column Grid"
+         ,"Identifier":"5COLUMNGRID"
+         ,"Group":"Layout (66971358022765773939)"
+         ,"Sequence":50
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-BadgeList--cols"
+           ,"t-BadgeList--5cols"
+          ]
+        }
+      }
+     ,{
+        "id":"66971359436012773940"
+       ,"Identification":{
+          "Name":"64px"
+         ,"Identifier":"64PX"
+         ,"Group":"Badge Size (66971357646267773939)"
+         ,"Sequence":30
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-BadgeList--large"
+          ]
+        }
+      }
+     ,{
+        "id":"66971359650866773940"
+       ,"Identification":{
+          "Name":"96px"
+         ,"Identifier":"96PX"
+         ,"Group":"Badge Size (66971357646267773939)"
+         ,"Sequence":40
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-BadgeList--xlarge"
+          ]
+        }
+      }
+     ,{
+        "id":"66971359822560773940"
+       ,"Identification":{
+          "Name":"Apply Theme Colors"
+         ,"Identifier":"APPLY_THEME_COLORS"
+         ,"Sequence":10
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "u-colors"
+          ]
+        }
+      }
+     ,{
+        "id":"66971360251075773940"
+       ,"Identification":{
+          "Name":"Circular"
+         ,"Identifier":"CIRCULAR"
+         ,"Group":"Style (66971360001278773940)"
+         ,"Sequence":20
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-BadgeList--circular"
+          ]
+        }
+      }
+     ,{
+        "id":"66971360449760773940"
+       ,"Identification":{
+          "Name":"Span Horizontally"
+         ,"Identifier":"FIXED"
+         ,"Group":"Layout (66971358022765773939)"
+         ,"Sequence":60
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-BadgeList--fixed"
+          ]
+        }
+      }
+     ,{
+        "id":"66971360691724773940"
+       ,"Identification":{
+          "Name":"Flexible Box"
+         ,"Identifier":"FLEXIBLEBOX"
+         ,"Group":"Layout (66971358022765773939)"
+         ,"Sequence":80
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-BadgeList--flex"
+          ]
+        }
+      }
+     ,{
+        "id":"66971360865997773940"
+       ,"Identification":{
+          "Name":"Float Items"
+         ,"Identifier":"FLOATITEMS"
+         ,"Group":"Layout (66971358022765773939)"
+         ,"Sequence":70
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-BadgeList--float"
+          ]
+        }
+      }
+     ,{
+        "id":"66971361088333773940"
+       ,"Identification":{
+          "Name":"Grid"
+         ,"Identifier":"GRID"
+         ,"Group":"Style (66971360001278773940)"
+         ,"Sequence":30
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-BadgeList--dash"
+          ]
+        }
+      }
+     ,{
+        "id":"66971361261196773941"
+       ,"Identification":{
+          "Name":"Stacked"
+         ,"Identifier":"STACKED"
+         ,"Group":"Layout (66971358022765773939)"
+         ,"Sequence":10
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-BadgeList--stacked"
+          ]
+        }
+      }
+    ]
+  }
+ ,{
+    "id":"66971361353799773941"
+   ,"Identification":{
+      "Name":"Cards"
+     ,"Identifier":"CARDS"
+     ,"Class":"Custom 1"
+    }
+   ,"Subscription":{
+      "Master":{
+        "Referenced Id":"2973535649510699732"
+      }
+    }
+   ,"Advanced":{
+      "Translatable":false
+    }
+   ,"Template Options":{
+      "Preset":[
+        "t-Cards--animColorFill"
+       ,"t-Cards--3cols"
+       ,"t-Cards--basic"
+      ]
+    }
+   ,"Attributes":{
+      "Type":"Named Column (row template)"
+    }
+   ,"Report Template":{
+      "Top":"\u003Cul class=\"t-Cards #COMPONENT_CSS_CLASSES#\" #REPORT_ATTRIBUTES# id=\"#REGION_STATIC_ID#_cards\" data-region-id=\"#REGION_STATIC_ID#\"\u003E"
+     ,"Bottom":"\u003C\/ul\u003E\n\u003Ctable class=\"t-Report-pagination\" role=\"presentation\"\u003E#PAGINATION#\u003C\/table\u003E"
+    }
+   ,"Row Template 1":{
+      "Template":"\u003Cli class=\"t-Cards-item #CARD_MODIFIERS#\"\u003E\n  \u003Cdiv class=\"t-Card\"\u003E\n    \u003Ca href=\"#CARD_LINK#\" class=\"t-Card-wrap\"\u003E\n      \u003Cdiv class=\"t-Card-icon u-color #CARD_COLOR#\"\u003E\u003Cspan class=\"t-Icon fa #CARD_ICON#\"\u003E\u003Cspan class=\"t-Card-initials\" role=\"presentation\"\u003E#CARD_INITIALS#\u003C\/span\u003E\u003C\/span\u003E\u003C\/div\u003E\n      \u003Cdiv class=\"t-Card-titleWrap\"\u003E\u003Ch3 class=\"t-Card-title\"\u003E#CARD_TITLE#\u003C\/h3\u003E\u003Ch4 class=\"t-Card-subtitle\"\u003E#CARD_SUBTITLE#\u003C\/h4\u003E\u003C\/div\u003E\n      \u003Cdiv class=\"t-Card-body\"\u003E\n        \u003Cdiv class=\"t-Card-desc\"\u003E#CARD_TEXT#\u003C\/div\u003E\n        \u003Cdiv class=\"t-Card-info\"\u003E#CARD_SUBTEXT#\u003C\/div\u003E\n      \u003C\/div\u003E\n      \u003Cspan class=\"t-Card-colorFill u-color #CARD_COLOR#\"\u003E\u003C\/span\u003E\n    \u003C\/a\u003E\n  \u003C\/div\u003E\n\u003C\/li\u003E"
+     ,"Condition":"Use Based on PL\/SQL Expression"
+     ,"PL\/SQL Expression":":CARD_LINK is not null"
+    }
+   ,"Row Template 2":{
+      "Template":"\u003Cli class=\"t-Cards-item #CARD_MODIFIERS#\"\u003E\n  \u003Cdiv class=\"t-Card\"\u003E\n    \u003Cdiv class=\"t-Card-wrap\"\u003E\n      \u003Cdiv class=\"t-Card-icon u-color #CARD_COLOR#\"\u003E\u003Cspan class=\"t-Icon fa #CARD_ICON#\"\u003E\u003Cspan class=\"t-Card-initials\" role=\"presentation\"\u003E#CARD_INITIALS#\u003C\/span\u003E\u003C\/span\u003E\u003C\/div\u003E\n      \u003Cdiv class=\"t-Card-titleWrap\"\u003E\u003Ch3 class=\"t-Card-title\"\u003E#CARD_TITLE#\u003C\/h3\u003E\u003Ch4 class=\"t-Card-subtitle\"\u003E#CARD_SUBTITLE#\u003C\/h4\u003E\u003C\/div\u003E\n      \u003Cdiv class=\"t-Card-body\"\u003E\n        \u003Cdiv class=\"t-Card-desc\"\u003E#CARD_TEXT#\u003C\/div\u003E\n        \u003Cdiv class=\"t-Card-info\"\u003E#CARD_SUBTEXT#\u003C\/div\u003E\n      \u003C\/div\u003E\n      \u003Cspan class=\"t-Card-colorFill u-color #CARD_COLOR#\"\u003E\u003C\/span\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/li\u003E"
+     ,"Condition":"0"
+    }
+   ,"Pagination Subtemplates":{
+      "Pagination":"\u003Cspan class=\"t-Report-paginationText\"\u003E#TEXT#\u003C\/span\u003E"
+     ,"Next Page":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--next\"\u003E\n  #PAGINATION_NEXT#\u003Cspan class=\"a-Icon icon-right-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E\n\u003C\/a\u003E"
+     ,"Previous Page":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--prev\"\u003E\n  \u003Cspan class=\"a-Icon icon-left-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E#PAGINATION_PREVIOUS#\n\u003C\/a\u003E"
+     ,"Next Set":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--next\"\u003E\n  #PAGINATION_NEXT_SET#\u003Cspan class=\"a-Icon icon-right-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E\n\u003C\/a\u003E"
+     ,"Previous Set":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--prev\"\u003E\n  \u003Cspan class=\"a-Icon icon-left-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E#PAGINATION_PREVIOUS_SET#\n\u003C\/a\u003E"
+    }
+   ,"Template Options":[
+      {
+        "id":"66971361688030773941"
+       ,"Identification":{
+          "Name":"2 Columns"
+         ,"Identifier":"2_COLUMNS"
+         ,"Group":"Layout (66971358022765773939)"
+         ,"Sequence":15
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Cards--cols"
+          ]
+        }
+      }
+     ,{
+        "id":"66971362054408773941"
+       ,"Identification":{
+          "Name":"2 Lines"
+         ,"Identifier":"2_LINES"
+         ,"Group":"Body Text (66971361805753773941)"
+         ,"Sequence":10
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Cards--desc-2ln"
+          ]
+        }
+      }
+     ,{
+        "id":"66971362276821773941"
+       ,"Identification":{
+          "Name":"3 Columns"
+         ,"Identifier":"3_COLUMNS"
+         ,"Group":"Layout (66971358022765773939)"
+         ,"Sequence":20
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Cards--3cols"
+          ]
+        }
+      }
+     ,{
+        "id":"66971362480728773941"
+       ,"Identification":{
+          "Name":"3 Lines"
+         ,"Identifier":"3_LINES"
+         ,"Group":"Body Text (66971361805753773941)"
+         ,"Sequence":20
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Cards--desc-3ln"
+          ]
+        }
+      }
+     ,{
+        "id":"66971362638714773941"
+       ,"Identification":{
+          "Name":"4 Columns"
+         ,"Identifier":"4_COLUMNS"
+         ,"Group":"Layout (66971358022765773939)"
+         ,"Sequence":30
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Cards--4cols"
+          ]
+        }
+      }
+     ,{
+        "id":"66971362824172773941"
+       ,"Identification":{
+          "Name":"4 Lines"
+         ,"Identifier":"4_LINES"
+         ,"Group":"Body Text (66971361805753773941)"
+         ,"Sequence":30
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Cards--desc-4ln"
+          ]
+        }
+      }
+     ,{
+        "id":"66971363057007773941"
+       ,"Identification":{
+          "Name":"5 Columns"
+         ,"Identifier":"5_COLUMNS"
+         ,"Group":"Layout (66971358022765773939)"
+         ,"Sequence":50
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Cards--5cols"
+          ]
+        }
+      }
+     ,{
+        "id":"66971363244025773941"
+       ,"Identification":{
+          "Name":"Basic"
+         ,"Identifier":"BASIC"
+         ,"Group":"Style (66971360001278773940)"
+         ,"Sequence":10
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Cards--basic"
+          ]
+        }
+      }
+     ,{
+        "id":"66971363486280773941"
+       ,"Identification":{
+          "Name":"Block"
+         ,"Identifier":"BLOCK"
+         ,"Group":"Style (66971360001278773940)"
+         ,"Sequence":40
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Cards--featured"
+           ,"t-Cards--block"
+           ,"force-fa-lg"
+          ]
+        }
+      }
+     ,{
+        "id":"66971363829700773942"
+       ,"Identification":{
+          "Name":"Color Fill"
+         ,"Identifier":"CARDS_COLOR_FILL"
+         ,"Group":"Animation (66971363665005773942)"
+         ,"Sequence":10
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Cards--animColorFill"
+          ]
+        }
+      }
+     ,{
+        "id":"66971364028836773942"
+       ,"Identification":{
+          "Name":"Raise Card"
+         ,"Identifier":"CARD_RAISE_CARD"
+         ,"Group":"Animation (66971363665005773942)"
+         ,"Sequence":20
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Cards--animRaiseCard"
+          ]
+        }
+      }
+     ,{
+        "id":"66971364289674773942"
+       ,"Identification":{
+          "Name":"Compact"
+         ,"Identifier":"COMPACT"
+         ,"Group":"Style (66971360001278773940)"
+         ,"Sequence":20
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Cards--compact"
+          ]
+        }
+       ,"Help":{
+          "Help Text":"Use this option when you want to show smaller cards."
+        }
+      }
+     ,{
+        "id":"66971364607429773942"
+       ,"Identification":{
+          "Name":"Display Icons"
+         ,"Identifier":"DISPLAY_ICONS"
+         ,"Group":"Icons (66971364450323773942)"
+         ,"Sequence":10
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Cards--displayIcons"
+          ]
+        }
+      }
+     ,{
+        "id":"66971364835324773942"
+       ,"Identification":{
+          "Name":"Display Initials"
+         ,"Identifier":"DISPLAY_INITIALS"
+         ,"Group":"Icons (66971364450323773942)"
+         ,"Sequence":20
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Cards--displayInitials"
+          ]
+        }
+      }
+     ,{
+        "id":"66971365058594773942"
+       ,"Identification":{
+          "Name":"Display Subtitle"
+         ,"Identifier":"DISPLAY_SUBTITLE"
+         ,"Sequence":20
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Cards--displaySubtitle"
+          ]
+        }
+      }
+     ,{
+        "id":"66971365205589773942"
+       ,"Identification":{
+          "Name":"Featured"
+         ,"Identifier":"FEATURED"
+         ,"Group":"Style (66971360001278773940)"
+         ,"Sequence":30
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Cards--featured"
+           ,"force-fa-lg"
+          ]
+        }
+      }
+     ,{
+        "id":"66971365489504773942"
+       ,"Identification":{
+          "Name":"Float"
+         ,"Identifier":"FLOAT"
+         ,"Group":"Layout (66971358022765773939)"
+         ,"Sequence":60
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Cards--float"
+          ]
+        }
+      }
+     ,{
+        "id":"66971365646381773942"
+       ,"Identification":{
+          "Name":"Hidden"
+         ,"Identifier":"HIDDEN_BODY_TEXT"
+         ,"Group":"Body Text (66971361805753773941)"
+         ,"Sequence":50
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Cards--hideBody"
+          ]
+        }
+       ,"Help":{
+          "Help Text":"This option hides the card body which contains description and subtext."
+        }
+      }
+     ,{
+        "id":"66971366081018773943"
+       ,"Identification":{
+          "Name":"Rounded Corners"
+         ,"Identifier":"ICONS_ROUNDED"
+         ,"Group":"Icon Shape (66971365884864773943)"
+         ,"Sequence":10
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Cards--iconsRounded"
+          ]
+        }
+       ,"Help":{
+          "Help Text":"The icons are displayed within a square with rounded corners."
+        }
+      }
+     ,{
+        "id":"66971366236142773943"
+       ,"Identification":{
+          "Name":"Square"
+         ,"Identifier":"ICONS_SQUARE"
+         ,"Group":"Icon Shape (66971365884864773943)"
+         ,"Sequence":20
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Cards--iconsSquare"
+          ]
+        }
+       ,"Help":{
+          "Help Text":"The icons are displayed within a square shape."
+        }
+      }
+     ,{
+        "id":"66971366434502773943"
+       ,"Identification":{
+          "Name":"Span Horizontally"
+         ,"Identifier":"SPAN_HORIZONTALLY"
+         ,"Group":"Layout (66971358022765773939)"
+         ,"Sequence":70
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Cards--spanHorizontally"
+          ]
+        }
+      }
+     ,{
+        "id":"66971366625803773943"
+       ,"Identification":{
+          "Name":"Apply Theme Colors"
+         ,"Identifier":"USE_THEME_COLORS"
+         ,"Sequence":10
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "u-colors"
+          ]
+        }
+      }
+    ]
+  }
+ ,{
+    "id":"66971366776848773943"
+   ,"Identification":{
+      "Name":"Comments"
+     ,"Identifier":"COMMENTS"
+     ,"Class":"Custom 1"
+    }
+   ,"Subscription":{
+      "Master":{
+        "Referenced Id":"2611722012730764232"
+      }
+    }
+   ,"Advanced":{
+      "Translatable":false
+    }
+   ,"Template Options":{
+      "Preset":[
+        "t-Comments--chat"
+      ]
+    }
+   ,"Attributes":{
+      "Type":"Named Column (row template)"
+    }
+   ,"Report Template":{
+      "Top":"\u003Cul class=\"t-Comments #COMPONENT_CSS_CLASSES#\" #REPORT_ATTRIBUTES# id=\"#REGION_STATIC_ID#_report\" data-region-id=\"#REGION_STATIC_ID#\"\u003E"
+     ,"Bottom":"\u003C\/ul\u003E\n\u003Ctable class=\"t-Report-pagination\" role=\"presentation\"\u003E#PAGINATION#\u003C\/table\u003E"
+    }
+   ,"Row Template 1":{
+      "Template":"\u003Cli class=\"t-Comments-item #COMMENT_MODIFIERS#\"\u003E\n  \u003Cdiv class=\"t-Comments-icon\"\u003E\n    \u003Cdiv class=\"t-Comments-userIcon #ICON_MODIFIER#\" aria-hidden=\"true\"\u003E#USER_ICON#\u003C\/div\u003E\n  \u003C\/div\u003E\n  \u003Cdiv class=\"t-Comments-body\"\u003E\n    \u003Cdiv class=\"t-Comments-info\"\u003E\n      #USER_NAME# \u003Cspan class=\"t-Comments-date\"\u003E#COMMENT_DATE#\u003C\/span\u003E \u003Cspan class=\"t-Comments-actions\"\u003E#ACTIONS#\u003C\/span\u003E\n    \u003C\/div\u003E\n    \u003Cdiv class=\"t-Comments-comment\"\u003E\n      #COMMENT_TEXT##ATTRIBUTE_1##ATTRIBUTE_2##ATTRIBUTE_3##ATTRIBUTE_4#\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/li\u003E"
+     ,"Condition":"0"
+    }
+   ,"Pagination Subtemplates":{
+      "Pagination":"\u003Cspan class=\"t-Report-paginationText\"\u003E#TEXT#\u003C\/span\u003E"
+     ,"Next Page":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--next\"\u003E\n  #PAGINATION_NEXT#\u003Cspan class=\"a-Icon icon-right-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E\n\u003C\/a\u003E"
+     ,"Previous Page":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--prev\"\u003E\n  \u003Cspan class=\"a-Icon icon-left-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E#PAGINATION_PREVIOUS#\n\u003C\/a\u003E"
+     ,"Next Set":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--next\"\u003E\n  #PAGINATION_NEXT_SET#\u003Cspan class=\"a-Icon icon-right-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E\n\u003C\/a\u003E\n"
+     ,"Previous Set":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--prev\"\u003E\n  \u003Cspan class=\"a-Icon icon-left-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E#PAGINATION_PREVIOUS_SET#\n\u003C\/a\u003E"
+    }
+   ,"Template Options":[
+      {
+        "id":"66971367253240773943"
+       ,"Identification":{
+          "Name":"Basic"
+         ,"Identifier":"BASIC"
+         ,"Group":"Comments Style (66971367050017773943)"
+         ,"Sequence":10
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Comments--basic"
+          ]
+        }
+      }
+     ,{
+        "id":"66971367412553773943"
+       ,"Identification":{
+          "Name":"Rounded Corners"
+         ,"Identifier":"ICONS_ROUNDED"
+         ,"Group":"Icon Shape (66971365884864773943)"
+         ,"Sequence":10
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Comments--iconsRounded"
+          ]
+        }
+       ,"Help":{
+          "Help Text":"The icons are displayed within a square with rounded corners."
+        }
+      }
+     ,{
+        "id":"66971367643583773943"
+       ,"Identification":{
+          "Name":"Square"
+         ,"Identifier":"ICONS_SQUARE"
+         ,"Group":"Icon Shape (66971365884864773943)"
+         ,"Sequence":20
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Comments--iconsSquare"
+          ]
+        }
+       ,"Help":{
+          "Help Text":"The icons are displayed within a square shape."
+        }
+      }
+     ,{
+        "id":"66971367852447773943"
+       ,"Identification":{
+          "Name":"Speech Bubbles"
+         ,"Identifier":"SPEECH_BUBBLES"
+         ,"Group":"Comments Style (66971367050017773943)"
+         ,"Sequence":20
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Comments--chat"
+          ]
+        }
+      }
+    ]
+  }
+ ,{
+    "id":"66971367996918773943"
+   ,"Identification":{
+      "Name":"Content Row"
+     ,"Identifier":"CONTENT_ROW"
+     ,"Class":"Standard"
+    }
+   ,"Subscription":{
+      "Master":{
+        "Referenced Id":"1797843454948280151"
+      }
+    }
+   ,"Advanced":{
+      "Translatable":false
+    }
+   ,"Attributes":{
+      "Type":"Named Column (row template)"
+    }
+   ,"Report Template":{
+      "Top":"\u003Cul class=\"t-ContentRow #COMPONENT_CSS_CLASSES#\" #REPORT_ATTRIBUTES# id=\"#REGION_STATIC_ID#_report\" data-region-id=\"#REGION_STATIC_ID#\"\u003E"
+     ,"Bottom":"\u003C\/ul\u003E\n\u003Ctable class=\"t-Report-pagination\" role=\"presentation\"\u003E#PAGINATION#\u003C\/table\u003E"
+    }
+   ,"Row Template 1":{
+      "Template":"\u003Cli class=\"t-ContentRow-item #ITEM_CLASSES#\"\u003E\n  \u003Cdiv class=\"t-ContentRow-wrap\"\u003E\n    \u003Cdiv class=\"t-ContentRow-selection\"\u003E#SELECTION#\u003C\/div\u003E\n    \u003Cdiv class=\"t-ContentRow-iconWrap\"\u003E\n      \u003Cspan class=\"t-ContentRow-icon #ICON_CLASS#\"\u003E#ICON_HTML#\u003C\/span\u003E\n    \u003C\/div\u003E\n    \u003Cdiv class=\"t-ContentRow-body\"\u003E\n      \u003Cdiv class=\"t-ContentRow-content\"\u003E\n        \u003Ch3 class=\"t-ContentRow-title\"\u003E#TITLE#\u003C\/h3\u003E\n        \u003Cdiv class=\"t-ContentRow-description\"\u003E#DESCRIPTION#\u003C\/div\u003E\n      \u003C\/div\u003E\n      \u003Cdiv class=\"t-ContentRow-misc\"\u003E#MISC#\u003C\/div\u003E\n      \u003Cdiv class=\"t-ContentRow-actions\"\u003E#ACTIONS#\u003C\/div\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/li\u003E"
+     ,"Condition":"0"
+    }
+   ,"Pagination Subtemplates":{
+      "Pagination":"\u003Cspan class=\"t-Report-paginationText\"\u003E#TEXT#\u003C\/span\u003E"
+     ,"Next Page":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--next\"\u003E\n  #PAGINATION_NEXT#\u003Cspan class=\"a-Icon icon-right-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E\n\u003C\/a\u003E"
+     ,"Previous Page":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--prev\"\u003E\n  \u003Cspan class=\"a-Icon icon-left-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E#PAGINATION_PREVIOUS#\n\u003C\/a\u003E"
+     ,"Next Set":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--next\"\u003E\n  #PAGINATION_NEXT_SET#\u003Cspan class=\"a-Icon icon-right-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E\n\u003C\/a\u003E"
+     ,"Previous Set":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--prev\"\u003E\n  \u003Cspan class=\"a-Icon icon-left-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E#PAGINATION_PREVIOUS_SET#\n\u003C\/a\u003E"
+    }
+   ,"Template Options":[
+      {
+        "id":"66971368493805773944"
+       ,"Identification":{
+          "Name":"Hidden"
+         ,"Identifier":"ACTIONS_HIDDEN"
+         ,"Group":"Actions (66971368251506773944)"
+         ,"Sequence":60
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-ContentRow--hideActions"
+          ]
+        }
+       ,"Help":{
+          "Help Text":"Hides the Actions column from being rendered on the screen."
+        }
+      }
+     ,{
+        "id":"66971368879637773944"
+       ,"Identification":{
+          "Name":"Top"
+         ,"Identifier":"ALIGNMENT_TOP"
+         ,"Group":"Content Alignment (66971368634788773944)"
+         ,"Sequence":100
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-ContentRow--alignTop"
+          ]
+        }
+       ,"Help":{
+          "Help Text":"Aligns the content to the top of the row. This is useful when you expect that yours rows will vary in height (e.g. some rows will have longer descriptions than others)."
+        }
+      }
+     ,{
+        "id":"66971369210250773944"
+       ,"Identification":{
+          "Name":"Hidden"
+         ,"Identifier":"DESCRIPTION_HIDDEN"
+         ,"Group":"Description (66971369087797773944)"
+         ,"Sequence":40
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-ContentRow--hideDescription"
+          ]
+        }
+       ,"Help":{
+          "Help Text":"Hides the Description from being rendered on the screen."
+        }
+      }
+     ,{
+        "id":"66971369667450773944"
+       ,"Identification":{
+          "Name":"Hidden"
+         ,"Identifier":"ICON_HIDDEN"
+         ,"Group":"Icon (66971369464385773944)"
+         ,"Sequence":20
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-ContentRow--hideIcon"
+          ]
+        }
+       ,"Help":{
+          "Help Text":"Hides the Icon from being rendered on the screen."
+        }
+      }
+     ,{
+        "id":"66971370060531773944"
+       ,"Identification":{
+          "Name":"Hidden"
+         ,"Identifier":"MISC_HIDDEN"
+         ,"Group":"Misc (66971369843798773944)"
+         ,"Sequence":50
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-ContentRow--hideMisc"
+          ]
+        }
+       ,"Help":{
+          "Help Text":"Hides the Misc column from being rendered on the screen."
+        }
+      }
+     ,{
+        "id":"66971370436552773945"
+       ,"Identification":{
+          "Name":"Hidden"
+         ,"Identifier":"SELECTION_HIDDEN"
+         ,"Group":"Selection (66971370240645773944)"
+         ,"Sequence":10
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-ContentRow--hideSelection"
+          ]
+        }
+       ,"Help":{
+          "Help Text":"Hides the Selection column from being rendered on the screen."
+        }
+      }
+     ,{
+        "id":"66971370679738773945"
+       ,"Identification":{
+          "Name":"Compact"
+         ,"Identifier":"STYLE_COMPACT"
+         ,"Group":"Style (66971360001278773940)"
+         ,"Sequence":1
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-ContentRow--styleCompact"
+          ]
+        }
+       ,"Help":{
+          "Help Text":"This option reduces the padding and font sizes to present a compact display of the same information."
+        }
+      }
+     ,{
+        "id":"66971371038687773945"
+       ,"Identification":{
+          "Name":"Hidden"
+         ,"Identifier":"TITLE_HIDDEN"
+         ,"Group":"Title (66971370848568773945)"
+         ,"Sequence":30
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-ContentRow--hideTitle"
+          ]
+        }
+       ,"Help":{
+          "Help Text":"Hides the Title from being rendered on the screen."
+        }
+      }
+    ]
+  }
+ ,{
+    "id":"66971371103553773945"
+   ,"Identification":{
+      "Name":"Contextual Info"
+     ,"Identifier":"CONTEXTUAL_INFO"
+     ,"Class":"Value Attribute Pairs"
+    }
+   ,"Subscription":{
+      "Master":{
+        "Referenced Id":"2114325881116323585"
+      }
+    }
+   ,"Advanced":{
+      "Translatable":false
+    }
+   ,"Attributes":{
+      "Type":"Generic Columns (column template)"
+    }
+   ,"Report Template":{
+      "Top":" \u003Cdiv class=\"t-ContextualInfo #COMPONENT_CSS_CLASSES#\" id=\"report_#REGION_STATIC_ID#\" #REPORT_ATTRIBUTES# data-region-id=\"#REGION_STATIC_ID#\"\u003E"
+     ,"Bottom":"\u003C\/div\u003E\n\u003Ctable class=\"t-Report-pagination\" role=\"presentation\"\u003E#PAGINATION#\u003C\/table\u003E"
+    }
+   ,"Column Template 1":{
+      "Template":"\u003Cdiv class=\"t-ContextualInfo-item\"\u003E\n  \u003Cspan class=\"t-ContextualInfo-label\"\u003E#COLUMN_HEADER#\u003C\/span\u003E\n  \u003Cspan class=\"t-ContextualInfo-value\"\u003E#COLUMN_VALUE#\u003C\/span\u003E\n\u003C\/div\u003E"
+     ,"Condition":"0"
+    }
+   ,"Pagination Subtemplates":{
+      "Pagination":"\u003Cspan class=\"t-Report-paginationText\"\u003E#TEXT#\u003C\/span\u003E"
+     ,"Next Page":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--next\"\u003E\n  #PAGINATION_NEXT#\u003Cspan class=\"a-Icon icon-right-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E\n\u003C\/a\u003E"
+     ,"Previous Page":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--prev\"\u003E\n  \u003Cspan class=\"a-Icon icon-left-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E#PAGINATION_PREVIOUS#\n\u003C\/a\u003E"
+     ,"Next Set":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--next\"\u003E\n  #PAGINATION_NEXT_SET#\u003Cspan class=\"a-Icon icon-right-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E\n\u003C\/a\u003E"
+     ,"Previous Set":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--prev\"\u003E\n  \u003Cspan class=\"a-Icon icon-left-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E#PAGINATION_PREVIOUS_SET#\n\u003C\/a\u003E"
+    }
+   ,"Template Options":[
+      {
+        "id":"66971371699790773945"
+       ,"Identification":{
+          "Name":"Stacked"
+         ,"Identifier":"DISPLAY_ITEMS_STACKED"
+         ,"Group":"Display Items (66971371497484773945)"
+         ,"Sequence":1
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-ContextualInfo-item--stacked"
+          ]
+        }
+      }
+     ,{
+        "id":"66971372018218773945"
+       ,"Identification":{
+          "Name":"Stacked"
+         ,"Identifier":"DISPLAY_LABELS_STACKED"
+         ,"Group":"Display Labels (66971371806431773945)"
+         ,"Sequence":1
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-ContextualInfo-label--stacked"
+          ]
+        }
+      }
+    ]
+  }
+ ,{
+    "id":"66971372166190773945"
+   ,"Identification":{
+      "Name":"Media List"
+     ,"Identifier":"MEDIA_LIST"
+     ,"Class":"Borderless"
+    }
+   ,"Subscription":{
+      "Master":{
+        "Referenced Id":"2092157460408299055"
+      }
+    }
+   ,"Advanced":{
+      "Translatable":false
+    }
+   ,"Template Options":{
+      "Preset":[
+        "t-MediaList--stack"
+      ]
+     ,"Default":[
+        "t-MediaList--showIcons"
+       ,"t-MediaList--showDesc"
+      ]
+    }
+   ,"Attributes":{
+      "Type":"Named Column (row template)"
+    }
+   ,"Report Template":{
+      "Top":"\u003Cul class=\"t-MediaList #COMPONENT_CSS_CLASSES#\" #REPORT_ATTRIBUTES# id=\"#REGION_STATIC_ID#_report\" data-region-id=\"#REGION_STATIC_ID#\"\u003E"
+     ,"Bottom":"\u003C\/ul\u003E\n\u003Ctable class=\"t-Report-pagination\" role=\"presentation\"\u003E#PAGINATION#\u003C\/table\u003E"
+    }
+   ,"Row Template 1":{
+      "Template":"\u003Cli class=\"t-MediaList-item #LIST_CLASS#\"\u003E\n  \u003Ca href=\"#LINK#\" class=\"t-MediaList-itemWrap #LINK_CLASS#\" #LINK_ATTR#\u003E\n    \u003Cdiv class=\"t-MediaList-iconWrap\" aria-hidden=\"true\"\u003E\n      \u003Cspan class=\"t-MediaList-icon u-color #ICON_COLOR_CLASS#\"\u003E\u003Cspan class=\"t-Icon #ICON_CLASS#\"\u003E\u003C\/span\u003E\u003C\/span\u003E\n    \u003C\/div\u003E\n    \u003Cdiv class=\"t-MediaList-body\"\u003E\n      \u003Ch3 class=\"t-MediaList-title\"\u003E#LIST_TITLE#\u003C\/h3\u003E\n      \u003Cp class=\"t-MediaList-desc\"\u003E#LIST_TEXT#\u003C\/p\u003E\n    \u003C\/div\u003E\n    \u003Cdiv class=\"t-MediaList-badgeWrap\"\u003E\n      \u003Cspan class=\"t-MediaList-badge\"\u003E#LIST_BADGE#\u003C\/span\u003E\n    \u003C\/div\u003E\n  \u003C\/a\u003E\n\u003C\/li\u003E\n"
+     ,"Condition":"Use Based on PL\/SQL Expression"
+     ,"PL\/SQL Expression":":LINK is not null"
+    }
+   ,"Row Template 2":{
+      "Template":"\u003Cli class=\"t-MediaList-item #LIST_CLASS#\"\u003E\n  \u003Cdiv class=\"t-MediaList-itemWrap #LINK_CLASS#\" #LINK_ATTR#\u003E\n    \u003Cdiv class=\"t-MediaList-iconWrap\" aria-hidden=\"true\"\u003E\n      \u003Cspan class=\"t-MediaList-icon u-color #ICON_COLOR_CLASS#\"\u003E\u003Cspan class=\"t-Icon #ICON_CLASS#\"\u003E\u003C\/span\u003E\u003C\/span\u003E\n    \u003C\/div\u003E\n    \u003Cdiv class=\"t-MediaList-body\"\u003E\n      \u003Ch3 class=\"t-MediaList-title\"\u003E#LIST_TITLE#\u003C\/h3\u003E\n      \u003Cp class=\"t-MediaList-desc\"\u003E#LIST_TEXT#\u003C\/p\u003E\n    \u003C\/div\u003E\n    \u003Cdiv class=\"t-MediaList-badgeWrap\"\u003E\n      \u003Cspan class=\"t-MediaList-badge\"\u003E#LIST_BADGE#\u003C\/span\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/li\u003E\n"
+     ,"Condition":"0"
+    }
+   ,"Pagination Subtemplates":{
+      "Pagination":"\u003Cspan class=\"t-Report-paginationText\"\u003E#TEXT#\u003C\/span\u003E"
+     ,"Next Page":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--next\"\u003E\n  #PAGINATION_NEXT#\u003Cspan class=\"a-Icon icon-right-arrow\"\u003E\u003C\/span\u003E\n\u003C\/a\u003E"
+     ,"Previous Page":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--prev\"\u003E\n  \u003Cspan class=\"a-Icon icon-left-arrow\"\u003E\u003C\/span\u003E#PAGINATION_PREVIOUS#\n\u003C\/a\u003E"
+     ,"Next Set":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--next\"\u003E\n  #PAGINATION_NEXT_SET#\u003Cspan class=\"a-Icon icon-right-arrow\"\u003E\u003C\/span\u003E\n\u003C\/a\u003E"
+     ,"Previous Set":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--prev\"\u003E\n  \u003Cspan class=\"a-Icon icon-left-arrow\"\u003E\u003C\/span\u003E#PAGINATION_PREVIOUS_SET#\n\u003C\/a\u003E"
+    }
+   ,"Comments":{
+      "Comments":" (SELECT link_text, link_target, detail1, detail2, last_modified)"
+    }
+   ,"Template Options":[
+      {
+        "id":"66971372486744773946"
+       ,"Identification":{
+          "Name":"2 Column Grid"
+         ,"Identifier":"2_COLUMN_GRID"
+         ,"Group":"Layout (66971358022765773939)"
+         ,"Sequence":10
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-MediaList--cols"
+           ,"t-MediaList--2cols"
+          ]
+        }
+      }
+     ,{
+        "id":"66971372673833773946"
+       ,"Identification":{
+          "Name":"3 Column Grid"
+         ,"Identifier":"3_COLUMN_GRID"
+         ,"Group":"Layout (66971358022765773939)"
+         ,"Sequence":20
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-MediaList--cols"
+           ,"t-MediaList--3cols"
+          ]
+        }
+      }
+     ,{
+        "id":"66971372863962773946"
+       ,"Identification":{
+          "Name":"4 Column Grid"
+         ,"Identifier":"4_COLUMN_GRID"
+         ,"Group":"Layout (66971358022765773939)"
+         ,"Sequence":30
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-MediaList--cols"
+           ,"t-MediaList--4cols"
+          ]
+        }
+      }
+     ,{
+        "id":"66971373052778773946"
+       ,"Identification":{
+          "Name":"5 Column Grid"
+         ,"Identifier":"5_COLUMN_GRID"
+         ,"Group":"Layout (66971358022765773939)"
+         ,"Sequence":40
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-MediaList--cols"
+           ,"t-MediaList--5cols"
+          ]
+        }
+      }
+     ,{
+        "id":"66971373226007773946"
+       ,"Identification":{
+          "Name":"Apply Theme Colors"
+         ,"Identifier":"APPLY_THEME_COLORS"
+         ,"Sequence":40
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "u-colors"
+          ]
+        }
+      }
+     ,{
+        "id":"66971373467939773946"
+       ,"Identification":{
+          "Name":"Rounded Corners"
+         ,"Identifier":"ICONS_ROUNDED"
+         ,"Group":"Icon Shape (66971365884864773943)"
+         ,"Sequence":10
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-MediaList--iconsRounded"
+          ]
+        }
+       ,"Help":{
+          "Help Text":"The icons are displayed within a square with rounded corners."
+        }
+      }
+     ,{
+        "id":"66971373611242773946"
+       ,"Identification":{
+          "Name":"Square"
+         ,"Identifier":"ICONS_SQUARE"
+         ,"Group":"Icon Shape (66971365884864773943)"
+         ,"Sequence":20
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-MediaList--iconsSquare"
+          ]
+        }
+       ,"Help":{
+          "Help Text":"The icons are displayed within a square shape."
+        }
+      }
+     ,{
+        "id":"66971374058983773946"
+       ,"Identification":{
+          "Name":"Large"
+         ,"Identifier":"LARGE"
+         ,"Group":"Size (66971373817421773946)"
+         ,"Sequence":20
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-MediaList--large"
+           ,"force-fa-lg"
+          ]
+        }
+       ,"Help":{
+          "Help Text":"Increases the size of the text and icons in the list."
+        }
+      }
+     ,{
+        "id":"66971374295162773946"
+       ,"Identification":{
+          "Name":"Show Badges"
+         ,"Identifier":"SHOW_BADGES"
+         ,"Sequence":30
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-MediaList--showBadges"
+          ]
+        }
+      }
+     ,{
+        "id":"66971374459674773947"
+       ,"Identification":{
+          "Name":"Show Description"
+         ,"Identifier":"SHOW_DESCRIPTION"
+         ,"Sequence":20
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-MediaList--showDesc"
+          ]
+        }
+      }
+     ,{
+        "id":"66971374661611773947"
+       ,"Identification":{
+          "Name":"Show Icons"
+         ,"Identifier":"SHOW_ICONS"
+         ,"Sequence":10
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-MediaList--showIcons"
+          ]
+        }
+      }
+     ,{
+        "id":"66971374852648773947"
+       ,"Identification":{
+          "Name":"Span Horizontal"
+         ,"Identifier":"SPAN_HORIZONTAL"
+         ,"Group":"Layout (66971358022765773939)"
+         ,"Sequence":50
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-MediaList--horizontal"
+          ]
+        }
+      }
+     ,{
+        "id":"66971375028080773947"
+       ,"Identification":{
+          "Name":"Stack"
+         ,"Identifier":"STACK"
+         ,"Group":"Layout (66971358022765773939)"
+         ,"Sequence":5
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-MediaList--stack"
+          ]
+        }
+      }
+    ]
+  }
+ ,{
+    "id":"66971375105729773947"
+   ,"Identification":{
+      "Name":"Search Results"
+     ,"Identifier":"SEARCH_RESULTS"
+     ,"Class":"Borderless"
+    }
+   ,"Subscription":{
+      "Master":{
+        "Referenced Id":"4070913431524059316"
+      }
+    }
+   ,"Advanced":{
+      "Translatable":false
+    }
+   ,"Attributes":{
+      "Type":"Named Column (row template)"
+    }
+   ,"Report Template":{
+      "Top":"\u003Cdiv class=\"t-SearchResults #COMPONENT_CSS_CLASSES#\" #REPORT_ATTRIBUTES# id=\"#REGION_STATIC_ID#_report\" data-region-id=\"#REGION_STATIC_ID#\"\u003E\n\u003Cul class=\"t-SearchResults-list\"\u003E"
+     ,"Bottom":"\u003C\/ul\u003E\n\u003Ctable class=\"t-Report-pagination\" role=\"presentation\"\u003E#PAGINATION#\u003C\/table\u003E\n\u003C\/div\u003E"
+    }
+   ,"Row Template 1":{
+      "Template":"  \u003Cli class=\"t-SearchResults-item\"\u003E\n    \u003Ch3 class=\"t-SearchResults-title\"\u003E\u003Ca href=\"#SEARCH_LINK#\"\u003E#SEARCH_TITLE#\u003C\/a\u003E\u003C\/h3\u003E\n    \u003Cdiv class=\"t-SearchResults-info\"\u003E\n      \u003Cp class=\"t-SearchResults-desc\"\u003E#SEARCH_DESC#\u003C\/p\u003E\n      \u003Cspan class=\"t-SearchResults-misc\"\u003E#LABEL_01#: #VALUE_01#\u003C\/span\u003E\n    \u003C\/div\u003E\n  \u003C\/li\u003E"
+     ,"Condition":"Use Based on PL\/SQL Expression"
+     ,"PL\/SQL Expression":":LABEL_02 is null"
+    }
+   ,"Row Template 2":{
+      "Template":"  \u003Cli class=\"t-SearchResults-item\"\u003E\n    \u003Ch3 class=\"t-SearchResults-title\"\u003E\u003Ca href=\"#SEARCH_LINK#\"\u003E#SEARCH_TITLE#\u003C\/a\u003E\u003C\/h3\u003E\n    \u003Cdiv class=\"t-SearchResults-info\"\u003E\n      \u003Cp class=\"t-SearchResults-desc\"\u003E#SEARCH_DESC#\u003C\/p\u003E\n      \u003Cspan class=\"t-SearchResults-misc\"\u003E#LABEL_01#: #VALUE_01#\u003C\/span\u003E\n      \u003Cspan class=\"t-SearchResults-misc\"\u003E#LABEL_02#: #VALUE_02#\u003C\/span\u003E\n    \u003C\/div\u003E\n  \u003C\/li\u003E"
+     ,"Condition":"Use Based on PL\/SQL Expression"
+     ,"PL\/SQL Expression":":LABEL_03 is null"
+    }
+   ,"Row Template 3":{
+      "Template":"  \u003Cli class=\"t-SearchResults-item\"\u003E\n    \u003Ch3 class=\"t-SearchResults-title\"\u003E\u003Ca href=\"#SEARCH_LINK#\"\u003E#SEARCH_TITLE#\u003C\/a\u003E\u003C\/h3\u003E\n    \u003Cdiv class=\"t-SearchResults-info\"\u003E\n      \u003Cp class=\"t-SearchResults-desc\"\u003E#SEARCH_DESC#\u003C\/p\u003E\n      \u003Cspan class=\"t-SearchResults-misc\"\u003E#LABEL_01#: #VALUE_01#\u003C\/span\u003E\n      \u003Cspan class=\"t-SearchResults-misc\"\u003E#LABEL_02#: #VALUE_02#\u003C\/span\u003E\n      \u003Cspan class=\"t-SearchResults-misc\"\u003E#LABEL_03#: #VALUE_03#\u003C\/span\u003E\n    \u003C\/div\u003E\n  \u003C\/li\u003E"
+     ,"Condition":"Use Based on PL\/SQL Expression"
+     ,"PL\/SQL Expression":":LABEL_04 is null"
+    }
+   ,"Row Template 4":{
+      "Template":"  \u003Cli class=\"t-SearchResults-item\"\u003E\n    \u003Ch3 class=\"t-SearchResults-title\"\u003E\u003Ca href=\"#SEARCH_LINK#\"\u003E#SEARCH_TITLE#\u003C\/a\u003E\u003C\/h3\u003E\n    \u003Cdiv class=\"t-SearchResults-info\"\u003E\n      \u003Cp class=\"t-SearchResults-desc\"\u003E#SEARCH_DESC#\u003C\/p\u003E\n      \u003Cspan class=\"t-SearchResults-misc\"\u003E#LABEL_01#: #VALUE_01#\u003C\/span\u003E\n      \u003Cspan class=\"t-SearchResults-misc\"\u003E#LABEL_02#: #VALUE_02#\u003C\/span\u003E\n      \u003Cspan class=\"t-SearchResults-misc\"\u003E#LABEL_03#: #VALUE_03#\u003C\/span\u003E\n      \u003Cspan class=\"t-SearchResults-misc\"\u003E#LABEL_04#: #VALUE_04#\u003C\/span\u003E\n    \u003C\/div\u003E\n  \u003C\/li\u003E"
+     ,"Condition":"Use Based on PL\/SQL Expression"
+    }
+   ,"Pagination Subtemplates":{
+      "Pagination":"\u003Cspan class=\"t-Report-paginationText\"\u003E#TEXT#\u003C\/span\u003E"
+     ,"Next Page":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--next\"\u003E\n  #PAGINATION_NEXT#\u003Cspan class=\"a-Icon icon-right-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E\n\u003C\/a\u003E"
+     ,"Previous Page":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--prev\"\u003E\n  \u003Cspan class=\"a-Icon icon-left-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E#PAGINATION_PREVIOUS#\n\u003C\/a\u003E"
+     ,"Next Set":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--next\"\u003E\n  #PAGINATION_NEXT_SET#\u003Cspan class=\"a-Icon icon-right-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E\n\u003C\/a\u003E"
+     ,"Previous Set":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--prev\"\u003E\n  \u003Cspan class=\"a-Icon icon-left-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E#PAGINATION_PREVIOUS_SET#\n\u003C\/a\u003E"
+    }
+   ,"Comments":{
+      "Comments":" (SELECT link_text, link_target, detail1, detail2, last_modified)"
+    }
+  }
+ ,{
+    "id":"66971375327380773947"
+   ,"Identification":{
+      "Name":"Standard"
+     ,"Identifier":"STANDARD"
+     ,"Class":"Standard"
+    }
+   ,"Subscription":{
+      "Master":{
+        "Referenced Id":"2537207537838287671"
+      }
+    }
+   ,"Advanced":{
+      "Translatable":false
+    }
+   ,"Template Options":{
+      "Preset":[
+        "t-Report--altRowsDefault"
+       ,"t-Report--rowHighlight"
+      ]
+    }
+   ,"Attributes":{
+      "Type":"Generic Columns (column template)"
+    }
+   ,"Report Template":{
+      "Top":"\u003Cdiv class=\"t-Report #COMPONENT_CSS_CLASSES#\" id=\"report_#REGION_STATIC_ID#\" #REPORT_ATTRIBUTES# data-region-id=\"#REGION_STATIC_ID#\"\u003E\n  \u003Cdiv class=\"t-Report-wrap\"\u003E\n    \u003Ctable class=\"t-Report-pagination\" role=\"presentation\"\u003E#TOP_PAGINATION#\u003C\/table\u003E\n    \u003Cdiv class=\"t-Report-tableWrap\"\u003E\n    \u003Ctable class=\"t-Report-report\" id=\"report_table_#REGION_STATIC_ID#\" aria-label=\"#REGION_TITLE#\"\u003E"
+     ,"Bottom":"      \u003C\/tbody\u003E\n    \u003C\/table\u003E\n    \u003C\/div\u003E\n    \u003Cdiv class=\"t-Report-links\"\u003E#EXTERNAL_LINK##CSV_LINK#\u003C\/div\u003E\n    \u003Ctable class=\"t-Report-pagination t-Report-pagination--bottom\" role=\"presentation\"\u003E#PAGINATION#\u003C\/table\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E"
+    }
+   ,"Column Templates":{
+      "Before Heading":"\u003Cthead\u003E"
+     ,"Heading":"\u003Cth class=\"t-Report-colHead\" #ARIA_SORT# #ALIGNMENT# id=\"#COLUMN_HEADER_NAME#\" #COLUMN_WIDTH#\u003E#COLUMN_HEADER#\u003C\/th\u003E"
+     ,"After Heading":"\u003C\/thead\u003E\n\u003Ctbody\u003E"
+     ,"Before Each Row":"\u003Ctr\u003E"
+    }
+   ,"Column Template 1":{
+      "Template":"\u003Ctd class=\"t-Report-cell\" #ALIGNMENT# #ACCESSIBLE_HEADERS#\u003E#COLUMN_VALUE#\u003C\/td\u003E"
+     ,"Condition":"0"
+    }
+   ,"Row Templates":{
+      "After Each Row":"\u003C\/tr\u003E"
+    }
+   ,"Pagination Subtemplates":{
+      "Pagination":"\u003Cspan class=\"t-Report-paginationText\"\u003E#TEXT#\u003C\/span\u003E"
+     ,"Next Page":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--next\"\u003E\n  #PAGINATION_NEXT#\u003Cspan class=\"a-Icon icon-right-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E\n\u003C\/a\u003E"
+     ,"Previous Page":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--prev\"\u003E\n  \u003Cspan class=\"a-Icon icon-left-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E#PAGINATION_PREVIOUS#\n\u003C\/a\u003E"
+     ,"Next Set":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--next\"\u003E\n  #PAGINATION_NEXT_SET#\u003Cspan class=\"a-Icon icon-right-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E\n\u003C\/a\u003E"
+     ,"Previous Set":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--prev\"\u003E\n  \u003Cspan class=\"a-Icon icon-left-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E#PAGINATION_PREVIOUS_SET#\n\u003C\/a\u003E"
+    }
+   ,"Template Options":[
+      {
+        "id":"66971375867220773947"
+       ,"Identification":{
+          "Name":"Disable"
+         ,"Identifier":"ALTROWCOLORSDISABLE"
+         ,"Group":"Alternating Rows (66971375641424773947)"
+         ,"Sequence":20
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Report--staticRowColors"
+          ]
+        }
+      }
+     ,{
+        "id":"66971376055780773947"
+       ,"Identification":{
+          "Name":"Enable"
+         ,"Identifier":"ALTROWCOLORSENABLE"
+         ,"Group":"Alternating Rows (66971375641424773947)"
+         ,"Sequence":10
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Report--altRowsDefault"
+          ]
+        }
+      }
+     ,{
+        "id":"66971376480855773947"
+       ,"Identification":{
+          "Name":"Enable"
+         ,"Identifier":"ENABLE"
+         ,"Group":"Row Highlighting (66971376206533773947)"
+         ,"Sequence":10
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Report--rowHighlight"
+          ]
+        }
+       ,"Help":{
+          "Help Text":"Enable row highlighting on mouse over"
+        }
+      }
+     ,{
+        "id":"66971376855343773948"
+       ,"Identification":{
+          "Name":"Horizontal Only"
+         ,"Identifier":"HORIZONTALBORDERS"
+         ,"Group":"Report Border (66971376640402773948)"
+         ,"Sequence":20
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Report--horizontalBorders"
+          ]
+        }
+      }
+     ,{
+        "id":"66971377054893773948"
+       ,"Identification":{
+          "Name":"No Borders"
+         ,"Identifier":"REMOVEALLBORDERS"
+         ,"Group":"Report Border (66971376640402773948)"
+         ,"Sequence":30
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Report--noBorders"
+          ]
+        }
+      }
+     ,{
+        "id":"66971377268684773948"
+       ,"Identification":{
+          "Name":"No Outer Borders"
+         ,"Identifier":"REMOVEOUTERBORDERS"
+         ,"Group":"Report Border (66971376640402773948)"
+         ,"Sequence":40
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Report--inline"
+          ]
+        }
+      }
+     ,{
+        "id":"66971377490986773948"
+       ,"Identification":{
+          "Name":"Disable"
+         ,"Identifier":"ROWHIGHLIGHTDISABLE"
+         ,"Group":"Row Highlighting (66971376206533773947)"
+         ,"Sequence":20
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Report--rowHighlightOff"
+          ]
+        }
+       ,"Help":{
+          "Help Text":"Disable row highlighting on mouse over"
+        }
+      }
+     ,{
+        "id":"66971377625294773948"
+       ,"Identification":{
+          "Name":"Stretch Report"
+         ,"Identifier":"STRETCHREPORT"
+         ,"Sequence":10
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Report--stretch"
+          ]
+        }
+      }
+     ,{
+        "id":"66971377814723773948"
+       ,"Identification":{
+          "Name":"Vertical Only"
+         ,"Identifier":"VERTICALBORDERS"
+         ,"Group":"Report Border (66971376640402773948)"
+         ,"Sequence":20
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Report--verticalBorders"
+          ]
+        }
+      }
+    ]
+  }
+ ,{
+    "id":"66971377984152773948"
+   ,"Identification":{
+      "Name":"Timeline"
+     ,"Identifier":"TIMELINE"
+     ,"Class":"Custom 1"
+    }
+   ,"Subscription":{
+      "Master":{
+        "Referenced Id":"1513373588340069864"
+      }
+    }
+   ,"Advanced":{
+      "Translatable":false
+    }
+   ,"Attributes":{
+      "Type":"Named Column (row template)"
+    }
+   ,"Report Template":{
+      "Top":"\u003Cul class=\"t-Timeline #COMPONENT_CSS_CLASSES#\" #REPORT_ATTRIBUTES# id=\"#REGION_STATIC_ID#_timeline\" data-region-id=\"#REGION_STATIC_ID#\"\u003E\n"
+     ,"Bottom":"\u003C\/ul\u003E\n\u003Ctable class=\"t-Report-pagination\" role=\"presentation\"\u003E#PAGINATION#\u003C\/table\u003E"
+    }
+   ,"Row Template 1":{
+      "Template":"\u003Cli class=\"t-Timeline-item #EVENT_MODIFIERS#\" #EVENT_ATTRIBUTES#\u003E\n  \u003Cdiv class=\"t-Timeline-wrap\"\u003E\n    \u003Cdiv class=\"t-Timeline-user\"\u003E\n      \u003Cdiv class=\"t-Timeline-avatar #USER_COLOR#\" role=\"presentation\"\u003E\n        #USER_AVATAR#\n      \u003C\/div\u003E\n      \u003Cdiv class=\"t-Timeline-userinfo\"\u003E\n        \u003Cspan class=\"t-Timeline-username\"\u003E#USER_NAME#\u003C\/span\u003E\n        \u003Cspan class=\"t-Timeline-date\"\u003E#EVENT_DATE#\u003C\/span\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n    \u003Cdiv class=\"t-Timeline-content\"\u003E\n      \u003Cdiv class=\"t-Timeline-typeWrap\"\u003E\n        \u003Cdiv class=\"t-Timeline-type #EVENT_STATUS#\"\u003E\n          \u003Cspan class=\"t-Icon #EVENT_ICON#\"\u003E\u003C\/span\u003E\n          \u003Cspan class=\"t-Timeline-typename\"\u003E#EVENT_TYPE#\u003C\/span\u003E\n        \u003C\/div\u003E\n      \u003C\/div\u003E\n      \u003Cdiv class=\"t-Timeline-body\"\u003E\n        \u003Ch3 class=\"t-Timeline-title\"\u003E#EVENT_TITLE#\u003C\/h3\u003E\n        \u003Cp class=\"t-Timeline-desc\"\u003E#EVENT_DESC#\u003C\/p\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/li\u003E"
+     ,"Condition":"Use Based on PL\/SQL Expression"
+     ,"PL\/SQL Expression":":EVENT_LINK is null"
+    }
+   ,"Row Template 2":{
+      "Template":"\u003Cli class=\"t-Timeline-item #EVENT_MODIFIERS#\" #EVENT_ATTRIBUTES#\u003E\n  \u003Ca href=\"#EVENT_LINK#\" class=\"t-Timeline-wrap\"\u003E\n    \u003Cdiv class=\"t-Timeline-user\"\u003E\n      \u003Cdiv class=\"t-Timeline-avatar #USER_COLOR#\" role=\"presentation\"\u003E\n        #USER_AVATAR#\n      \u003C\/div\u003E\n      \u003Cdiv class=\"t-Timeline-userinfo\"\u003E\n        \u003Cspan class=\"t-Timeline-username\"\u003E#USER_NAME#\u003C\/span\u003E\n        \u003Cspan class=\"t-Timeline-date\"\u003E#EVENT_DATE#\u003C\/span\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n    \u003Cdiv class=\"t-Timeline-content\"\u003E\n      \u003Cdiv class=\"t-Timeline-typeWrap\"\u003E\n        \u003Cdiv class=\"t-Timeline-type #EVENT_STATUS#\"\u003E\n          \u003Cspan class=\"t-Icon #EVENT_ICON#\"\u003E\u003C\/span\u003E\n          \u003Cspan class=\"t-Timeline-typename\"\u003E#EVENT_TYPE#\u003C\/span\u003E\n        \u003C\/div\u003E\n      \u003C\/div\u003E\n      \u003Cdiv class=\"t-Timeline-body\"\u003E\n        \u003Ch3 class=\"t-Timeline-title\"\u003E#EVENT_TITLE#\u003C\/h3\u003E\n        \u003Cp class=\"t-Timeline-desc\"\u003E#EVENT_DESC#\u003C\/p\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n  \u003C\/a\u003E\n\u003C\/li\u003E"
+     ,"Condition":"0"
+    }
+   ,"Pagination Subtemplates":{
+      "Pagination":"\u003Cspan class=\"t-Report-paginationText\"\u003E#TEXT#\u003C\/span\u003E"
+     ,"Next Page":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--next\"\u003E\n  #PAGINATION_NEXT#\u003Cspan class=\"a-Icon icon-right-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E\n\u003C\/a\u003E"
+     ,"Previous Page":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--prev\"\u003E\n  \u003Cspan class=\"a-Icon icon-left-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E#PAGINATION_PREVIOUS#\n\u003C\/a\u003E"
+     ,"Next Set":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--next\"\u003E\n  #PAGINATION_NEXT_SET#\u003Cspan class=\"a-Icon icon-right-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E\n\u003C\/a\u003E"
+     ,"Previous Set":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--prev\"\u003E\n  \u003Cspan class=\"a-Icon icon-left-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E#PAGINATION_PREVIOUS_SET#\n\u003C\/a\u003E"
+    }
+   ,"Template Options":[
+      {
+        "id":"66971378250442773948"
+       ,"Identification":{
+          "Name":"Compact"
+         ,"Identifier":"COMPACT"
+         ,"Group":"Style (66971360001278773940)"
+         ,"Sequence":1
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-Timeline--compact"
+          ]
+        }
+       ,"Help":{
+          "Help Text":"Displays a compact version of timeline with smaller text and fewer columns."
+        }
+      }
+    ]
+  }
+ ,{
+    "id":"66971378322904773948"
+   ,"Identification":{
+      "Name":"Value Attribute Pairs - Column"
+     ,"Identifier":"VALUE_ATTRIBUTE_PAIRS_COLUMN"
+     ,"Class":"Value Attribute Pairs"
+    }
+   ,"Subscription":{
+      "Master":{
+        "Referenced Id":"2099068636272681754"
+      }
+    }
+   ,"Advanced":{
+      "Translatable":false
+    }
+   ,"Template Options":{
+      "Preset":[
+        "t-AVPList--leftAligned"
+      ]
+    }
+   ,"Attributes":{
+      "Type":"Generic Columns (column template)"
+    }
+   ,"Report Template":{
+      "Top":"\u003Cdl class=\"t-AVPList #COMPONENT_CSS_CLASSES#\" #REPORT_ATTRIBUTES# data-region-id=\"#REGION_STATIC_ID#\"\u003E"
+     ,"Bottom":"\u003C\/dl\u003E\n\u003Ctable class=\"t-Report-pagination\" role=\"presentation\"\u003E#PAGINATION#\u003C\/table\u003E"
+    }
+   ,"Column Template 1":{
+      "Template":"\u003Cdt class=\"t-AVPList-label\"\u003E\n  #COLUMN_HEADER#\n\u003C\/dt\u003E\n\u003Cdd class=\"t-AVPList-value\"\u003E\n  #COLUMN_VALUE#\n\u003C\/dd\u003E"
+     ,"Condition":"0"
+    }
+   ,"Pagination Subtemplates":{
+      "Pagination":"\u003Cspan class=\"t-Report-paginationText\"\u003E#TEXT#\u003C\/span\u003E"
+     ,"Next Page":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--next\"\u003E\n  #PAGINATION_NEXT#\u003Cspan class=\"a-Icon icon-right-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E\n\u003C\/a\u003E"
+     ,"Previous Page":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--prev\"\u003E\n  \u003Cspan class=\"a-Icon icon-left-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E#PAGINATION_PREVIOUS#\n\u003C\/a\u003E"
+     ,"Next Set":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--next\"\u003E\n  #PAGINATION_NEXT_SET#\u003Cspan class=\"a-Icon icon-right-arrow\"\u003E\u003C\/span\u003E\n\u003C\/a\u003E"
+     ,"Previous Set":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--prev\"\u003E\n  \u003Cspan class=\"a-Icon icon-left-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E#PAGINATION_PREVIOUS_SET#\n\u003C\/a\u003E"
+    }
+   ,"Template Options":[
+      {
+        "id":"66971378844998773949"
+       ,"Identification":{
+          "Name":"Fixed - Large"
+         ,"Identifier":"FIXED_LARGE"
+         ,"Group":"Label Width (66971378619119773949)"
+         ,"Sequence":30
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-AVPList--fixedLabelLarge"
+          ]
+        }
+      }
+     ,{
+        "id":"66971379067076773949"
+       ,"Identification":{
+          "Name":"Fixed - Medium"
+         ,"Identifier":"FIXED_MEDIUM"
+         ,"Group":"Label Width (66971378619119773949)"
+         ,"Sequence":20
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-AVPList--fixedLabelMedium"
+          ]
+        }
+      }
+     ,{
+        "id":"66971379243621773949"
+       ,"Identification":{
+          "Name":"Fixed - Small"
+         ,"Identifier":"FIXED_SMALL"
+         ,"Group":"Label Width (66971378619119773949)"
+         ,"Sequence":10
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-AVPList--fixedLabelSmall"
+          ]
+        }
+      }
+     ,{
+        "id":"66971379425133773949"
+       ,"Identification":{
+          "Name":"Left Aligned Details"
+         ,"Identifier":"LEFT_ALIGNED_DETAILS"
+         ,"Group":"Layout (66971358022765773939)"
+         ,"Sequence":10
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-AVPList--leftAligned"
+          ]
+        }
+      }
+     ,{
+        "id":"66971379617385773949"
+       ,"Identification":{
+          "Name":"Right Aligned Details"
+         ,"Identifier":"RIGHT_ALIGNED_DETAILS"
+         ,"Group":"Layout (66971358022765773939)"
+         ,"Sequence":20
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-AVPList--rightAligned"
+          ]
+        }
+      }
+     ,{
+        "id":"66971379885742773949"
+       ,"Identification":{
+          "Name":"Variable - Large"
+         ,"Identifier":"VARIABLE_LARGE"
+         ,"Group":"Label Width (66971378619119773949)"
+         ,"Sequence":60
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-AVPList--variableLabelLarge"
+          ]
+        }
+      }
+     ,{
+        "id":"66971380059684773949"
+       ,"Identification":{
+          "Name":"Variable - Medium"
+         ,"Identifier":"VARIABLE_MEDIUM"
+         ,"Group":"Label Width (66971378619119773949)"
+         ,"Sequence":50
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-AVPList--variableLabelMedium"
+          ]
+        }
+      }
+     ,{
+        "id":"66971380277691773949"
+       ,"Identification":{
+          "Name":"Variable - Small"
+         ,"Identifier":"VARIABLE_SMALL"
+         ,"Group":"Label Width (66971378619119773949)"
+         ,"Sequence":40
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-AVPList--variableLabelSmall"
+          ]
+        }
+      }
+    ]
+  }
+ ,{
+    "id":"66971380310764773949"
+   ,"Identification":{
+      "Name":"Value Attribute Pairs - Row"
+     ,"Identifier":"VALUE_ATTRIBUTE_PAIRS_ROW"
+     ,"Class":"Custom 1"
+    }
+   ,"Subscription":{
+      "Master":{
+        "Referenced Id":"2099068321678681753"
+      }
+    }
+   ,"Advanced":{
+      "Translatable":false
+    }
+   ,"Template Options":{
+      "Preset":[
+        "t-AVPList--leftAligned"
+      ]
+    }
+   ,"Attributes":{
+      "Type":"Named Column (row template)"
+    }
+   ,"Report Template":{
+      "Top":"\u003Cdl class=\"t-AVPList #COMPONENT_CSS_CLASSES#\" #REPORT_ATTRIBUTES# id=\"report_#REGION_STATIC_ID#\" data-region-id=\"#REGION_STATIC_ID#\"\u003E"
+     ,"Bottom":"\u003C\/dl\u003E\n\u003Ctable class=\"t-Report-pagination\" role=\"presentation\"\u003E#PAGINATION#\u003C\/table\u003E"
+    }
+   ,"Row Template 1":{
+      "Template":"\u003Cdt class=\"t-AVPList-label\"\u003E\n  #1#\n\u003C\/dt\u003E\n\u003Cdd class=\"t-AVPList-value\"\u003E\n  #2#\n\u003C\/dd\u003E"
+     ,"Condition":"0"
+    }
+   ,"Pagination Subtemplates":{
+      "Pagination":"\u003Cspan class=\"t-Report-paginationText\"\u003E#TEXT#\u003C\/span\u003E"
+     ,"Next Page":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--next\"\u003E\n  #PAGINATION_NEXT#\u003Cspan class=\"a-Icon icon-right-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E\n\u003C\/a\u003E"
+     ,"Previous Page":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--prev\"\u003E\n  \u003Cspan class=\"a-Icon icon-left-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E#PAGINATION_PREVIOUS#\n\u003C\/a\u003E"
+     ,"Next Set":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--next\"\u003E\n  #PAGINATION_NEXT_SET#\u003Cspan class=\"a-Icon icon-right-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E\n\u003C\/a\u003E"
+     ,"Previous Set":"\u003Ca href=\"#LINK#\" class=\"t-Button t-Button--small t-Button--noUI t-Report-paginationLink t-Report-paginationLink--prev\"\u003E\n  \u003Cspan class=\"a-Icon icon-left-arrow\" aria-hidden=\"true\"\u003E\u003C\/span\u003E#PAGINATION_PREVIOUS_SET#\n\u003C\/a\u003E"
+    }
+   ,"Template Options":[
+      {
+        "id":"66971380634626773949"
+       ,"Identification":{
+          "Name":"Fixed - Large"
+         ,"Identifier":"FIXED_LARGE"
+         ,"Group":"Label Width (66971378619119773949)"
+         ,"Sequence":30
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-AVPList--fixedLabelLarge"
+          ]
+        }
+      }
+     ,{
+        "id":"66971380849306773950"
+       ,"Identification":{
+          "Name":"Fixed - Medium"
+         ,"Identifier":"FIXED_MEDIUM"
+         ,"Group":"Label Width (66971378619119773949)"
+         ,"Sequence":20
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-AVPList--fixedLabelMedium"
+          ]
+        }
+      }
+     ,{
+        "id":"66971381061791773950"
+       ,"Identification":{
+          "Name":"Fixed - Small"
+         ,"Identifier":"FIXED_SMALL"
+         ,"Group":"Label Width (66971378619119773949)"
+         ,"Sequence":10
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-AVPList--fixedLabelSmall"
+          ]
+        }
+      }
+     ,{
+        "id":"66971381208068773950"
+       ,"Identification":{
+          "Name":"Left Aligned Details"
+         ,"Identifier":"LEFT_ALIGNED_DETAILS"
+         ,"Group":"Layout (66971358022765773939)"
+         ,"Sequence":10
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-AVPList--leftAligned"
+          ]
+        }
+      }
+     ,{
+        "id":"66971381459887773950"
+       ,"Identification":{
+          "Name":"Right Aligned Details"
+         ,"Identifier":"RIGHT_ALIGNED_DETAILS"
+         ,"Group":"Layout (66971358022765773939)"
+         ,"Sequence":20
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-AVPList--rightAligned"
+          ]
+        }
+      }
+     ,{
+        "id":"66971381637813773950"
+       ,"Identification":{
+          "Name":"Variable - Large"
+         ,"Identifier":"VARIABLE_LARGE"
+         ,"Group":"Label Width (66971378619119773949)"
+         ,"Sequence":60
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-AVPList--variableLabelLarge"
+          ]
+        }
+      }
+     ,{
+        "id":"66971381874374773950"
+       ,"Identification":{
+          "Name":"Variable - Medium"
+         ,"Identifier":"VARIABLE_MEDIUM"
+         ,"Group":"Label Width (66971378619119773949)"
+         ,"Sequence":50
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-AVPList--variableLabelMedium"
+          ]
+        }
+      }
+     ,{
+        "id":"66971382061183773950"
+       ,"Identification":{
+          "Name":"Variable - Small"
+         ,"Identifier":"VARIABLE_SMALL"
+         ,"Group":"Label Width (66971378619119773949)"
+         ,"Sequence":40
+        }
+       ,"Settings":{
+          "Advanced":false
+        }
+       ,"Appearance":{
+          "CSS Classes":[
+            "t-AVPList--variableLabelSmall"
+          ]
+        }
+      }
+    ]
+  }
+]

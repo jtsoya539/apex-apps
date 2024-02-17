@@ -1,0 +1,4906 @@
+[
+  {
+    "id":"66971412369249773966"
+   ,"Identification":{
+      "Name":"Avatar"
+     ,"Internal Name":"THEME_42$AVATAR"
+     ,"Theme":"Universal Theme (42)"
+     ,"Type":"Template Component"
+    }
+   ,"Advanced":{
+      "Quick Pick":false
+    }
+   ,"Subscription":{
+      "Master":{
+        "Referenced Id":"1564363394689414260"
+      }
+     ,"Subscribe Component Settings":true
+    }
+   ,"Templates":{
+      "Available as":[
+        "Single (Partial)"
+      ]
+     ,"Partial":"{if APEX$IS_LAZY_LOADING\/}\n  \u003Cspan class=\"t-Avatar is-placeholder{if ?SHAPE\/} #SHAPE!ATTR#{endif\/}{if ?SIZE\/} #SIZE!ATTR#{endif\/}{if ?CSS_CLASSES\/} #CSS_CLASSES!ATTR#{endif\/}\"\u003E\u003C\/span\u003E\n{else\/}\n  {if ?LINK\/}\u003Ca href=\"#LINK!ATTR#\" #LINK_ATTR!RAW#{else\/}\u003Cspan{endif\/} class=\"t-Avatar{if ?TYPE\/} t-Avatar--{if ?IMAGE\/}image{else\/}{if ?INITIALS\/}initials{else\/}icon{endif\/}{endif\/}{endif\/}{if ?SHAPE\/} #SHAPE!ATTR#{endif\/}{if ?SIZE\/} #SIZE!ATTR#{endif\/}{if ?ICON\/} #ICON!ATTR#{else\/} fa fa-user{endif\/}{if ?CSS_CLASSES\/} #CSS_CLASSES!ATTR#{endif\/} u-color\" {if !IMAGE\/}{if DESCRIPTION\/} role=\"img\" aria-label=\"#DESCRIPTION!ATTR#\" title=\"#DESCRIPTION!ATTR#\"{else\/} role=\"presentation\"{endif\/}{endif\/}\u003E{if IMAGE\/}\u003Cimg src=\"#IMAGE!ATTR#\" alt=\"#DESCRIPTION!ATTR#\"{if ?DESCRIPTION\/} title=\"#DESCRIPTION!ATTR#\"{endif\/} loading=\"lazy\" \/\u003E{else\/}{if ?INITIALS\/}#INITIALS!RAW#{endif\/}{endif\/}{if ?LINK\/}\u003C\/a\u003E{else\/}\u003C\/span\u003E{endif\/}\n{endif\/}"
+     ,"Translate Templates":false
+     ,"Default Escape Mode":"HTML"
+    }
+   ,"Callbacks":{
+      "API Interface":"Procedure"
+    }
+   ,"Custom Attributes":{
+      "Substitute Attribute Values":true
+    }
+   ,"Information":{
+      "Version":"1.0"
+     ,"Help Text":"Display an image, icon, or initials. Available as a partial template to display a single row."
+    }
+   ,"Custom Attributes":[
+      {
+        "id":"66971412626414773968"
+       ,"Identification":{
+          "Static ID":"TYPE"
+         ,"Attribute":1
+         ,"Name":"Type"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":10
+        }
+       ,"Settings":{
+          "Type":"Select List"
+         ,"Lov Type":"Static"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML"
+        }
+       ,"Default":{
+          "Value":"IMAGE"
+        }
+       ,"Help":{
+          "Help Text":"Select the type of content that will be displayed in the avatar."
+        }
+       ,"Examples":{
+          "Demo Value":"IMAGE"
+        }
+       ,"Entries":[
+          {
+            "id":"66971412910793773969"
+           ,"Entry":{
+              "Sequence":10
+             ,"Display":"Image"
+             ,"Return":"IMAGE"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971413355014773970"
+           ,"Entry":{
+              "Sequence":20
+             ,"Display":"Initials"
+             ,"Return":"INITIALS"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971413709405773970"
+           ,"Entry":{
+              "Sequence":30
+             ,"Display":"Icon"
+             ,"Return":"ICON"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+        ]
+      }
+     ,{
+        "id":"66971414116408773970"
+       ,"Identification":{
+          "Static ID":"IMAGE"
+         ,"Attribute":2
+         ,"Name":"Image"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":20
+        }
+       ,"Settings":{
+          "Type":"Media"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Type (66971412626414773968)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"IMAGE"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"\u003Cp\u003EUse the Media popup dialog to select a source for the avatar image.\u003C\/p\u003E\n\n\u003Cp\u003EAvailable options include:\n\u003Cul\u003E\n\u003Cli\u003EURL\u003C\/li\u003E\n\u003Cli\u003EBLOB Column\u003C\/li\u003E\n\u003Cli\u003EURL Column\u003C\/li\u003E\n\u003C\/ul\u003E\n\u003C\/p\u003E"
+        }
+       ,"Examples":{
+          "Demo Value":"#APEX_FILES#apex_ui\/img\/favicons\/app-artwork-catalog.png"
+        }
+      }
+     ,{
+        "id":"66971414424262773970"
+       ,"Identification":{
+          "Static ID":"DESCRIPTION"
+         ,"Attribute":3
+         ,"Name":"Description"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":55
+        }
+       ,"Settings":{
+          "Type":"Text"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Help":{
+          "Help Text":"Enter a short description of the image\/icon or select a source column from the quick pick options. This will be used as title \u0026 alt text for the avatar image\/icon."
+        }
+      }
+     ,{
+        "id":"66971414720063773971"
+       ,"Identification":{
+          "Static ID":"INITIALS"
+         ,"Attribute":4
+         ,"Name":"Initials"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":40
+        }
+       ,"Settings":{
+          "Type":"Session State Value"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Data Types":[
+            "Varchar2"
+          ]
+         ,"Escape Mode":"HTML"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Type (66971412626414773968)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"INITIALS"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Select the source column to be displayed within each avatar. Only varchar2 data types are supported."
+        }
+      }
+     ,{
+        "id":"66971415098523773973"
+       ,"Identification":{
+          "Static ID":"ICON"
+         ,"Attribute":5
+         ,"Name":"Icon"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":50
+        }
+       ,"Settings":{
+          "Type":"Icon"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Type (66971412626414773968)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"ICON"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Enter an icon class or use the Pick Icon dialog to select the icon you want to add to display in the avatar."
+        }
+      }
+     ,{
+        "id":"66971415367631773973"
+       ,"Identification":{
+          "Static ID":"SHAPE"
+         ,"Attribute":6
+         ,"Name":"Shape"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":60
+        }
+       ,"Settings":{
+          "Type":"Select List"
+         ,"Lov Type":"Static"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"LOV Null Text":"Default"
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Help":{
+          "Help Text":"Select the shape of the avatar. Default inherits the shape set by the containing template."
+        }
+       ,"Entries":[
+          {
+            "id":"66971415630868773974"
+           ,"Entry":{
+              "Sequence":10
+             ,"Display":"Rounded"
+             ,"Return":"t-Avatar--rounded"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed within a square with rounded corners."
+            }
+          }
+         ,{
+            "id":"66971416064841773974"
+           ,"Entry":{
+              "Sequence":20
+             ,"Display":"Circular"
+             ,"Return":"t-Avatar--circle"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed within a circular shape."
+            }
+          }
+         ,{
+            "id":"66971416484432773974"
+           ,"Entry":{
+              "Sequence":30
+             ,"Display":"Square"
+             ,"Return":"t-Avatar--square"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed within a square shape."
+            }
+          }
+         ,{
+            "id":"66971416844033773975"
+           ,"Entry":{
+              "Sequence":40
+             ,"Display":"No Shape"
+             ,"Return":"t-Avatar--noShape"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed inline without a containing shape."
+            }
+          }
+        ]
+      }
+     ,{
+        "id":"66971417211887773975"
+       ,"Identification":{
+          "Static ID":"SIZE"
+         ,"Attribute":7
+         ,"Name":"Size"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":70
+        }
+       ,"Settings":{
+          "Type":"Select List"
+         ,"Lov Type":"Static"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"LOV Null Text":"Default"
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Help":{
+          "Help Text":"Set the size of the avatar. The default inherits the sizing set by the containing template."
+        }
+       ,"Entries":[
+          {
+            "id":"66971417563498773975"
+           ,"Entry":{
+              "Sequence":10
+             ,"Display":"Extra Extra Small"
+             ,"Return":"t-Avatar--xxs"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971417921223773976"
+           ,"Entry":{
+              "Sequence":20
+             ,"Display":"Extra Small"
+             ,"Return":"t-Avatar--xs"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971418352750773976"
+           ,"Entry":{
+              "Sequence":30
+             ,"Display":"Small"
+             ,"Return":"t-Avatar--sm"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971418744258773976"
+           ,"Entry":{
+              "Sequence":40
+             ,"Display":"Medium"
+             ,"Return":"t-Avatar--md"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971419126010773977"
+           ,"Entry":{
+              "Sequence":50
+             ,"Display":"Large"
+             ,"Return":"t-Avatar--lg"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971419500049773977"
+           ,"Entry":{
+              "Sequence":60
+             ,"Display":"Extra Large"
+             ,"Return":"t-Avatar--xl"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971419999178773977"
+           ,"Entry":{
+              "Sequence":70
+             ,"Display":"Extra Extra Large"
+             ,"Return":"t-Avatar--xxl"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+        ]
+      }
+     ,{
+        "id":"66971420300886773978"
+       ,"Identification":{
+          "Static ID":"CSS_CLASSES"
+         ,"Attribute":8
+         ,"Name":"CSS Classes"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":80
+        }
+       ,"Settings":{
+          "Type":"Text"
+         ,"Common":false
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Help":{
+          "Help Text":"Enter classes to add to this component. You may add multiple classes by separating them with a space."
+        }
+      }
+    ]
+   ,"Action Positions":[
+      {
+        "id":"68771463169401887720"
+       ,"Identification":{
+          "Name":"Link"
+         ,"Static ID":"LINK"
+         ,"Sequence":10
+        }
+       ,"Advanced":{
+          "Quick Pick":true
+        }
+       ,"Settings":{
+          "Type":"Link"
+        }
+      }
+    ]
+  }
+ ,{
+    "id":"66971421484049773980"
+   ,"Identification":{
+      "Name":"Badge"
+     ,"Internal Name":"THEME_42$BADGE"
+     ,"Theme":"Universal Theme (42)"
+     ,"Type":"Template Component"
+    }
+   ,"Advanced":{
+      "Quick Pick":false
+    }
+   ,"Subscription":{
+      "Master":{
+        "Referenced Id":"1564377533892414278"
+      }
+     ,"Subscribe Component Settings":true
+    }
+   ,"Templates":{
+      "Available as":[
+        "Single (Partial)"
+       ,"Multiple (Report)"
+      ]
+     ,"Partial":"{if APEX$IS_LAZY_LOADING\/}\n  \u003Cspan class=\"t-Badge is-placeholder{if ?SIZE\/} #SIZE!ATTR#{endif\/}{if ?SHAPE\/} #SHAPE!ATTR#{endif\/}\"\u003E\u003C\/span\u003E\n{else\/}\n  {if ?LINK\/}\u003Ca href=\"#LINK!ATTR#\" #LINK_ATTR!RAW#{else\/}\u003Cspan{endif\/} class=\"t-Badge {if ?STATE\/}t-Badge--#STATE!ATTR#{endif\/} {if ?STYLE\/}#STYLE!ATTR#{endif\/} {if ?SIZE\/}#SIZE!ATTR#{endif\/} {if ?SHAPE\/}#SHAPE!ATTR#{endif\/}\" role=\"status\" aria-label=\"#LABEL!ATTR# #VALUE!ATTR#\" title=\"#LABEL!ATTR# #VALUE!ATTR#\"\u003E\n    {if ?ICON\/}\u003Cspan class=\"t-Badge-icon #ICON!ATTR#\" aria-hidden=\"true\"\u003E\u003C\/span\u003E{endif\/}\n    {if LABEL_DISPLAY\/}\u003Cspan class=\"t-Badge-label\"\u003E#LABEL!RAW#\u003C\/span\u003E{endif\/}\n    \u003Cspan class=\"t-Badge-value\"\u003E#VALUE!RAW#\u003C\/span\u003E\n  {if ?LINK\/}\u003C\/a\u003E{else\/}\u003C\/span\u003E{endif\/}\n{endif\/}\n"
+     ,"Report Body":"{if !APEX$HAS_MESSAGE\/}\n  \u003Cul class=\"t-Badges #APEX$COMPONENT_CSS_CLASSES#\"\u003E#APEX$ROWS#\u003C\/ul\u003E\n{endif\/}"
+     ,"Report Row":"\u003Cli class=\"t-Badges-item\" #APEX$ROW_IDENTIFICATION#\u003E#APEX$PARTIAL#\u003C\/li\u003E\n"
+     ,"Translate Templates":true
+     ,"Default Escape Mode":"HTML"
+     ,"Number of Lazy Loading Skeletons":1
+    }
+   ,"Callbacks":{
+      "API Interface":"Procedure"
+    }
+   ,"Custom Attributes":{
+      "Substitute Attribute Values":true
+    }
+   ,"Information":{
+      "Version":"1.0"
+     ,"Help Text":"Display content within a badge. Available for multiple report rows or a single row."
+    }
+   ,"Custom Attributes":[
+      {
+        "id":"66971421722569773982"
+       ,"Identification":{
+          "Static ID":"LABEL"
+         ,"Attribute":1
+         ,"Name":"Label"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":10
+        }
+       ,"Settings":{
+          "Type":"Text"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":true
+         ,"Escape Mode":"Strip HTML"
+        }
+       ,"Help":{
+          "Help Text":"Enter a value for the badge label or select a source column from the quick pick options."
+        }
+      }
+     ,{
+        "id":"66971422047477773982"
+       ,"Identification":{
+          "Static ID":"VALUE"
+         ,"Attribute":2
+         ,"Name":"Value"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":20
+        }
+       ,"Settings":{
+          "Type":"Session State Value"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":false
+         ,"Data Types":[
+            "Varchar2"
+           ,"Number"
+           ,"Date"
+           ,"Interval Year to Month"
+           ,"Interval Day to Second"
+          ]
+         ,"Escape Mode":"Strip HTML"
+        }
+       ,"Help":{
+          "Help Text":"Select a source column for the badge value."
+        }
+      }
+     ,{
+        "id":"66971422394442773982"
+       ,"Identification":{
+          "Static ID":"STATE"
+         ,"Attribute":3
+         ,"Name":"State"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":30
+        }
+       ,"Settings":{
+          "Type":"Session State Value"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Data Types":[
+            "Varchar2"
+          ]
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Help":{
+          "Help Text":"Select the source column for the state of the badge. Substitute column value with \"danger\", \"warning\", \"success\" or \"info\" for default styling."
+        }
+      }
+     ,{
+        "id":"66971422630470773983"
+       ,"Identification":{
+          "Static ID":"ICON"
+         ,"Attribute":4
+         ,"Name":"Icon"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":40
+        }
+       ,"Settings":{
+          "Type":"Icon"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Help":{
+          "Help Text":"Enter an icon class or use the Pick Icon dialog to select the icon you want to add to display in the badge."
+        }
+      }
+     ,{
+        "id":"66971422929640773984"
+       ,"Identification":{
+          "Static ID":"LABEL_DISPLAY"
+         ,"Attribute":5
+         ,"Name":"Display Label"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":50
+        }
+       ,"Settings":{
+          "Type":"Yes\/No"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Default":{
+          "Value":"N"
+        }
+       ,"Help":{
+          "Help Text":"Specify whether to display or hide the badge label. When set to Yes, the badge label will be displayed in addition to the badge value. When set to No, only the badge value will be displayed."
+        }
+      }
+     ,{
+        "id":"66971423213518773984"
+       ,"Identification":{
+          "Static ID":"STYLE"
+         ,"Attribute":6
+         ,"Name":"Style"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":60
+        }
+       ,"Settings":{
+          "Type":"Select List"
+         ,"Lov Type":"Static"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"LOV Null Text":"Default"
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Help":{
+          "Help Text":"Select the badge style. Default inherits the style set by the containing template."
+        }
+       ,"Entries":[
+          {
+            "id":"66971423513498773984"
+           ,"Entry":{
+              "Sequence":10
+             ,"Display":"Subtle"
+             ,"Return":"t-Badge--subtle"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971423941020773984"
+           ,"Entry":{
+              "Sequence":20
+             ,"Display":"Outline"
+             ,"Return":"t-Badge--outline"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+        ]
+      }
+     ,{
+        "id":"66971424359770773985"
+       ,"Identification":{
+          "Static ID":"SHAPE"
+         ,"Attribute":7
+         ,"Name":"Shape"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":70
+        }
+       ,"Settings":{
+          "Type":"Select List"
+         ,"Lov Type":"Static"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"LOV Null Text":"Default"
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Help":{
+          "Help Text":"Select the shape of the badge. Default inherits the shape set by the containing template."
+        }
+       ,"Entries":[
+          {
+            "id":"66971424661610773985"
+           ,"Entry":{
+              "Sequence":10
+             ,"Display":"Rounded"
+             ,"Return":"t-Badge--rounded"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed with rounded corners."
+            }
+          }
+         ,{
+            "id":"66971425001417773985"
+           ,"Entry":{
+              "Sequence":20
+             ,"Display":"Circular"
+             ,"Return":"t-Badge--circle"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed with circular edges."
+            }
+          }
+         ,{
+            "id":"66971425478177773986"
+           ,"Entry":{
+              "Sequence":30
+             ,"Display":"Square"
+             ,"Return":"t-Badge--square"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed with squared edges."
+            }
+          }
+        ]
+      }
+     ,{
+        "id":"66971425843213773986"
+       ,"Identification":{
+          "Static ID":"SIZE"
+         ,"Attribute":8
+         ,"Name":"Size"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":80
+        }
+       ,"Settings":{
+          "Type":"Select List"
+         ,"Lov Type":"Static"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"LOV Null Text":"Default"
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Help":{
+          "Help Text":"Set the size of the badge. The default inherits the sizing set by the containing template."
+        }
+       ,"Entries":[
+          {
+            "id":"66971426135080773986"
+           ,"Entry":{
+              "Sequence":10
+             ,"Display":"Small"
+             ,"Return":"t-Badge--sm"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971426535346773986"
+           ,"Entry":{
+              "Sequence":20
+             ,"Display":"Medium"
+             ,"Return":"t-Badge--md"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971426929450773987"
+           ,"Entry":{
+              "Sequence":30
+             ,"Display":"Large"
+             ,"Return":"t-Badge--lg"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+        ]
+      }
+    ]
+   ,"Action Positions":[
+      {
+        "id":"68482903746896876171"
+       ,"Identification":{
+          "Name":"Link"
+         ,"Static ID":"LINK"
+         ,"Sequence":10
+        }
+       ,"Advanced":{
+          "Quick Pick":false
+        }
+       ,"Settings":{
+          "Type":"Link"
+        }
+      }
+    ]
+  }
+ ,{
+    "id":"66971427891136773988"
+   ,"Identification":{
+      "Name":"Button"
+     ,"Internal Name":"THEME_42$BUTTON"
+     ,"Theme":"Universal Theme (42)"
+     ,"Type":"Template Component"
+    }
+   ,"Advanced":{
+      "Quick Pick":false
+    }
+   ,"Subscription":{
+      "Master":{
+        "Referenced Id":"1568467215199837453"
+      }
+     ,"Subscribe Component Settings":true
+    }
+   ,"Templates":{
+      "Partial":"{if MENU_ID\/}\u003Cbutton type=\"button\" data-menu=\"#MENU_ID!ATTR#\"{else\/}\u003Ca href=\"#LINK_URL!ATTR#\" #LINK_ATTR!RAW#{endif\/} class=\"t-Button{if IS_HOT\/} t-Button--hot{endif\/}{if IS_ICON_ONLY\/} t-Button--noLabel t-Button--icon{else\/}{if ICON_CLASSES\/} t-Button--iconLeft{endif\/}{endif\/} #CSS_CLASSES!ATTR#\" title=\"#LABEL!ATTR#\" {if IS_DISABLED\/} disabled{endif\/}\u003E\n  {if ?ICON_CLASSES\/}\u003Cspan class=\"t-Icon t-Icon--left #ICON_CLASSES!ATTR#\" aria-hidden=\"true\"\u003E\u003C\/span\u003E{endif\/}\u003Cspan class=\"t-Button-label\"\u003E#LABEL!RAW#\u003C\/span\u003E\n{if MENU_ID\/}\u003C\/button\u003E{else\/}\u003C\/a\u003E{endif\/}\n"
+     ,"Translate Templates":false
+     ,"Default Escape Mode":"HTML"
+    }
+   ,"Callbacks":{
+      "API Interface":"Function"
+    }
+   ,"Custom Attributes":{
+      "Substitute Attribute Values":true
+    }
+   ,"Custom Attributes":[
+      {
+        "id":"66971429071560773989"
+       ,"Identification":{
+          "Static ID":"LABEL"
+         ,"Attribute":1
+         ,"Name":"Label"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":10
+        }
+       ,"Settings":{
+          "Type":"Text"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"Raw"
+        }
+      }
+     ,{
+        "id":"66971429858346773989"
+       ,"Identification":{
+          "Static ID":"LINK_URL"
+         ,"Attribute":2
+         ,"Name":"Link URL"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":20
+        }
+       ,"Settings":{
+          "Type":"Link to Target Page\/URL"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+      }
+     ,{
+        "id":"66971430511088773989"
+       ,"Identification":{
+          "Static ID":"LINK_ATTR"
+         ,"Attribute":3
+         ,"Name":"Link Attribute"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":30
+        }
+       ,"Settings":{
+          "Type":"Text"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"Raw"
+        }
+      }
+     ,{
+        "id":"66971431482287773990"
+       ,"Identification":{
+          "Static ID":"ICON_CLASSES"
+         ,"Attribute":4
+         ,"Name":"Icon Classes"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":40
+        }
+       ,"Settings":{
+          "Type":"Icon"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+      }
+     ,{
+        "id":"66971432392711773990"
+       ,"Identification":{
+          "Static ID":"CSS_CLASSES"
+         ,"Attribute":5
+         ,"Name":"CSS Classes"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":50
+        }
+       ,"Settings":{
+          "Type":"Text"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+      }
+     ,{
+        "id":"66971432846320773990"
+       ,"Identification":{
+          "Static ID":"IS_DISABLED"
+         ,"Attribute":6
+         ,"Name":"Is Disabled"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":60
+        }
+       ,"Settings":{
+          "Type":"Yes\/No"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML"
+        }
+       ,"Default":{
+          "Value":"N"
+        }
+      }
+     ,{
+        "id":"66971433473046773991"
+       ,"Identification":{
+          "Static ID":"IS_HOT"
+         ,"Attribute":7
+         ,"Name":"Is Hot"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":70
+        }
+       ,"Settings":{
+          "Type":"Yes\/No"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML"
+        }
+       ,"Default":{
+          "Value":"N"
+        }
+      }
+     ,{
+        "id":"66971433835475773991"
+       ,"Identification":{
+          "Static ID":"IS_ICON_ONLY"
+         ,"Attribute":8
+         ,"Name":"Is Icon Only"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":80
+        }
+       ,"Settings":{
+          "Type":"Yes\/No"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML"
+        }
+       ,"Default":{
+          "Value":"N"
+        }
+      }
+    ]
+  }
+ ,{
+    "id":"66971434738732773991"
+   ,"Identification":{
+      "Name":"Comments"
+     ,"Internal Name":"THEME_42$COMMENTS"
+     ,"Theme":"Universal Theme (42)"
+     ,"Type":"Template Component"
+    }
+   ,"Advanced":{
+      "Quick Pick":true
+    }
+   ,"Subscription":{
+      "Master":{
+        "Referenced Id":"1564386865908414285"
+      }
+     ,"Subscribe Component Settings":true
+    }
+   ,"Templates":{
+      "Available as":[
+        "Single (Partial)"
+       ,"Multiple (Report)"
+      ]
+     ,"Partial":"{if APEX$IS_LAZY_LOADING\/}\n  \u003Cdiv class=\"t-Comments-item{if ?COMMENT_CLASS\/} #COMMENT_CLASS!ATTR#{endif\/}\"\u003E\n    {if DISPLAY_AVATAR%assigned\/}\n      \u003Cdiv class=\"t-Comments-icon\"\u003E\n        {with\/}\n          SIZE:=t-Avatar--xs\n          SHAPE:=#AVATAR_SHAPE#\n        {apply THEME$AVATAR\/}\n      \u003C\/div\u003E\n    {endif\/}\n    \u003Cdiv class=\"t-Comments-body\"\u003E\n      \u003Cdiv class=\"t-Comments-info\"\u003E\n        \u003Cspan class=\"t-Comments-user is-placeholder\"\u003E\u003C\/span\u003E\n      \u003C\/div\u003E\n      \u003Cdiv class=\"t-Comments-comment is-placeholder\"\u003E\u003C\/div\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n{else\/}\n  \u003Cdiv class=\"t-Comments-item{if ?COMMENT_CLASS\/} #COMMENT_CLASS!ATTR#{endif\/}\"\u003E\n    {if DISPLAY_AVATAR\/}\n      \u003Cdiv class=\"t-Comments-icon\"\u003E\n        {with\/}\n          TYPE:=#AVATAR_TYPE#\n          IMAGE:=#AVATAR_IMAGE#\n          DESCRIPTION:=#AVATAR_DESCRIPTION#\n          ICON:=#AVATAR_ICON#\n          INITIALS:=#AVATAR_INITIALS#\n          SIZE:=t-Avatar--xs\n          SHAPE:=#AVATAR_SHAPE#\n          CSS_CLASSES:=u-color\n          LINK:=#AVATAR_LINK#\n          LINK_ATTR:=#AVATAR_LINK_ATTR!RAW#\n        {apply THEME$AVATAR\/}\n      \u003C\/div\u003E\n    {endif\/}\n    \u003Cdiv class=\"t-Comments-body\"\u003E\n      \u003Cdiv class=\"t-Comments-info\"\u003E\n        \u003Cspan class=\"t-Comments-user\"\u003E{if USER_NAME_LINK\/}\u003Ca href=\"#USER_NAME_LINK!ATTR#\" #USER_NAME_LINK_ATTR!RAW#\u003E{endif\/}#USER_NAME!RAW#{if USER_NAME_LINK\/}\u003C\/a\u003E{endif\/}\u003C\/span\u003E\n        {if COMMENT_DATE\/}\u003Cspan class=\"t-Comments-date\"\u003E#COMMENT_DATE!RAW#\u003C\/span\u003E{endif\/}\n        {if ACTIONS\/}\u003Cspan class=\"t-Comments-actions\"\u003E#ACTIONS!RAW#\u003C\/span\u003E{endif\/}\n      \u003C\/div\u003E\n      \u003Cdiv class=\"t-Comments-comment\"\u003E\n        #COMMENT_TEXT!RAW#\n        {if ATTRIBUTES\/}\u003Cdiv class=\"t-Comments-attributes\"\u003E#ATTRIBUTES!RAW#\u003C\/div\u003E{endif\/}\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n{endif\/}"
+     ,"Report Body":"\u003Cul class=\"t-Comments{if ?STYLE\/} #STYLE!ATTR#{endif\/} {if APPLY_THEME_COLORS\/} u-colors{endif\/} #APEX$COMPONENT_CSS_CLASSES#\"\u003E#APEX$ROWS#\u003C\/ul\u003E\n"
+     ,"Report Row":"\u003Cli class=\"t-Comments-item\" #APEX$ROW_IDENTIFICATION#\u003E#APEX$PARTIAL#\u003C\/li\u003E\n"
+     ,"Translate Templates":false
+     ,"Default Escape Mode":"HTML"
+     ,"Number of Lazy Loading Skeletons":3
+    }
+   ,"Callbacks":{
+      "API Interface":"Function"
+    }
+   ,"Custom Attributes":{
+      "Substitute Attribute Values":true
+    }
+   ,"Information":{
+      "Help Text":"Display user comments and status updates. Supports avatars. Available for a single row or as a report with multiple rows."
+    }
+   ,"Attribute Groups":[
+      {
+        "id":"68771324049034805710"
+       ,"Identification":{
+          "Name":"Avatar"
+         ,"Sequence":20
+        }
+      }
+    ]
+   ,"Custom Attributes":[
+      {
+        "id":"66971439779963773994"
+       ,"Identification":{
+          "Static ID":"COMMENT_TEXT"
+         ,"Attribute":1
+         ,"Name":"Comment Text"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":10
+        }
+       ,"Settings":{
+          "Type":"Session State Value"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":false
+         ,"Data Types":[
+            "Varchar2"
+          ]
+         ,"Escape Mode":"HTML"
+        }
+       ,"Help":{
+          "Help Text":"Select a source column containing text for user comments."
+        }
+       ,"Examples":{
+          "Demo Value":"Praesent vel felis rutrum erat elementum viverra sit amet non odio. Cras vel auctor eros, in malesuada dolor. Nulla tellus magna, ornare consectetur purus id, volutpat egestas felis. Proin lobortis risus massa, nec faucibus arcu malesuada a. Nunc sed gravida urna. Fusce at ligula sed erat consequat pharetra."
+        }
+      }
+     ,{
+        "id":"66971440319634773995"
+       ,"Identification":{
+          "Static ID":"USER_NAME"
+         ,"Attribute":2
+         ,"Name":"User Name"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":20
+        }
+       ,"Settings":{
+          "Type":"Session State Value"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":false
+         ,"Data Types":[
+            "Varchar2"
+          ]
+         ,"Escape Mode":"HTML"
+        }
+       ,"Help":{
+          "Help Text":"Select a source column to be displayed as the user name associated with a comment."
+        }
+       ,"Examples":{
+          "Demo Value":"Joel"
+        }
+      }
+     ,{
+        "id":"66971441019067773995"
+       ,"Identification":{
+          "Static ID":"COMMENT_DATE"
+         ,"Attribute":3
+         ,"Name":"Date"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":30
+        }
+       ,"Settings":{
+          "Type":"Session State Value"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Data Types":[
+            "Varchar2"
+           ,"Date"
+          ]
+         ,"Escape Mode":"HTML"
+        }
+       ,"Help":{
+          "Help Text":"Select a source column containing a date, date range, or time."
+        }
+       ,"Examples":{
+          "Demo Value":"5 minutes ago"
+        }
+      }
+     ,{
+        "id":"66971441766438773995"
+       ,"Identification":{
+          "Static ID":"ATTRIBUTES"
+         ,"Attribute":4
+         ,"Name":"Attributes"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":40
+        }
+       ,"Settings":{
+          "Type":"Textarea"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":true
+         ,"Escape Mode":"HTML"
+        }
+       ,"Help":{
+          "Help Text":"Enter some text and\/or column substitution strings to be used as the comment attributes."
+        }
+      }
+     ,{
+        "id":"66971442276602773995"
+       ,"Identification":{
+          "Static ID":"AVATAR_TYPE"
+         ,"Attribute":5
+         ,"Name":"Type"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Avatar (68771324049034805710)"
+         ,"Sequence":50
+        }
+       ,"Settings":{
+          "Type":"Select List"
+         ,"Lov Type":"Static"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":false
+         ,"Escape Mode":"HTML"
+        }
+       ,"Default":{
+          "Value":"icon"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Avatar (66971451054950773999)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Select the type of content that will be displayed in the avatar."
+        }
+       ,"Examples":{
+          "Demo Value":"initials"
+        }
+       ,"Entries":[
+          {
+            "id":"66971442994686773996"
+           ,"Entry":{
+              "Sequence":10
+             ,"Display":"Image"
+             ,"Return":"image"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971443747339773996"
+           ,"Entry":{
+              "Sequence":20
+             ,"Display":"Initials"
+             ,"Return":"initials"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971444452578773996"
+           ,"Entry":{
+              "Sequence":30
+             ,"Display":"Icon"
+             ,"Return":"icon"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+        ]
+      }
+     ,{
+        "id":"66971445276578773997"
+       ,"Identification":{
+          "Static ID":"AVATAR_IMAGE"
+         ,"Attribute":6
+         ,"Name":"Image"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Avatar (68771324049034805710)"
+         ,"Sequence":60
+        }
+       ,"Settings":{
+          "Type":"Media"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Type (66971442276602773995)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"image"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"\u003Cp\u003EUse the Media popup dialog to select a source for the avatar image.\u003C\/p\u003E\n\n\u003Cp\u003EAvailable options include:\n\u003Cul\u003E\n\u003Cli\u003EURL\u003C\/li\u003E\n\u003Cli\u003EBLOB Column\u003C\/li\u003E\n\u003Cli\u003EURL Column\u003C\/li\u003E\n\u003C\/ul\u003E\n\u003C\/p\u003E"
+        }
+      }
+     ,{
+        "id":"66971445830353773997"
+       ,"Identification":{
+          "Static ID":"AVATAR_DESCRIPTION"
+         ,"Attribute":7
+         ,"Name":"Description"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Avatar (68771324049034805710)"
+         ,"Sequence":95
+        }
+       ,"Settings":{
+          "Type":"Text"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":true
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Avatar (66971451054950773999)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Enter a short description of the image\/icon or select a source column from the quick pick options. This will be used as title \u0026 alt text for the avatar image\/icon."
+        }
+      }
+     ,{
+        "id":"66971446413311773997"
+       ,"Identification":{
+          "Static ID":"AVATAR_INITIALS"
+         ,"Attribute":8
+         ,"Name":"Initials"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Avatar (68771324049034805710)"
+         ,"Sequence":80
+        }
+       ,"Settings":{
+          "Type":"Session State Value"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":false
+         ,"Data Types":[
+            "Varchar2"
+          ]
+         ,"Escape Mode":"Strip HTML"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Type (66971442276602773995)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"initials"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Select the source column to be displayed within each avatar. Only varchar2 data types are supported."
+        }
+       ,"Examples":{
+          "Demo Value":"JK"
+        }
+      }
+     ,{
+        "id":"66971446841794773997"
+       ,"Identification":{
+          "Static ID":"AVATAR_ICON"
+         ,"Attribute":9
+         ,"Name":"Icon"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Avatar (68771324049034805710)"
+         ,"Sequence":90
+        }
+       ,"Settings":{
+          "Type":"Icon"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Default":{
+          "Value":"fa-user"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Type (66971442276602773995)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"icon"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Enter an icon class or use the Pick Icon dialog to select the icon you want to add to display in the avatar."
+        }
+      }
+     ,{
+        "id":"66971447484913773998"
+       ,"Identification":{
+          "Static ID":"AVATAR_SHAPE"
+         ,"Attribute":10
+         ,"Name":"Shape"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Avatar (68771324049034805710)"
+         ,"Sequence":100
+        }
+       ,"Settings":{
+          "Type":"Select List"
+         ,"Lov Type":"Static"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Default":{
+          "Value":"t-Avatar--rounded"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Avatar (66971451054950773999)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Select the shape of the avatar. Default inherits the shape set by the containing template."
+        }
+       ,"Entries":[
+          {
+            "id":"66971448044404773998"
+           ,"Entry":{
+              "Sequence":10
+             ,"Display":"Rounded"
+             ,"Return":"t-Avatar--rounded"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed within a square with rounded corners."
+            }
+          }
+         ,{
+            "id":"66971448722792773998"
+           ,"Entry":{
+              "Sequence":20
+             ,"Display":"Circular"
+             ,"Return":"t-Avatar--circle"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed within a circular shape."
+            }
+          }
+         ,{
+            "id":"66971449574989773999"
+           ,"Entry":{
+              "Sequence":30
+             ,"Display":"Square"
+             ,"Return":"t-Avatar--square"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed within a square shape."
+            }
+          }
+         ,{
+            "id":"66971450387601773999"
+           ,"Entry":{
+              "Sequence":40
+             ,"Display":"No Shape"
+             ,"Return":"t-Avatar--noShape"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed inline without a containing shape."
+            }
+          }
+        ]
+      }
+     ,{
+        "id":"66971451054950773999"
+       ,"Identification":{
+          "Static ID":"DISPLAY_AVATAR"
+         ,"Attribute":11
+         ,"Name":"Display Avatar"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":110
+        }
+       ,"Settings":{
+          "Type":"Yes\/No"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Default":{
+          "Value":"Y"
+        }
+       ,"Help":{
+          "Help Text":"Specify whether to display or hide the avatar for each row. When set to Yes, an avatar will be displayed with the assigned image, icon, or initials. When set to No, no avatar will be displayed."
+        }
+       ,"Examples":{
+          "Demo Value":"Y"
+        }
+      }
+     ,{
+        "id":"66971451613201773999"
+       ,"Identification":{
+          "Static ID":"COMMENT_CLASS"
+         ,"Attribute":14
+         ,"Name":"Comment Class"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":45
+        }
+       ,"Settings":{
+          "Type":"Text"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Help":{
+          "Help Text":"Allows you to pass a class onto individual comments. Example using is-active will highlight the specific comment with a different shade."
+        }
+      }
+     ,{
+        "id":"66971452276135774000"
+       ,"Identification":{
+          "Static ID":"STYLE"
+         ,"Attribute":12
+         ,"Name":"Style"
+         ,"Scope":"Report"
+        }
+       ,"Layout":{
+          "Sequence":120
+        }
+       ,"Settings":{
+          "Type":"Select List"
+         ,"Lov Type":"Static"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Default":{
+          "Value":"t-Comments--basic"
+        }
+       ,"Help":{
+          "Help Text":"Set the style of the comments."
+        }
+       ,"Examples":{
+          "Demo Value":"t-Comments--chat"
+        }
+       ,"Entries":[
+          {
+            "id":"66971452802220774000"
+           ,"Entry":{
+              "Sequence":10
+             ,"Display":"Basic"
+             ,"Return":"t-Comments--basic"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971453719038774000"
+           ,"Entry":{
+              "Sequence":20
+             ,"Display":"Chat (Speech Bubbles)"
+             ,"Return":"t-Comments--chat"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+        ]
+      }
+     ,{
+        "id":"66971454445068774001"
+       ,"Identification":{
+          "Static ID":"APPLY_THEME_COLORS"
+         ,"Attribute":13
+         ,"Name":"Apply Theme Colors"
+         ,"Scope":"Report"
+        }
+       ,"Layout":{
+          "Sequence":130
+        }
+       ,"Settings":{
+          "Type":"Yes\/No"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Default":{
+          "Value":"Y"
+        }
+       ,"Help":{
+          "Help Text":"Specify whether to use the Universal Theme colors for avatar and badge row items. When set to Yes, the u-colors class will be applied to each row. When set to No, a default color will be used instead."
+        }
+      }
+    ]
+   ,"Action Positions":[
+      {
+        "id":"68771456124962899756"
+       ,"Identification":{
+          "Name":"Actions"
+         ,"Static ID":"ACTIONS"
+         ,"Sequence":10
+        }
+       ,"Advanced":{
+          "Quick Pick":false
+        }
+       ,"Settings":{
+          "Type":"Template"
+        }
+      }
+     ,{
+        "id":"68771511748632881635"
+       ,"Identification":{
+          "Name":"Avatar Link"
+         ,"Static ID":"AVATAR_LINK"
+         ,"Sequence":20
+        }
+       ,"Advanced":{
+          "Quick Pick":false
+        }
+       ,"Settings":{
+          "Type":"Link"
+        }
+      }
+     ,{
+        "id":"68771663966345752406"
+       ,"Identification":{
+          "Name":"User Name Link"
+         ,"Static ID":"USER_NAME_LINK"
+         ,"Sequence":30
+        }
+       ,"Advanced":{
+          "Quick Pick":false
+        }
+       ,"Settings":{
+          "Type":"Link"
+        }
+      }
+    ]
+   ,"Action Templates":[
+      {
+        "id":"68771456716467907213"
+       ,"Identification":{
+          "Name":"Link"
+         ,"Type":"Button"
+        }
+       ,"Template":{
+          "Action Template":"{if !IS_DISABLED\/}\u003Ca {if CSS_CLASSES\/}class=\"#CSS_CLASSES#\"{endif\/} href=\"#LINK_URL#\" #LINK_ATTR!RAW#\u003E#LABEL!RAW#\u003C\/a\u003E{endif\/}"
+        }
+       ,"Advanced":{
+          "Translatable":false
+        }
+      }
+    ]
+  }
+ ,{
+    "id":"66971459667049774004"
+   ,"Identification":{
+      "Name":"Content Row"
+     ,"Internal Name":"THEME_42$CONTENT_ROW"
+     ,"Theme":"Universal Theme (42)"
+     ,"Type":"Template Component"
+    }
+   ,"Advanced":{
+      "Quick Pick":true
+    }
+   ,"Subscription":{
+      "Master":{
+        "Referenced Id":"1568468153344837456"
+      }
+     ,"Subscribe Component Settings":true
+    }
+   ,"Templates":{
+      "Available as":[
+        "Single (Partial)"
+       ,"Multiple (Report)"
+      ]
+     ,"Partial":"{if APEX$IS_LAZY_LOADING\/}\n  \u003Cdiv class=\"t-ContentRow-wrap\" aria-hidden=\"true\"\u003E\n    {if ?SELECTION%assigned\/}\u003Cdiv class=\"t-ContentRow-selection is-placeholder\"\u003E\u003C\/div\u003E{endif\/}\n    {if DISPLAY_BADGE\/}\n      \u003Cdiv class=\"t-ContentRow-badge #BADGE_COL_WIDTH!ATTR# #BADGE_POS!ATTR# #BADGE_ALIGNMENT!ATTR#\"\u003E\n        {with\/}\n          LABEL:=\n          VALUE:=\n          SIZE:=#BADGE_SIZE#\n          SHAPE:=#BADGE_SHAPE#\n        {apply THEME$BADGE\/}\n      \u003C\/div\u003E\n    {endif\/}\n    {if DISPLAY_AVATAR\/}\n      \u003Cdiv class=\"t-ContentRow-avatar\"\u003E\n        {with\/}\n          SHAPE:=#AVATAR_SHAPE#\n          SIZE:=#AVATAR_SIZE#\n        {apply THEME$AVATAR\/}\n      \u003C\/div\u003E\n    {endif\/}\n    \u003Cdiv class=\"t-ContentRow-body\"\u003E\n      \u003Cdiv class=\"t-ContentRow-content\"\u003E\n        {if ?OVERLINE%assigned\/}\u003Cdiv class=\"t-ContentRow-overline is-placeholder\"\u003E\u003C\/div\u003E{endif\/}\n        {if ?TITLE%assigned\/}\u003Cdiv class=\"t-ContentRow-title is-placeholder\"\u003E\u003C\/div\u003E{endif\/}\n        {if ?DESCRIPTION%assigned\/}\u003Cdiv class=\"t-ContentRow-description is-placeholder\"\u003E\u003C\/div\u003E{endif\/}\n      \u003C\/div\u003E\n      {if ?MISC%assigned\/}\u003Cdiv class=\"t-ContentRow-misc is-placeholder\"\u003E\u003C\/div\u003E{endif\/}\n      {if ?PRIMARY_ACTIONS%assigned\/}\u003Cdiv class=\"t-ContentRow-actions is-placeholder\"\u003E\u003C\/div\u003E{endif\/}\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n{else\/}\n  {if ?FULL_ROW_LINK\/}\u003Ca class=\"t-ContentRow-fullLink\" href=\"#FULL_ROW_LINK!ATTR#\" #FULL_ROW_LINK_ATTR!RAW#\u003E\u003C\/a\u003E{endif\/}\n  \u003Cdiv class=\"t-ContentRow-wrap\"\u003E\n    {if ?SELECTION%assigned\/}\u003Cdiv class=\"t-ContentRow-selection\"\u003E#SELECTION!RAW#\u003C\/div\u003E{endif\/}\n    {if DISPLAY_BADGE\/}\n      \u003Cdiv class=\"t-ContentRow-badge #BADGE_COL_WIDTH!ATTR# #BADGE_POS!ATTR# #BADGE_ALIGNMENT!ATTR#\"\u003E\n        {with\/}\n          LABEL_DISPLAY:=#BADGE_LABEL_DISPLAY#\n          LABEL:=#BADGE_LABEL#\n          VALUE:=#BADGE_VALUE#\n          ICON:=#BADGE_ICON#\n          STATE:=#BADGE_STATE#\n          SIZE:=#BADGE_SIZE#\n          STYLE:=#BADGE_STYLE#\n          SHAPE:=#BADGE_SHAPE#\n          LINK:=#BADGE_LINK#\n          LINK_ATTR:=#BADGE_LINK_ATTR!RAW#\n        {apply THEME$BADGE\/}\n      \u003C\/div\u003E\n    {endif\/}\n    {if DISPLAY_AVATAR\/}\n      \u003Cdiv class=\"t-ContentRow-avatar\" aria-hidden=\"true\"\u003E\n        {with\/}\n          TYPE:=#AVATAR_TYPE#\n          IMAGE:=#AVATAR_IMAGE#\n          DESCRIPTION:=#AVATAR_DESCRIPTION#\n          INITIALS:=#AVATAR_INITIALS#\n          ICON:=#AVATAR_ICON#\n          SHAPE:=#AVATAR_SHAPE#\n          SIZE:=#AVATAR_SIZE#\n          LINK:=#AVATAR_LINK#\n          LINK_ATTR:=#AVATAR_LINK_ATTR!RAW#\n        {apply THEME$AVATAR\/}\n      \u003C\/div\u003E\n    {endif\/}\n    \u003Cdiv class=\"t-ContentRow-body\"\u003E\n      \u003Cdiv class=\"t-ContentRow-content\"\u003E\n        {if ?OVERLINE\/}\u003Cdiv class=\"t-ContentRow-overline\"\u003E#OVERLINE!RAW#\u003C\/div\u003E{endif\/}\n        {if ?TITLE\/}\u003Ch3 class=\"t-ContentRow-title\"\u003E{if ?TITLE_LINK\/}\u003Ca href=\"#TITLE_LINK!ATTR#\" #TITLE_LINK_ATTR!RAW#\u003E{endif\/}#TITLE!RAW#{if ?TITLE_LINK\/}\u003C\/a\u003E{endif\/}\u003C\/h3\u003E{endif\/}\n        {if ?DESCRIPTION\/}\u003Cdiv class=\"t-ContentRow-description\"\u003E#DESCRIPTION!RAW#\u003C\/div\u003E{endif\/}\n      \u003C\/div\u003E\n      {if ?MISC%assigned\/}\u003Cdiv class=\"t-ContentRow-misc\"\u003E#MISC!RAW#\u003C\/div\u003E{endif\/}\n      {if ?PRIMARY_ACTIONS\/}\u003Cdiv class=\"t-ContentRow-actions\"\u003E#PRIMARY_ACTIONS#\u003C\/div\u003E{endif\/}\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n{endif\/}\n"
+     ,"Report Body":"\u003Cul class=\"t-ContentRow{if ?STYLE\/} #STYLE!ATTR#{endif\/}{if REMOVE_PADDING\/} t-ContentRow--removePadding{endif\/}{if HIDE_BORDERS\/} t-ContentRow--hideBorders{endif\/}{if APPLY_THEME_COLORS\/} u-colors{endif\/} #APEX$COMPONENT_CSS_CLASSES#\"\u003E#APEX$ROWS#\u003C\/ul\u003E"
+     ,"Report Row":"\u003Cli class=\"t-ContentRow-item{if ?ITEM_CLASSES\/} #ITEM_CLASSES#{endif\/}\" #APEX$ROW_IDENTIFICATION#\u003E#APEX$PARTIAL#\u003C\/li\u003E"
+     ,"Translate Templates":false
+     ,"Default Escape Mode":"HTML"
+     ,"Number of Lazy Loading Skeletons":3
+    }
+   ,"Callbacks":{
+      "API Interface":"Function"
+    }
+   ,"Custom Attributes":{
+      "Substitute Attribute Values":true
+    }
+   ,"Information":{
+      "Help Text":"Display content in a formatted row with a title, description, and more. Supports avatars and badges. Available for a single row or as a report with multiple rows."
+    }
+   ,"Attribute Groups":[
+      {
+        "id":"68641810804720572190"
+       ,"Identification":{
+          "Name":"Appearance"
+         ,"Sequence":30
+        }
+      }
+     ,{
+        "id":"68898702868450845703"
+       ,"Identification":{
+          "Name":"Badge"
+         ,"Sequence":20
+        }
+      }
+     ,{
+        "id":"68898703423462845704"
+       ,"Identification":{
+          "Name":"Avatar"
+         ,"Sequence":10
+        }
+      }
+    ]
+   ,"Custom Attributes":[
+      {
+        "id":"66971467755703774010"
+       ,"Identification":{
+          "Static ID":"OVERLINE"
+         ,"Attribute":1
+         ,"Name":"Overline"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":10
+        }
+       ,"Settings":{
+          "Type":"HTML"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":true
+         ,"Escape Mode":"Raw"
+        }
+       ,"Help":{
+          "Help Text":"Enter some text and\/or column substitution strings to display at the top of each row above the title and description."
+        }
+       ,"Examples":{
+          "Demo Value":"Category"
+        }
+      }
+     ,{
+        "id":"66971468356419774011"
+       ,"Identification":{
+          "Static ID":"TITLE"
+         ,"Attribute":2
+         ,"Name":"Title"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":20
+        }
+       ,"Settings":{
+          "Type":"HTML"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":true
+         ,"Escape Mode":"HTML"
+        }
+       ,"Help":{
+          "Help Text":"Enter some text and\/or column substitution strings to be used as the title in each row."
+        }
+       ,"Examples":{
+          "Demo Value":"Lorem ipsum dolor sit amet"
+        }
+      }
+     ,{
+        "id":"66971469010161774011"
+       ,"Identification":{
+          "Static ID":"DESCRIPTION"
+         ,"Attribute":3
+         ,"Name":"Description"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":30
+        }
+       ,"Settings":{
+          "Type":"HTML"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":true
+         ,"Escape Mode":"Raw"
+        }
+       ,"Help":{
+          "Help Text":"Enter some text and\/or column substitution strings to be used as the description in each row."
+        }
+       ,"Examples":{
+          "Demo Value":"Nunc sit amet nunc quis magna ornare suscipit. Etiam aliquet maximus sapien, at sagittis sem gravida nec."
+        }
+      }
+     ,{
+        "id":"66971469643503774011"
+       ,"Identification":{
+          "Static ID":"MISC"
+         ,"Attribute":4
+         ,"Name":"Miscellaneous"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":40
+        }
+       ,"Settings":{
+          "Type":"HTML"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":true
+         ,"Escape Mode":"Raw"
+        }
+       ,"Help":{
+          "Help Text":"Enter miscellaneous content such as additional text and\/or column substitution strings to display in each row."
+        }
+      }
+     ,{
+        "id":"66971470364285774012"
+       ,"Identification":{
+          "Static ID":"DISPLAY_AVATAR"
+         ,"Attribute":5
+         ,"Name":"Display Avatar"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":50
+        }
+       ,"Settings":{
+          "Type":"Yes\/No"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Default":{
+          "Value":"N"
+        }
+       ,"Help":{
+          "Help Text":"Specify whether to display or hide the avatar for each row. When set to Yes, an avatar will be displayed with the assigned image, icon, or initials. When set to No, no avatar will be displayed."
+        }
+      }
+     ,{
+        "id":"66971470932281774012"
+       ,"Identification":{
+          "Static ID":"DISPLAY_BADGE"
+         ,"Attribute":6
+         ,"Name":"Display Badge"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":60
+        }
+       ,"Settings":{
+          "Type":"Yes\/No"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Default":{
+          "Value":"N"
+        }
+       ,"Help":{
+          "Help Text":"Specify whether to display or hide the badge for each row. When set to Yes, a badge will be displayed in each row. When set to No, no badge will be displayed."
+        }
+      }
+     ,{
+        "id":"66971471705054774012"
+       ,"Identification":{
+          "Static ID":"AVATAR_TYPE"
+         ,"Attribute":7
+         ,"Name":"Type"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Avatar (68898703423462845704)"
+         ,"Sequence":70
+        }
+       ,"Settings":{
+          "Type":"Select List"
+         ,"Lov Type":"Static"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":false
+         ,"Escape Mode":"HTML"
+        }
+       ,"Default":{
+          "Value":"icon"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Avatar (66971470364285774012)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Select the type of content that will be displayed in the avatar."
+        }
+       ,"Examples":{
+          "Demo Value":"icon"
+        }
+       ,"Entries":[
+          {
+            "id":"66971472419147774013"
+           ,"Entry":{
+              "Sequence":10
+             ,"Display":"Image"
+             ,"Return":"image"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971473360802774013"
+           ,"Entry":{
+              "Sequence":20
+             ,"Display":"Initials"
+             ,"Return":"initials"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971474040275774013"
+           ,"Entry":{
+              "Sequence":30
+             ,"Display":"Icon"
+             ,"Return":"icon"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+        ]
+      }
+     ,{
+        "id":"66971475035636774014"
+       ,"Identification":{
+          "Static ID":"AVATAR_IMAGE"
+         ,"Attribute":8
+         ,"Name":"Image"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Avatar (68898703423462845704)"
+         ,"Sequence":80
+        }
+       ,"Settings":{
+          "Type":"Media"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Type (66971471705054774012)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"image"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"\u003Cp\u003EUse the Media popup dialog to select a source for the avatar image.\u003C\/p\u003E\n\n\u003Cp\u003EAvailable options include:\n\u003Cul\u003E\n\u003Cli\u003EURL\u003C\/li\u003E\n\u003Cli\u003EBLOB Column\u003C\/li\u003E\n\u003Cli\u003EURL Column\u003C\/li\u003E\n\u003C\/ul\u003E\n\u003C\/p\u003E"
+        }
+      }
+     ,{
+        "id":"66971475429891774014"
+       ,"Identification":{
+          "Static ID":"AVATAR_DESCRIPTION"
+         ,"Attribute":9
+         ,"Name":"Description"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Avatar (68898703423462845704)"
+         ,"Sequence":115
+        }
+       ,"Settings":{
+          "Type":"Text"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":true
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Avatar (66971470364285774012)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Enter a short description of the image or select a source column from the quick pick options. This will be used as alt text for the avatar image."
+        }
+      }
+     ,{
+        "id":"66971475889049774014"
+       ,"Identification":{
+          "Static ID":"AVATAR_INITIALS"
+         ,"Attribute":10
+         ,"Name":"Initials"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Avatar (68898703423462845704)"
+         ,"Sequence":100
+        }
+       ,"Settings":{
+          "Type":"Session State Value"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":false
+         ,"Data Types":[
+            "Varchar2"
+          ]
+         ,"Escape Mode":"Strip HTML"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Type (66971471705054774012)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"initials"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Select the source column to be displayed within each avatar. Only varchar2 data types are supported."
+        }
+      }
+     ,{
+        "id":"66971476308301774015"
+       ,"Identification":{
+          "Static ID":"AVATAR_ICON"
+         ,"Attribute":11
+         ,"Name":"Icon"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Avatar (68898703423462845704)"
+         ,"Sequence":110
+        }
+       ,"Settings":{
+          "Type":"Icon"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Default":{
+          "Value":"fa-user"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Type (66971471705054774012)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"icon"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Enter an icon class or use the Pick Icon dialog to select the icon you want to add to display in the avatar."
+        }
+      }
+     ,{
+        "id":"66971476942913774015"
+       ,"Identification":{
+          "Static ID":"AVATAR_SHAPE"
+         ,"Attribute":12
+         ,"Name":"Shape"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Avatar (68898703423462845704)"
+         ,"Sequence":120
+        }
+       ,"Settings":{
+          "Type":"Select List"
+         ,"Lov Type":"Static"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Default":{
+          "Value":"t-Avatar--rounded"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Avatar (66971470364285774012)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Select the shape of the avatar. Default inherits the shape set by the containing template."
+        }
+       ,"Entries":[
+          {
+            "id":"66971477745934774015"
+           ,"Entry":{
+              "Sequence":10
+             ,"Display":"Rounded"
+             ,"Return":"t-Avatar--rounded"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed within a square with rounded corners."
+            }
+          }
+         ,{
+            "id":"66971478443957774016"
+           ,"Entry":{
+              "Sequence":20
+             ,"Display":"Circular"
+             ,"Return":"t-Avatar--circle"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed within a circular shape."
+            }
+          }
+         ,{
+            "id":"66971479522006774016"
+           ,"Entry":{
+              "Sequence":30
+             ,"Display":"Square"
+             ,"Return":"t-Avatar--square"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed within a square shape."
+            }
+          }
+         ,{
+            "id":"66971480190901774016"
+           ,"Entry":{
+              "Sequence":40
+             ,"Display":"No Shape"
+             ,"Return":"t-Avatar--noShape"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed inline without a containing shape."
+            }
+          }
+        ]
+      }
+     ,{
+        "id":"66971480731035774017"
+       ,"Identification":{
+          "Static ID":"BADGE_LABEL"
+         ,"Attribute":13
+         ,"Name":"Label"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Badge (68898702868450845703)"
+         ,"Sequence":130
+        }
+       ,"Settings":{
+          "Type":"Text"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":true
+         ,"Escape Mode":"HTML"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Badge (66971470932281774012)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Enter a value for the badge label or select a source column from the quick pick options."
+        }
+      }
+     ,{
+        "id":"66971481205939774017"
+       ,"Identification":{
+          "Static ID":"BADGE_VALUE"
+         ,"Attribute":14
+         ,"Name":"Value"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Badge (68898702868450845703)"
+         ,"Sequence":140
+        }
+       ,"Settings":{
+          "Type":"Session State Value"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":false
+         ,"Data Types":[
+            "Varchar2"
+           ,"Number"
+           ,"Date"
+           ,"Interval Year to Month"
+           ,"Interval Day to Second"
+          ]
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Badge (66971470932281774012)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Select a source column for the badge value."
+        }
+      }
+     ,{
+        "id":"66971481941072774018"
+       ,"Identification":{
+          "Static ID":"BADGE_STATE"
+         ,"Attribute":15
+         ,"Name":"State"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Badge (68898702868450845703)"
+         ,"Sequence":150
+        }
+       ,"Settings":{
+          "Type":"Session State Value"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Data Types":[
+            "Varchar2"
+          ]
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Badge (66971470932281774012)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Select the source column for the state of the badge. Substitute column value with \"danger\", \"warning\", \"success\" or \"info\" for default styling."
+        }
+      }
+     ,{
+        "id":"66971482574222774018"
+       ,"Identification":{
+          "Static ID":"BADGE_ICON"
+         ,"Attribute":16
+         ,"Name":"Icon"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Badge (68898702868450845703)"
+         ,"Sequence":160
+        }
+       ,"Settings":{
+          "Type":"Icon"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Badge (66971470932281774012)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Enter an icon class or use the Pick Icon dialog to select the icon you want to add to display in the badge."
+        }
+      }
+     ,{
+        "id":"66971483222639774018"
+       ,"Identification":{
+          "Static ID":"BADGE_LABEL_DISPLAY"
+         ,"Attribute":17
+         ,"Name":"Display Label"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Badge (68898702868450845703)"
+         ,"Sequence":170
+        }
+       ,"Settings":{
+          "Type":"Yes\/No"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Default":{
+          "Value":"N"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Badge (66971470932281774012)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Specify whether to display or hide the badge label. When set to Yes, the badge label will be displayed in addition to the badge value. When set to No, only the badge value will be displayed."
+        }
+      }
+     ,{
+        "id":"66971483924645774019"
+       ,"Identification":{
+          "Static ID":"BADGE_STYLE"
+         ,"Attribute":18
+         ,"Name":"Style"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Badge (68898702868450845703)"
+         ,"Sequence":180
+        }
+       ,"Settings":{
+          "Type":"Select List"
+         ,"Lov Type":"Static"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"LOV Null Text":"Default"
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Badge (66971470932281774012)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Select the badge style. Default inherits the style set by the containing template."
+        }
+       ,"Entries":[
+          {
+            "id":"66971484798141774019"
+           ,"Entry":{
+              "Sequence":10
+             ,"Display":"Subtle"
+             ,"Return":"t-Badge--subtle"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971485552156774019"
+           ,"Entry":{
+              "Sequence":20
+             ,"Display":"Outline"
+             ,"Return":"t-Badge--outline"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+        ]
+      }
+     ,{
+        "id":"66971486357561774020"
+       ,"Identification":{
+          "Static ID":"BADGE_SHAPE"
+         ,"Attribute":19
+         ,"Name":"Shape"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Badge (68898702868450845703)"
+         ,"Sequence":190
+        }
+       ,"Settings":{
+          "Type":"Select List"
+         ,"Lov Type":"Static"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"LOV Null Text":"Default"
+         ,"Escape Mode":"HTML"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Badge (66971470932281774012)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Select the shape of the badge. Default inherits the shape set by the containing template."
+        }
+       ,"Entries":[
+          {
+            "id":"66971486950236774020"
+           ,"Entry":{
+              "Sequence":10
+             ,"Display":"Rounded"
+             ,"Return":"t-Badge--rounded"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed with rounded corners."
+            }
+          }
+         ,{
+            "id":"66971487643078774020"
+           ,"Entry":{
+              "Sequence":20
+             ,"Display":"Circular"
+             ,"Return":"t-Badge--circle"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed with circular edges."
+            }
+          }
+         ,{
+            "id":"66971488398886774021"
+           ,"Entry":{
+              "Sequence":30
+             ,"Display":"Square"
+             ,"Return":"t-Badge--square"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed with squared edges."
+            }
+          }
+         ,{
+            "id":"66971489189902774021"
+           ,"Entry":{
+              "Sequence":40
+             ,"Display":"No Shape"
+             ,"Return":"t-Avatar--noShape"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed inline without a containing shape."
+            }
+          }
+        ]
+      }
+     ,{
+        "id":"66971490017220774021"
+       ,"Identification":{
+          "Static ID":"AVATAR_SIZE"
+         ,"Attribute":20
+         ,"Name":"Size"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Avatar (68898703423462845704)"
+         ,"Sequence":200
+        }
+       ,"Settings":{
+          "Type":"Select List"
+         ,"Lov Type":"Static"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"LOV Null Text":"Default"
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Avatar (66971470364285774012)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Set the size of the avatar. The default inherits the sizing set by the containing template."
+        }
+       ,"Entries":[
+          {
+            "id":"66971490647301774022"
+           ,"Entry":{
+              "Sequence":60
+             ,"Display":"Extra Large"
+             ,"Return":"t-Avatar--xl"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971491629127774022"
+           ,"Entry":{
+              "Sequence":70
+             ,"Display":"Extra Extra Large"
+             ,"Return":"t-Avatar--xxl"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971493264869774022"
+           ,"Entry":{
+              "Sequence":40
+             ,"Display":"Medium"
+             ,"Return":"t-Avatar--md"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971493666260774023"
+           ,"Entry":{
+              "Sequence":50
+             ,"Display":"Large"
+             ,"Return":"t-Avatar--lg"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971494045349774023"
+           ,"Entry":{
+              "Sequence":10
+             ,"Display":"Extra Extra Small"
+             ,"Return":"t-Avatar--xxs"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971494438754774023"
+           ,"Entry":{
+              "Sequence":20
+             ,"Display":"Extra Small"
+             ,"Return":"t-Avatar--xs"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971494812372774024"
+           ,"Entry":{
+              "Sequence":30
+             ,"Display":"Small"
+             ,"Return":"t-Avatar--sm"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+        ]
+      }
+     ,{
+        "id":"66971495256195774024"
+       ,"Identification":{
+          "Static ID":"BADGE_SIZE"
+         ,"Attribute":21
+         ,"Name":"Size"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Badge (68898702868450845703)"
+         ,"Sequence":210
+        }
+       ,"Settings":{
+          "Type":"Select List"
+         ,"Lov Type":"Static"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"LOV Null Text":"Default"
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Badge (66971470932281774012)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Set the size of the badge. The default inherits the sizing set by the containing template."
+        }
+       ,"Entries":[
+          {
+            "id":"66971495541014774024"
+           ,"Entry":{
+              "Sequence":10
+             ,"Display":"Small"
+             ,"Return":"t-Badge--sm"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971495953593774025"
+           ,"Entry":{
+              "Sequence":20
+             ,"Display":"Medium"
+             ,"Return":"t-Badge--md"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971496464155774025"
+           ,"Entry":{
+              "Sequence":30
+             ,"Display":"Large"
+             ,"Return":"t-Badge--lg"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+        ]
+      }
+     ,{
+        "id":"66971497018990774025"
+       ,"Identification":{
+          "Static ID":"BADGE_COL_WIDTH"
+         ,"Attribute":22
+         ,"Name":"Column Width"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Badge (68898702868450845703)"
+         ,"Sequence":220
+        }
+       ,"Settings":{
+          "Type":"Select List"
+         ,"Lov Type":"Static"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":false
+         ,"LOV Null Text":"Default"
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Default":{
+          "Value":"t-ContentRow-badge--md"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Badge (66971470932281774012)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Set the width of the content row columns. Default width is medium."
+        }
+       ,"Entries":[
+          {
+            "id":"66971497523072774026"
+           ,"Entry":{
+              "Sequence":10
+             ,"Display":"Small"
+             ,"Return":"t-ContentRow-badge--sm"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971498226915774026"
+           ,"Entry":{
+              "Sequence":20
+             ,"Display":"Medium"
+             ,"Return":"t-ContentRow-badge--md"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971498746243774026"
+           ,"Entry":{
+              "Sequence":30
+             ,"Display":"Large"
+             ,"Return":"t-ContentRow-badge--lg"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971499324801774026"
+           ,"Entry":{
+              "Sequence":40
+             ,"Display":"Auto"
+             ,"Return":"t-ContentRow-badge--auto"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+        ]
+      }
+     ,{
+        "id":"66971499924722774027"
+       ,"Identification":{
+          "Static ID":"BADGE_POS"
+         ,"Attribute":24
+         ,"Name":"Position"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Badge (68898702868450845703)"
+         ,"Sequence":240
+        }
+       ,"Settings":{
+          "Type":"Select List"
+         ,"Lov Type":"Static"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"LOV Null Text":"Start"
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Badge (66971470932281774012)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Positions the Badge column to either the \"Start\" or \"End\" of the row."
+        }
+       ,"Entries":[
+          {
+            "id":"66971500419973774027"
+           ,"Entry":{
+              "Sequence":10
+             ,"Display":"End"
+             ,"Return":"t-ContentRow-badge--posEnd"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Positions the Badge column to the \"end\" of the row."
+            }
+          }
+        ]
+      }
+     ,{
+        "id":"66971501082850774027"
+       ,"Identification":{
+          "Static ID":"BADGE_ALIGNMENT"
+         ,"Attribute":25
+         ,"Name":"Alignment"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Badge (68898702868450845703)"
+         ,"Sequence":250
+        }
+       ,"Settings":{
+          "Type":"Select List"
+         ,"Lov Type":"Static"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"LOV Null Text":"Start"
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Badge (66971470932281774012)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Changes the alignment of the badge within its column."
+        }
+       ,"Entries":[
+          {
+            "id":"66971501579351774028"
+           ,"Entry":{
+              "Sequence":10
+             ,"Display":"Center"
+             ,"Return":"t-ContentRow-badge--alignCenter"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Aligns the badge to the \"center\" of its column."
+            }
+          }
+         ,{
+            "id":"66971502165655774028"
+           ,"Entry":{
+              "Sequence":20
+             ,"Display":"End"
+             ,"Return":"t-ContentRow-badge--alignEnd"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Aligns the badge to the \"end\" of its column."
+            }
+          }
+        ]
+      }
+     ,{
+        "id":"66971502852321774028"
+       ,"Identification":{
+          "Static ID":"APPLY_THEME_COLORS"
+         ,"Attribute":23
+         ,"Name":"Apply Theme Colors"
+         ,"Scope":"Report"
+        }
+       ,"Layout":{
+          "Attribute Group":"Appearance (68641810804720572190)"
+         ,"Sequence":230
+        }
+       ,"Settings":{
+          "Type":"Yes\/No"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Default":{
+          "Value":"Y"
+        }
+       ,"Help":{
+          "Help Text":"Specify whether to use the Universal Theme colors for avatar and badge row items. When set to Yes, the u-colors class will be applied to each row. When set to No, a default color will be used instead."
+        }
+      }
+     ,{
+        "id":"66971503442892774029"
+       ,"Identification":{
+          "Static ID":"STYLE"
+         ,"Attribute":27
+         ,"Name":"Style"
+         ,"Scope":"Report"
+        }
+       ,"Layout":{
+          "Attribute Group":"Appearance (68641810804720572190)"
+         ,"Sequence":270
+        }
+       ,"Settings":{
+          "Type":"Select List"
+         ,"Lov Type":"Static"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"LOV Null Text":"Default"
+         ,"Escape Mode":"HTML"
+        }
+       ,"Entries":[
+          {
+            "id":"66971503866532774029"
+           ,"Entry":{
+              "Sequence":10
+             ,"Display":"Compact"
+             ,"Return":"t-ContentRow--styleCompact"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+        ]
+      }
+     ,{
+        "id":"66971504501988774029"
+       ,"Identification":{
+          "Static ID":"HIDE_BORDERS"
+         ,"Attribute":28
+         ,"Name":"Hide Borders"
+         ,"Scope":"Report"
+        }
+       ,"Layout":{
+          "Attribute Group":"Appearance (68641810804720572190)"
+         ,"Sequence":280
+        }
+       ,"Settings":{
+          "Type":"Yes\/No"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Default":{
+          "Value":"N"
+        }
+      }
+     ,{
+        "id":"66971505039249774030"
+       ,"Identification":{
+          "Static ID":"REMOVE_PADDING"
+         ,"Attribute":30
+         ,"Name":"Remove Padding"
+         ,"Scope":"Report"
+        }
+       ,"Layout":{
+          "Attribute Group":"Appearance (68641810804720572190)"
+         ,"Sequence":300
+        }
+       ,"Settings":{
+          "Type":"Yes\/No"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Default":{
+          "Value":"N"
+        }
+      }
+    ]
+   ,"Action Positions":[
+      {
+        "id":"68482965798782908888"
+       ,"Identification":{
+          "Name":"Badge Link"
+         ,"Static ID":"BADGE_LINK"
+         ,"Sequence":50
+        }
+       ,"Advanced":{
+          "Quick Pick":false
+        }
+       ,"Settings":{
+          "Type":"Link"
+        }
+      }
+     ,{
+        "id":"68766323685004260585"
+       ,"Identification":{
+          "Name":"Title Link"
+         ,"Static ID":"TITLE_LINK"
+         ,"Sequence":30
+        }
+       ,"Advanced":{
+          "Quick Pick":false
+        }
+       ,"Settings":{
+          "Type":"Link"
+        }
+      }
+     ,{
+        "id":"68767002985734343689"
+       ,"Identification":{
+          "Name":"Full Row Link"
+         ,"Static ID":"FULL_ROW_LINK"
+         ,"Sequence":40
+        }
+       ,"Advanced":{
+          "Quick Pick":false
+        }
+       ,"Settings":{
+          "Type":"Link"
+        }
+      }
+     ,{
+        "id":"68779915378611622332"
+       ,"Identification":{
+          "Name":"Avatar Link"
+         ,"Static ID":"AVATAR_LINK"
+         ,"Sequence":10
+        }
+       ,"Advanced":{
+          "Quick Pick":false
+        }
+       ,"Settings":{
+          "Type":"Link"
+        }
+      }
+     ,{
+        "id":"68779916712001636189"
+       ,"Identification":{
+          "Name":"Primary Actions"
+         ,"Static ID":"PRIMARY_ACTIONS"
+         ,"Sequence":20
+        }
+       ,"Advanced":{
+          "Quick Pick":false
+        }
+       ,"Settings":{
+          "Type":"Template"
+        }
+      }
+    ]
+   ,"Action Templates":[
+      {
+        "id":"68779917313678667318"
+       ,"Identification":{
+          "Name":"Button"
+         ,"Type":"Button"
+        }
+       ,"Template":{
+          "Action Template":"{with\/}\nLINK_URL:=#LINK_URL!RAW#\nLINK_ATTR:=#LINK_ATTR!RAW#\nLABEL:=#LABEL!RAW#\nICON_CLASSES:=#ICON_CLASSES#\nCSS_CLASSES:=#CSS_CLASSES#\nIS_HOT:=#IS_HOT#\nIS_ICON_ONLY:=#IS_ICON_ONLY#\nIS_DISABLED:=#IS_DISABLED#\n{apply THEME$BUTTON\/}"
+        }
+       ,"Advanced":{
+          "Translatable":false
+        }
+      }
+     ,{
+        "id":"68779918573198671466"
+       ,"Identification":{
+          "Name":"Menu"
+         ,"Type":"Menu"
+        }
+       ,"Template":{
+          "Action Template":"{with\/}\nMENU_ID:=#MENU_ID#\nLABEL:=#LABEL!RAW#\nICON_CLASSES:=#ICON_CLASSES#\nCSS_CLASSES:=#CSS_CLASSES#\nIS_HOT:=#IS_HOT#\nIS_DISABLED:=#IS_DISABLED#\nIS_ICON_ONLY:=#IS_ICON_ONLY#\n{apply THEME$BUTTON\/}\n#MENU#"
+        }
+       ,"Advanced":{
+          "Translatable":false
+        }
+      }
+    ]
+  }
+ ,{
+    "id":"66971516567614774038"
+   ,"Identification":{
+      "Name":"Media List"
+     ,"Internal Name":"THEME_42$MEDIA_LIST"
+     ,"Theme":"Universal Theme (42)"
+     ,"Type":"Template Component"
+    }
+   ,"Advanced":{
+      "Quick Pick":true
+    }
+   ,"Subscription":{
+      "Master":{
+        "Referenced Id":"1564403634518414297"
+      }
+     ,"Subscribe Component Settings":true
+    }
+   ,"Templates":{
+      "Available as":[
+        "Single (Partial)"
+       ,"Multiple (Report)"
+      ]
+     ,"Partial":"{if APEX$IS_LAZY_LOADING\/}\n  \u003Cdiv class=\"t-MediaList-itemWrap\"\u003E\n    {if DISPLAY_AVATAR\/}\n      \u003Cdiv class=\"t-MediaList-iconWrap\" aria-hidden=\"true\"\u003E\n        {with\/}\n          SIZE:=t-Avatar--xs\n          SHAPE:=#AVATAR_SHAPE#\n        {apply THEME$AVATAR\/}\n      \u003C\/div\u003E\n    {endif\/}\n    \u003Cdiv class=\"t-MediaList-body\"\u003E\n      {if ?TITLE%assigned\/}\u003Cdiv class=\"t-MediaList-title is-placeholder\"\u003E\u003C\/div\u003E{endif\/}\n      {if ?DESCRIPTION%assigned\/}\u003Cdiv class=\"t-MediaList-desc is-placeholder\"\u003E\u003C\/div\u003E{endif\/}\n    \u003C\/div\u003E\n    {if DISPLAY_BADGE%assigned\/}\n      {with\/}\n        LABEL:=\n        VALUE:=\n        SHAPE:=#BADGE_SHAPE#\n        STYLE:=#BADGE_STYLE#\n      {apply THEME$BADGE\/}\n    {endif\/}\n  \u003C\/div\u003E\n{else\/}\n  {if LINK\/}\u003Ca href=\"#LINK!ATTR#\" #LINK_ATTR!RAW#{else\/}\u003Cdiv{endif\/} class=\"t-MediaList-itemWrap{if ?DESCRIPTION\/} t-MediaList-itemWrap--showDesc{endif\/}\"\u003E\n    {if DISPLAY_AVATAR\/}\n      \u003Cdiv class=\"t-MediaList-iconWrap\" aria-hidden=\"true\"\u003E\n        {with\/}\n          TYPE:=#AVATAR_TYPE#\n          IMAGE:=#AVATAR_IMAGE#\n          DESCRIPTION:=#AVATAR_DESCRIPTION#\n          ICON:=#AVATAR_ICON#\n          INITIALS:=#AVATAR_INITIALS#\n          CSS_CLASSES:=u-color\n          SHAPE:=#AVATAR_SHAPE#\n        {apply THEME$AVATAR\/}\n      \u003C\/div\u003E\n    {endif\/}\n    \u003Cdiv class=\"t-MediaList-body\"\u003E\n      {if ?TITLE\/}\u003Ch3 class=\"t-MediaList-title\"\u003E#TITLE!RAW#\u003C\/h3\u003E{endif\/}\n      {if ?DESCRIPTION\/}\u003Cp class=\"t-MediaList-desc\"\u003E#DESCRIPTION!RAW#\u003C\/p\u003E{endif\/}\n    \u003C\/div\u003E\n    {if DISPLAY_BADGE\/}\n      {with\/}\n        LABEL_DISPLAY:=#BADGE_LABEL_DISPLAY#\n        LABEL:=#BADGE_LABEL#\n        VALUE:=#BADGE_VALUE#\n        ICON:=#BADGE_ICON#\n        STATE:=#BADGE_STATE#\n        SIZE:=t-Badge--md\n        STYLE:=#BADGE_STYLE#\n        SHAPE:=#BADGE_SHAPE#\n      {apply THEME$BADGE\/}\n    {endif\/}\n  {if LINK\/}\u003C\/a\u003E{else\/}\u003C\/div\u003E{endif\/}\n{endif\/}"
+     ,"Report Body":"\u003Cul class=\"t-MediaList t-MediaList--showIcons{if ?LAYOUT\/} #LAYOUT!ATTR#{endif\/}{if ?SIZE\/} #SIZE!ATTR#{endif\/}{if APPLY_THEME_COLORS\/} u-colors{endif\/} #APEX$COMPONENT_CSS_CLASSES#\"\u003E#APEX$ROWS#\u003C\/ul\u003E"
+     ,"Report Row":"\u003Cli class=\"t-MediaList-item\" #APEX$ROW_IDENTIFICATION#\u003E#APEX$PARTIAL#\u003C\/li\u003E"
+     ,"Translate Templates":false
+     ,"Default Escape Mode":"HTML"
+     ,"Number of Lazy Loading Skeletons":3
+    }
+   ,"Callbacks":{
+      "API Interface":"Function"
+    }
+   ,"Custom Attributes":{
+      "Substitute Attribute Values":true
+    }
+   ,"Information":{
+      "Help Text":"Display report content in a formatted media list. Supports avatars and badges. Available for a single row or as a report with multiple rows."
+    }
+   ,"Attribute Groups":[
+      {
+        "id":"68771538124943657689"
+       ,"Identification":{
+          "Name":"Badge"
+         ,"Sequence":20
+        }
+      }
+     ,{
+        "id":"68771538679955657690"
+       ,"Identification":{
+          "Name":"Avatar"
+         ,"Sequence":10
+        }
+      }
+    ]
+   ,"Custom Attributes":[
+      {
+        "id":"66971521533760774042"
+       ,"Identification":{
+          "Static ID":"TITLE"
+         ,"Attribute":1
+         ,"Name":"Title"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":10
+        }
+       ,"Settings":{
+          "Type":"Session State Value"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":false
+         ,"Data Types":[
+            "Varchar2"
+          ]
+         ,"Escape Mode":"HTML"
+        }
+       ,"Help":{
+          "Help Text":"Select a source column to be used as the title."
+        }
+       ,"Examples":{
+          "Demo Value":"Lorem ipsum dolor sit amet"
+        }
+      }
+     ,{
+        "id":"66971522275171774042"
+       ,"Identification":{
+          "Static ID":"DESCRIPTION"
+         ,"Attribute":2
+         ,"Name":"Description"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":20
+        }
+       ,"Settings":{
+          "Type":"Session State Value"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Data Types":[
+            "Varchar2"
+          ]
+         ,"Escape Mode":"HTML"
+        }
+       ,"Help":{
+          "Help Text":"Select a source column to be used for the row description."
+        }
+       ,"Examples":{
+          "Demo Value":"Nunc sit amet nunc quis magna ornare suscipit. Etiam aliquet maximus sapien, at sagittis sem gravida nec."
+        }
+      }
+     ,{
+        "id":"66971522941638774042"
+       ,"Identification":{
+          "Static ID":"DISPLAY_AVATAR"
+         ,"Attribute":3
+         ,"Name":"Display Avatar"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":30
+        }
+       ,"Settings":{
+          "Type":"Yes\/No"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Default":{
+          "Value":"N"
+        }
+       ,"Help":{
+          "Help Text":"Specify whether to display or hide the avatar for each row. When set to Yes, an avatar will be displayed with the assigned image, icon, or initials. When set to No, no avatar will be displayed."
+        }
+      }
+     ,{
+        "id":"66971523545144774043"
+       ,"Identification":{
+          "Static ID":"DISPLAY_BADGE"
+         ,"Attribute":4
+         ,"Name":"Display Badge"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":40
+        }
+       ,"Settings":{
+          "Type":"Yes\/No"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Default":{
+          "Value":"N"
+        }
+       ,"Help":{
+          "Help Text":"Specify whether to display or hide the badge for each row. When set to Yes, a badge will be displayed in each row. When set to No, no badge will be displayed."
+        }
+      }
+     ,{
+        "id":"66971524281869774043"
+       ,"Identification":{
+          "Static ID":"AVATAR_TYPE"
+         ,"Attribute":5
+         ,"Name":"Type"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Avatar (68771538679955657690)"
+         ,"Sequence":50
+        }
+       ,"Settings":{
+          "Type":"Select List"
+         ,"Lov Type":"Static"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":false
+         ,"Escape Mode":"HTML"
+        }
+       ,"Default":{
+          "Value":"icon"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Avatar (66971522941638774042)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Select the type of content that will be displayed in the avatar."
+        }
+       ,"Examples":{
+          "Demo Value":"icon"
+        }
+       ,"Entries":[
+          {
+            "id":"66971524979922774043"
+           ,"Entry":{
+              "Sequence":10
+             ,"Display":"Image"
+             ,"Return":"image"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971526806340774044"
+           ,"Entry":{
+              "Sequence":20
+             ,"Display":"Initials"
+             ,"Return":"initials"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971527545948774045"
+           ,"Entry":{
+              "Sequence":30
+             ,"Display":"Icon"
+             ,"Return":"icon"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+        ]
+      }
+     ,{
+        "id":"66971528269241774045"
+       ,"Identification":{
+          "Static ID":"AVATAR_IMAGE"
+         ,"Attribute":6
+         ,"Name":"Image"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Avatar (68771538679955657690)"
+         ,"Sequence":60
+        }
+       ,"Settings":{
+          "Type":"Media"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Type (66971524281869774043)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"image"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"\u003Cp\u003EUse the Media popup dialog to select a source for the avatar image.\u003C\/p\u003E\n\n\u003Cp\u003EAvailable options include:\n\u003Cul\u003E\n\u003Cli\u003EURL\u003C\/li\u003E\n\u003Cli\u003EBLOB Column\u003C\/li\u003E\n\u003Cli\u003EURL Column\u003C\/li\u003E\n\u003C\/ul\u003E\n\u003C\/p\u003E"
+        }
+      }
+     ,{
+        "id":"66971528819376774045"
+       ,"Identification":{
+          "Static ID":"AVATAR_DESCRIPTION"
+         ,"Attribute":7
+         ,"Name":"Description"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Avatar (68771538679955657690)"
+         ,"Sequence":95
+        }
+       ,"Settings":{
+          "Type":"Text"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":true
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Avatar (66971522941638774042)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Enter a short description of the image\/icon or select a source column from the quick pick options. This will be used as title \u0026 alt text for the avatar image\/icon."
+        }
+      }
+     ,{
+        "id":"66971529433744774046"
+       ,"Identification":{
+          "Static ID":"AVATAR_INITIALS"
+         ,"Attribute":8
+         ,"Name":"Initials"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Avatar (68771538679955657690)"
+         ,"Sequence":80
+        }
+       ,"Settings":{
+          "Type":"Session State Value"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":false
+         ,"Data Types":[
+            "Varchar2"
+          ]
+         ,"Escape Mode":"Strip HTML"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Type (66971524281869774043)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"initials"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Select the source column to be displayed within each avatar. Only varchar2 data types are supported."
+        }
+      }
+     ,{
+        "id":"66971530005773774046"
+       ,"Identification":{
+          "Static ID":"AVATAR_ICON"
+         ,"Attribute":9
+         ,"Name":"Icon"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Avatar (68771538679955657690)"
+         ,"Sequence":90
+        }
+       ,"Settings":{
+          "Type":"Icon"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Default":{
+          "Value":"fa-user"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Type (66971524281869774043)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"icon"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Enter an icon class or use the Pick Icon dialog to select the icon you want to add to display in the avatar."
+        }
+      }
+     ,{
+        "id":"66971530660891774046"
+       ,"Identification":{
+          "Static ID":"AVATAR_SHAPE"
+         ,"Attribute":10
+         ,"Name":"Shape"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Avatar (68771538679955657690)"
+         ,"Sequence":100
+        }
+       ,"Settings":{
+          "Type":"Select List"
+         ,"Lov Type":"Static"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Default":{
+          "Value":"t-Avatar--rounded"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Avatar (66971522941638774042)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Select the shape of the avatar. Default inherits the shape set by the containing template."
+        }
+       ,"Entries":[
+          {
+            "id":"66971531273709774046"
+           ,"Entry":{
+              "Sequence":10
+             ,"Display":"Rounded"
+             ,"Return":"t-Avatar--rounded"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed within a square with rounded corners."
+            }
+          }
+         ,{
+            "id":"66971531985158774047"
+           ,"Entry":{
+              "Sequence":20
+             ,"Display":"Circular"
+             ,"Return":"t-Avatar--circle"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed within a circular shape."
+            }
+          }
+         ,{
+            "id":"66971532697149774047"
+           ,"Entry":{
+              "Sequence":30
+             ,"Display":"Square"
+             ,"Return":"t-Avatar--square"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed within a square shape."
+            }
+          }
+         ,{
+            "id":"66971533525124774047"
+           ,"Entry":{
+              "Sequence":40
+             ,"Display":"No Shape"
+             ,"Return":"t-Avatar--noShape"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed inline without a containing shape."
+            }
+          }
+        ]
+      }
+     ,{
+        "id":"66971534271770774048"
+       ,"Identification":{
+          "Static ID":"BADGE_LABEL"
+         ,"Attribute":11
+         ,"Name":"Label"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Badge (68771538124943657689)"
+         ,"Sequence":110
+        }
+       ,"Settings":{
+          "Type":"Text"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":true
+         ,"Escape Mode":"HTML"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Badge (66971523545144774043)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Enter a value for the badge label or select a source column from the quick pick options."
+        }
+      }
+     ,{
+        "id":"66971534922164774048"
+       ,"Identification":{
+          "Static ID":"BADGE_VALUE"
+         ,"Attribute":12
+         ,"Name":"Value"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Badge (68771538124943657689)"
+         ,"Sequence":120
+        }
+       ,"Settings":{
+          "Type":"Session State Value"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":false
+         ,"Data Types":[
+            "Varchar2"
+           ,"Number"
+           ,"Date"
+           ,"Interval Year to Month"
+           ,"Interval Day to Second"
+          ]
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Badge (66971523545144774043)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Select a source column for the badge value."
+        }
+      }
+     ,{
+        "id":"66971535587164774048"
+       ,"Identification":{
+          "Static ID":"BADGE_STATE"
+         ,"Attribute":13
+         ,"Name":"State"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Badge (68771538124943657689)"
+         ,"Sequence":130
+        }
+       ,"Settings":{
+          "Type":"Session State Value"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Data Types":[
+            "Varchar2"
+          ]
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Badge (66971523545144774043)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Select the source column for the state of the badge. Substitute column value with \"danger\", \"warning\", \"success\" or \"info\" for default styling."
+        }
+      }
+     ,{
+        "id":"66971536226610774048"
+       ,"Identification":{
+          "Static ID":"BADGE_ICON"
+         ,"Attribute":14
+         ,"Name":"Icon"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Badge (68771538124943657689)"
+         ,"Sequence":140
+        }
+       ,"Settings":{
+          "Type":"Icon"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Badge (66971523545144774043)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Enter an icon class or use the Pick Icon dialog to select the icon you want to add to display in the badge."
+        }
+      }
+     ,{
+        "id":"66971536955045774049"
+       ,"Identification":{
+          "Static ID":"BADGE_LABEL_DISPLAY"
+         ,"Attribute":15
+         ,"Name":"Display Label"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Badge (68771538124943657689)"
+         ,"Sequence":150
+        }
+       ,"Settings":{
+          "Type":"Yes\/No"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Default":{
+          "Value":"N"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Badge (66971523545144774043)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Specify whether to display or hide the badge label. When set to Yes, the badge label will be displayed in addition to the badge value. When set to No, only the badge value will be displayed."
+        }
+      }
+     ,{
+        "id":"66971537450837774049"
+       ,"Identification":{
+          "Static ID":"BADGE_STYLE"
+         ,"Attribute":16
+         ,"Name":"Style"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Badge (68771538124943657689)"
+         ,"Sequence":160
+        }
+       ,"Settings":{
+          "Type":"Select List"
+         ,"Lov Type":"Static"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"LOV Null Text":"Default"
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Badge (66971523545144774043)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Select the badge style. Default inherits the style set by the containing template."
+        }
+       ,"Entries":[
+          {
+            "id":"66971538155722774049"
+           ,"Entry":{
+              "Sequence":10
+             ,"Display":"Subtle"
+             ,"Return":"t-Badge--subtle"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971538896247774049"
+           ,"Entry":{
+              "Sequence":20
+             ,"Display":"Outline"
+             ,"Return":"t-Badge--outline"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+        ]
+      }
+     ,{
+        "id":"66971539750880774050"
+       ,"Identification":{
+          "Static ID":"BADGE_SHAPE"
+         ,"Attribute":17
+         ,"Name":"Shape"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Badge (68771538124943657689)"
+         ,"Sequence":170
+        }
+       ,"Settings":{
+          "Type":"Select List"
+         ,"Lov Type":"Static"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"LOV Null Text":"Default"
+         ,"Escape Mode":"HTML"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Badge (66971523545144774043)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Select the shape of the badge. Default inherits the shape set by the containing template."
+        }
+       ,"Entries":[
+          {
+            "id":"66971540386820774050"
+           ,"Entry":{
+              "Sequence":10
+             ,"Display":"Rounded"
+             ,"Return":"t-Badge--rounded"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed with rounded corners."
+            }
+          }
+         ,{
+            "id":"66971540705712774050"
+           ,"Entry":{
+              "Sequence":20
+             ,"Display":"Circular"
+             ,"Return":"t-Badge--circle"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed with circular edges."
+            }
+          }
+         ,{
+            "id":"66971541131742774051"
+           ,"Entry":{
+              "Sequence":30
+             ,"Display":"Square"
+             ,"Return":"t-Badge--square"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed with squared edges."
+            }
+          }
+        ]
+      }
+     ,{
+        "id":"66971541613600774051"
+       ,"Identification":{
+          "Static ID":"LAYOUT"
+         ,"Attribute":18
+         ,"Name":"Layout"
+         ,"Scope":"Report"
+        }
+       ,"Layout":{
+          "Sequence":180
+        }
+       ,"Settings":{
+          "Type":"Select List"
+         ,"Lov Type":"Static"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"LOV Null Text":"Default"
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Help":{
+          "Help Text":"Select the number of grid columns the media list content will display in. Horizontal Span will display all columns in a single horizontal row."
+        }
+       ,"Entries":[
+          {
+            "id":"66971542078100774051"
+           ,"Entry":{
+              "Sequence":10
+             ,"Display":"2 Column Grid"
+             ,"Return":"t-MediaList--cols t-MediaList--2cols"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971542762467774051"
+           ,"Entry":{
+              "Sequence":20
+             ,"Display":"3 Column Grid"
+             ,"Return":"t-MediaList--cols t-MediaList--3cols"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971543422533774052"
+           ,"Entry":{
+              "Sequence":30
+             ,"Display":"4 Column Grid"
+             ,"Return":"t-MediaList--cols t-MediaList--4cols"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971544399197774052"
+           ,"Entry":{
+              "Sequence":40
+             ,"Display":"5 Column Grid"
+             ,"Return":"t-MediaList--cols t-MediaList--5cols"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971545037471774052"
+           ,"Entry":{
+              "Sequence":50
+             ,"Display":"Horizontal Span"
+             ,"Return":"t-MediaList--horizontal"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+        ]
+      }
+     ,{
+        "id":"66971545742013774053"
+       ,"Identification":{
+          "Static ID":"SIZE"
+         ,"Attribute":19
+         ,"Name":"Size"
+         ,"Scope":"Report"
+        }
+       ,"Layout":{
+          "Sequence":190
+        }
+       ,"Settings":{
+          "Type":"Select List"
+         ,"Lov Type":"Static"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"LOV Null Text":"Default"
+         ,"Escape Mode":"HTML"
+        }
+       ,"Help":{
+          "Help Text":"Set the size of media list items."
+        }
+       ,"Entries":[
+          {
+            "id":"66971546300199774053"
+           ,"Entry":{
+              "Sequence":10
+             ,"Display":"Large"
+             ,"Return":"t-MediaList--large force-fa-lg"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+        ]
+      }
+     ,{
+        "id":"66971547181340774053"
+       ,"Identification":{
+          "Static ID":"APPLY_THEME_COLORS"
+         ,"Attribute":20
+         ,"Name":"Apply Theme Colors"
+         ,"Scope":"Report"
+        }
+       ,"Layout":{
+          "Sequence":200
+        }
+       ,"Settings":{
+          "Type":"Yes\/No"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Default":{
+          "Value":"Y"
+        }
+       ,"Help":{
+          "Help Text":"Specify whether to use the Universal Theme colors for avatar and badge row items. When set to Yes, the u-colors class will be applied to each row. When set to No, a default color will be used instead."
+        }
+      }
+    ]
+   ,"Action Positions":[
+      {
+        "id":"68771741732112804318"
+       ,"Identification":{
+          "Name":"Link"
+         ,"Static ID":"LINK"
+         ,"Sequence":10
+        }
+       ,"Advanced":{
+          "Quick Pick":false
+        }
+       ,"Settings":{
+          "Type":"Link"
+        }
+      }
+    ]
+  }
+ ,{
+    "id":"66971554404009774057"
+   ,"Identification":{
+      "Name":"Timeline"
+     ,"Internal Name":"THEME_42$TIMELINE"
+     ,"Theme":"Universal Theme (42)"
+     ,"Type":"Template Component"
+    }
+   ,"Advanced":{
+      "Quick Pick":true
+    }
+   ,"Subscription":{
+      "Master":{
+        "Referenced Id":"1601817836543095628"
+      }
+     ,"Subscribe Component Settings":true
+    }
+   ,"Templates":{
+      "Available as":[
+        "Single (Partial)"
+       ,"Multiple (Report)"
+      ]
+     ,"Partial":"\u003Cdiv{if ?CSS_CLASSES\/} class=\"#CSS_CLASSES#\"{endif\/}{if ?ATTRIBUTES\/}#ATTRIBUTES!RAW#{endif\/}\u003E\n  \u003Cdiv class=\"t-Timeline-wrap\"\u003E\n    \u003Cdiv class=\"t-Timeline-user\"\u003E\n      {if DISPLAY_AVATAR\/}\n        {with\/}\n          TYPE:=#AVATAR_TYPE#\n          IMAGE:=#AVATAR_IMAGE#\n          DESCRIPTION:=#AVATAR_DESCRIPTION#\n          INITIALS:=#AVATAR_INITIALS#\n          ICON:=#AVATAR_ICON#\n          SHAPE:=#AVATAR_SHAPE#\n          SIZE:=\n          LINK:=#AVATAR_LINK#\n          LINK_ATTR:=#AVATAR_LINK_ATTR!RAW#\n        {apply THEME$AVATAR\/}\n      {endif\/}\n      \u003Cdiv class=\"t-Timeline-userinfo\"\u003E\n        \u003Cspan class=\"t-Timeline-username\"\u003E{if ?USER_NAME_LINK\/}\u003Ca href=\"#USER_NAME_LINK!ATTR#\" #USER_NAME_LINK_ATTR!RAW#\u003E{endif\/}#USER_NAME!RAW#{if ?USER_NAME_LINK\/}\u003C\/a\u003E{endif\/}\u003C\/span\u003E\n        \u003Cspan class=\"t-Timeline-date\"\u003E#DATE!RAW#\u003C\/span\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n    \u003Cdiv class=\"t-Timeline-content\"\u003E\n      {if DISPLAY_BADGE\/}\n        \u003Cdiv class=\"t-Timeline-typeWrap\"\u003E\n          {with\/}\n            LABEL_DISPLAY:=#BADGE_LABEL_DISPLAY#\n            LABEL:=#BADGE_LABEL#\n            VALUE:=#BADGE_VALUE#\n            ICON:=#BADGE_ICON#\n            STATE:=#BADGE_STATE#\n          {apply THEME$BADGE\/}\n        \u003C\/div\u003E\n      {endif\/}\n      \u003Cdiv class=\"t-Timeline-body\"\u003E\n        \u003Ch3 class=\"t-Timeline-title\"\u003E{if ?TITLE_LINK\/}\u003Ca href=\"#TITLE_LINK!ATTR#\" #TITLE_LINK_ATTR!RAW#\u003E{endif\/}#TITLE!RAW#{if ?TITLE_LINK\/}\u003C\/a\u003E{endif\/}\u003C\/h3\u003E\n        {if ?DESCRIPTION\/}\u003Cp class=\"t-Timeline-desc\"\u003E#DESCRIPTION!RAW#\u003C\/p\u003E{endif\/}\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E"
+     ,"Report Body":"\u003Cul class=\"t-Timeline{if ?STYLE\/} #STYLE#{endif\/}{if APPLY_THEME_COLORS\/} u-colors{endif\/} #APEX$COMPONENT_CSS_CLASSES#\"\u003E#APEX$ROWS#\u003C\/ul\u003E\n"
+     ,"Report Row":"\u003Cli class=\"t-Timeline-item\" #APEX$ROW_IDENTIFICATION#\u003E#APEX$PARTIAL#\u003C\/li\u003E"
+     ,"Translate Templates":false
+     ,"Default Escape Mode":"HTML"
+     ,"Number of Lazy Loading Skeletons":3
+    }
+   ,"Callbacks":{
+      "API Interface":"Function"
+    }
+   ,"Custom Attributes":{
+      "Substitute Attribute Values":true
+    }
+   ,"Information":{
+      "Help Text":"Display a series of events. Supports avatars and badges. Available for a single row or as a report with multiple rows."
+    }
+   ,"Attribute Groups":[
+      {
+        "id":"69118640004490881011"
+       ,"Identification":{
+          "Name":"Badge"
+         ,"Sequence":20
+        }
+      }
+     ,{
+        "id":"69118640559502881012"
+       ,"Identification":{
+          "Name":"Avatar"
+         ,"Sequence":10
+        }
+      }
+    ]
+   ,"Custom Attributes":[
+      {
+        "id":"66971558679593774060"
+       ,"Identification":{
+          "Static ID":"USER_NAME"
+         ,"Attribute":1
+         ,"Name":"User Name"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":10
+        }
+       ,"Settings":{
+          "Type":"Session State Value"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":false
+         ,"Data Types":[
+            "Varchar2"
+          ]
+         ,"Escape Mode":"HTML"
+        }
+       ,"Help":{
+          "Help Text":"Select a source column to be displayed as the user name associated with a timeline event."
+        }
+       ,"Examples":{
+          "Demo Value":"User"
+        }
+      }
+     ,{
+        "id":"66971559139144774061"
+       ,"Identification":{
+          "Static ID":"DATE"
+         ,"Attribute":2
+         ,"Name":"Date"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":20
+        }
+       ,"Settings":{
+          "Type":"Session State Value"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":false
+         ,"Data Types":[
+            "Varchar2"
+           ,"Number"
+           ,"Date"
+           ,"Interval Year to Month"
+           ,"Interval Day to Second"
+          ]
+         ,"Escape Mode":"HTML"
+        }
+       ,"Help":{
+          "Help Text":"Select a source column containing a date, date range, or time."
+        }
+       ,"Examples":{
+          "Demo Value":"1 hour ago"
+        }
+      }
+     ,{
+        "id":"66971559676508774061"
+       ,"Identification":{
+          "Static ID":"TITLE"
+         ,"Attribute":3
+         ,"Name":"Title"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":30
+        }
+       ,"Settings":{
+          "Type":"Session State Value"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":false
+         ,"Data Types":[
+            "Varchar2"
+          ]
+         ,"Escape Mode":"HTML"
+        }
+       ,"Help":{
+          "Help Text":"Select a source column to be used as the title."
+        }
+       ,"Examples":{
+          "Demo Value":"Lorem ipsum dolor sit amet"
+        }
+      }
+     ,{
+        "id":"66971560285693774061"
+       ,"Identification":{
+          "Static ID":"DESCRIPTION"
+         ,"Attribute":4
+         ,"Name":"Description"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":40
+        }
+       ,"Settings":{
+          "Type":"Session State Value"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Data Types":[
+            "Varchar2"
+          ]
+         ,"Escape Mode":"HTML"
+        }
+       ,"Help":{
+          "Help Text":"Select a source column to be used for the row description."
+        }
+       ,"Examples":{
+          "Demo Value":"Nunc sit amet nunc quis magna ornare suscipit. Etiam aliquet maximus sapien, at sagittis sem gravida nec."
+        }
+      }
+     ,{
+        "id":"66971560967474774061"
+       ,"Identification":{
+          "Static ID":"DISPLAY_AVATAR"
+         ,"Attribute":5
+         ,"Name":"Display Avatar"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":50
+        }
+       ,"Settings":{
+          "Type":"Yes\/No"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Default":{
+          "Value":"N"
+        }
+       ,"Help":{
+          "Help Text":"Specify whether to display or hide the avatar for each row. When set to Yes, an avatar will be displayed with the assigned image, icon, or initials. When set to No, no avatar will be displayed."
+        }
+       ,"Examples":{
+          "Demo Value":"Y"
+        }
+      }
+     ,{
+        "id":"66971561624759774062"
+       ,"Identification":{
+          "Static ID":"DISPLAY_BADGE"
+         ,"Attribute":6
+         ,"Name":"Display Badge"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Sequence":60
+        }
+       ,"Settings":{
+          "Type":"Yes\/No"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Default":{
+          "Value":"N"
+        }
+       ,"Help":{
+          "Help Text":"Specify whether to display or hide the badge for each row. When set to Yes, a badge will be displayed in each row. When set to No, no badge will be displayed."
+        }
+       ,"Examples":{
+          "Demo Value":"Y"
+        }
+      }
+     ,{
+        "id":"66971562100357774062"
+       ,"Identification":{
+          "Static ID":"AVATAR_TYPE"
+         ,"Attribute":7
+         ,"Name":"Type"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Avatar (69118640559502881012)"
+         ,"Sequence":70
+        }
+       ,"Settings":{
+          "Type":"Select List"
+         ,"Lov Type":"Static"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":false
+         ,"Escape Mode":"HTML"
+        }
+       ,"Default":{
+          "Value":"icon"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Avatar (66971560967474774061)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Select the type of content that will be displayed in the avatar."
+        }
+       ,"Examples":{
+          "Demo Value":"icon"
+        }
+       ,"Entries":[
+          {
+            "id":"66971562950815774062"
+           ,"Entry":{
+              "Sequence":10
+             ,"Display":"Image"
+             ,"Return":"image"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971564087221774063"
+           ,"Entry":{
+              "Sequence":20
+             ,"Display":"Initials"
+             ,"Return":"initials"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971565034444774063"
+           ,"Entry":{
+              "Sequence":30
+             ,"Display":"Icon"
+             ,"Return":"icon"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+        ]
+      }
+     ,{
+        "id":"66971566182410774063"
+       ,"Identification":{
+          "Static ID":"AVATAR_IMAGE"
+         ,"Attribute":8
+         ,"Name":"Image"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Avatar (69118640559502881012)"
+         ,"Sequence":80
+        }
+       ,"Settings":{
+          "Type":"Media"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Type (66971562100357774062)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"image"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"\u003Cp\u003EUse the Media popup dialog to select a source for the avatar image.\u003C\/p\u003E\n\n\u003Cp\u003EAvailable options include:\n\u003Cul\u003E\n\u003Cli\u003EURL\u003C\/li\u003E\n\u003Cli\u003EBLOB Column\u003C\/li\u003E\n\u003Cli\u003EURL Column\u003C\/li\u003E\n\u003C\/ul\u003E\n\u003C\/p\u003E"
+        }
+      }
+     ,{
+        "id":"66971566605365774063"
+       ,"Identification":{
+          "Static ID":"AVATAR_DESCRIPTION"
+         ,"Attribute":9
+         ,"Name":"Description"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Avatar (69118640559502881012)"
+         ,"Sequence":115
+        }
+       ,"Settings":{
+          "Type":"Text"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":true
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Avatar (66971560967474774061)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Enter a short description of the image\/icon or select a source column from the quick pick options. This will be used as title \u0026 alt text for the avatar image\/icon."
+        }
+      }
+     ,{
+        "id":"66971567120858774064"
+       ,"Identification":{
+          "Static ID":"AVATAR_INITIALS"
+         ,"Attribute":10
+         ,"Name":"Initials"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Avatar (69118640559502881012)"
+         ,"Sequence":100
+        }
+       ,"Settings":{
+          "Type":"Session State Value"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":false
+         ,"Data Types":[
+            "Varchar2"
+          ]
+         ,"Escape Mode":"Strip HTML"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Type (66971562100357774062)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"initials"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Select the source column to be displayed within each avatar. Only varchar2 data types are supported."
+        }
+      }
+     ,{
+        "id":"66971567452042774064"
+       ,"Identification":{
+          "Static ID":"AVATAR_ICON"
+         ,"Attribute":11
+         ,"Name":"Icon"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Avatar (69118640559502881012)"
+         ,"Sequence":110
+        }
+       ,"Settings":{
+          "Type":"Icon"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Default":{
+          "Value":"fa-user"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Type (66971562100357774062)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"icon"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Enter an icon class or use the Pick Icon dialog to select the icon you want to add to display in the avatar."
+        }
+      }
+     ,{
+        "id":"66971568076474774064"
+       ,"Identification":{
+          "Static ID":"AVATAR_SHAPE"
+         ,"Attribute":12
+         ,"Name":"Shape"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Avatar (69118640559502881012)"
+         ,"Sequence":120
+        }
+       ,"Settings":{
+          "Type":"Select List"
+         ,"Lov Type":"Static"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Default":{
+          "Value":"t-Avatar--circle"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Avatar (66971560967474774061)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Select the shape of the avatar. Default inherits the shape set by the containing template."
+        }
+       ,"Entries":[
+          {
+            "id":"66971568855758774064"
+           ,"Entry":{
+              "Sequence":10
+             ,"Display":"Rounded"
+             ,"Return":"t-Avatar--rounded"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed within a square with rounded corners."
+            }
+          }
+         ,{
+            "id":"66971569671282774065"
+           ,"Entry":{
+              "Sequence":20
+             ,"Display":"Circular"
+             ,"Return":"t-Avatar--circle"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed within a circular shape."
+            }
+          }
+         ,{
+            "id":"66971570507591774065"
+           ,"Entry":{
+              "Sequence":30
+             ,"Display":"Square"
+             ,"Return":"t-Avatar--square"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed within a square shape."
+            }
+          }
+         ,{
+            "id":"66971571632328774065"
+           ,"Entry":{
+              "Sequence":40
+             ,"Display":"No Shape"
+             ,"Return":"t-Avatar--noShape"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed inline without a containing shape."
+            }
+          }
+        ]
+      }
+     ,{
+        "id":"66971572582596774066"
+       ,"Identification":{
+          "Static ID":"BADGE_LABEL"
+         ,"Attribute":13
+         ,"Name":"Label"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Badge (69118640004490881011)"
+         ,"Sequence":130
+        }
+       ,"Settings":{
+          "Type":"Text"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":true
+         ,"Escape Mode":"HTML"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Badge (66971561624759774062)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Enter a value for the badge label or select a source column from the quick pick options."
+        }
+      }
+     ,{
+        "id":"66971573130186774066"
+       ,"Identification":{
+          "Static ID":"BADGE_VALUE"
+         ,"Attribute":14
+         ,"Name":"Value"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Badge (69118640004490881011)"
+         ,"Sequence":140
+        }
+       ,"Settings":{
+          "Type":"Session State Value"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":true
+         ,"Translatable":false
+         ,"Data Types":[
+            "Varchar2"
+           ,"Number"
+           ,"Date"
+           ,"Interval Year to Month"
+           ,"Interval Day to Second"
+          ]
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Badge (66971561624759774062)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Select a source column for the badge value."
+        }
+       ,"Examples":{
+          "Demo Value":"Closed"
+        }
+      }
+     ,{
+        "id":"66971573814930774066"
+       ,"Identification":{
+          "Static ID":"BADGE_STATE"
+         ,"Attribute":15
+         ,"Name":"State"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Badge (69118640004490881011)"
+         ,"Sequence":150
+        }
+       ,"Settings":{
+          "Type":"Session State Value"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Data Types":[
+            "Varchar2"
+          ]
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Badge (66971561624759774062)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Select the source column for the state of the badge. Substitute column value with \"danger\", \"warning\", \"success\" or \"info\" for default styling."
+        }
+       ,"Examples":{
+          "Demo Value":"is-removed"
+        }
+      }
+     ,{
+        "id":"66971574597759774066"
+       ,"Identification":{
+          "Static ID":"BADGE_ICON"
+         ,"Attribute":16
+         ,"Name":"Icon"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Badge (69118640004490881011)"
+         ,"Sequence":160
+        }
+       ,"Settings":{
+          "Type":"Icon"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Badge (66971561624759774062)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Enter an icon class or use the Pick Icon dialog to select the icon you want to add to display in the badge."
+        }
+       ,"Examples":{
+          "Demo Value":"fa-check-circle-o"
+        }
+      }
+     ,{
+        "id":"66971575133445774067"
+       ,"Identification":{
+          "Static ID":"BADGE_LABEL_DISPLAY"
+         ,"Attribute":17
+         ,"Name":"Display Label"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Badge (69118640004490881011)"
+         ,"Sequence":170
+        }
+       ,"Settings":{
+          "Type":"Yes\/No"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Default":{
+          "Value":"N"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Badge (66971561624759774062)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Specify whether to display or hide the badge label. When set to Yes, the badge label will be displayed in addition to the badge value. When set to No, only the badge value will be displayed."
+        }
+      }
+     ,{
+        "id":"66971575611853774067"
+       ,"Identification":{
+          "Static ID":"BADGE_STYLE"
+         ,"Attribute":18
+         ,"Name":"Style"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Badge (69118640004490881011)"
+         ,"Sequence":180
+        }
+       ,"Settings":{
+          "Type":"Select List"
+         ,"Lov Type":"Static"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"LOV Null Text":"Default"
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Badge (66971561624759774062)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Select the badge style. Default inherits the style set by the containing template."
+        }
+       ,"Entries":[
+          {
+            "id":"66971576153673774067"
+           ,"Entry":{
+              "Sequence":10
+             ,"Display":"Subtle"
+             ,"Return":"t-Badge--subtle"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+         ,{
+            "id":"66971577009396774068"
+           ,"Entry":{
+              "Sequence":20
+             ,"Display":"Outline"
+             ,"Return":"t-Badge--outline"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+        ]
+      }
+     ,{
+        "id":"66971577802286774068"
+       ,"Identification":{
+          "Static ID":"BADGE_SHAPE"
+         ,"Attribute":19
+         ,"Name":"Shape"
+         ,"Scope":"Component"
+        }
+       ,"Layout":{
+          "Attribute Group":"Badge (69118640004490881011)"
+         ,"Sequence":190
+        }
+       ,"Settings":{
+          "Type":"Select List"
+         ,"Lov Type":"Static"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"LOV Null Text":"Default"
+         ,"Escape Mode":"HTML"
+        }
+       ,"Condition":{
+          "Depending on Custom Attribute":"Display Badge (66971561624759774062)"
+         ,"Depending on Condition Type":"equal to"
+         ,"Expression":"Y"
+         ,"Always Evaluate":true
+        }
+       ,"Help":{
+          "Help Text":"Select the shape of the badge. Default inherits the shape set by the containing template."
+        }
+       ,"Entries":[
+          {
+            "id":"66971578501426774068"
+           ,"Entry":{
+              "Sequence":10
+             ,"Display":"Rounded"
+             ,"Return":"t-Badge--rounded"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed with rounded corners."
+            }
+          }
+         ,{
+            "id":"66971579533559774069"
+           ,"Entry":{
+              "Sequence":20
+             ,"Display":"Circular"
+             ,"Return":"t-Badge--circle"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed with circular edges."
+            }
+          }
+         ,{
+            "id":"66971581408461774069"
+           ,"Entry":{
+              "Sequence":30
+             ,"Display":"Square"
+             ,"Return":"t-Badge--square"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+           ,"Help":{
+              "Help Text":"Displayed with squared edges."
+            }
+          }
+        ]
+      }
+     ,{
+        "id":"66971581889489774069"
+       ,"Identification":{
+          "Static ID":"STYLE"
+         ,"Attribute":20
+         ,"Name":"Style"
+         ,"Scope":"Report"
+        }
+       ,"Layout":{
+          "Sequence":200
+        }
+       ,"Settings":{
+          "Type":"Select List"
+         ,"Lov Type":"Static"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"LOV Null Text":"Default"
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Help":{
+          "Help Text":"Set the style of timeline items."
+        }
+       ,"Entries":[
+          {
+            "id":"66971582401504774069"
+           ,"Entry":{
+              "Sequence":10
+             ,"Display":"Compact"
+             ,"Return":"t-Timeline--compact"
+            }
+           ,"Advanced":{
+              "Quick Pick":false
+            }
+          }
+        ]
+      }
+     ,{
+        "id":"66971582830756774070"
+       ,"Identification":{
+          "Static ID":"APPLY_THEME_COLORS"
+         ,"Attribute":21
+         ,"Name":"Apply Theme Colors"
+         ,"Scope":"Report"
+        }
+       ,"Layout":{
+          "Sequence":210
+        }
+       ,"Settings":{
+          "Type":"Yes\/No"
+         ,"Common":true
+         ,"Show in Wizard":true
+         ,"Required":false
+         ,"Translatable":false
+         ,"Escape Mode":"HTML Attribute"
+        }
+       ,"Default":{
+          "Value":"Y"
+        }
+       ,"Help":{
+          "Help Text":"Specify whether to use the Universal Theme colors for avatar and badge row items. When set to Yes, the u-colors class will be applied to each row. When set to No, a default color will be used instead."
+        }
+       ,"Examples":{
+          "Demo Value":"Y"
+        }
+      }
+    ]
+   ,"Action Positions":[
+      {
+        "id":"68766409904689089598"
+       ,"Identification":{
+          "Name":"Title Link"
+         ,"Static ID":"TITLE_LINK"
+         ,"Sequence":25
+        }
+       ,"Advanced":{
+          "Quick Pick":false
+        }
+       ,"Settings":{
+          "Type":"Link"
+        }
+      }
+     ,{
+        "id":"68880821267677353199"
+       ,"Identification":{
+          "Name":"User Name Link"
+         ,"Static ID":"USER_NAME_LINK"
+         ,"Sequence":15
+        }
+       ,"Advanced":{
+          "Quick Pick":false
+        }
+       ,"Settings":{
+          "Type":"Link"
+        }
+      }
+     ,{
+        "id":"68999852514651657640"
+       ,"Identification":{
+          "Name":"Avatar Link"
+         ,"Static ID":"AVATAR_LINK"
+         ,"Sequence":10
+        }
+       ,"Advanced":{
+          "Quick Pick":false
+        }
+       ,"Settings":{
+          "Type":"Link"
+        }
+      }
+    ]
+  }
+]
