@@ -1,0 +1,55 @@
+# drop: true
+t_proveedores /auditcols -- Proveedores
+    id_proveedor num /pk
+    descripcion vc4000 /nn
+    activo vc1 /nn /check S, N
+
+t_proyectos /auditcols -- Proyectos
+    id_proyecto vc5 /pk
+    id_proveedor num /nn /fk t_proveedores
+    descripcion vc4000 /nn
+    activo vc1 /nn /check S, N
+
+t_aplicaciones /auditcols -- Aplicaciones
+    id_aplicacion num /pk
+    descripcion vc4000 /nn
+    activo vc1 /nn /check S, N
+
+t_versiones /auditcols -- Versiones
+    id_version num /pk
+    id_aplicacion num /nn /fk t_aplicaciones
+    descripcion vc4000 /nn
+    activo vc1 /nn /check S, N
+
+t_ambientes /auditcols -- Ambientes
+    id_ambiente vc5 /pk
+    descripcion vc100 /nn
+    activo vc1 /nn /check S, N
+
+t_incidencia_tipos /auditcols -- Tipos de incidencia
+    id_incidencia_tipo vc2 /pk
+    descripcion vc100 /nn
+    activo vc1 /nn /check S, N
+
+t_incidencia_estados /auditcols -- Estados de incidencia
+    id_incidencia_estado vc2 /pk
+    descripcion vc100 /nn
+    activo vc1 /nn /check S, N
+
+t_incidencias /auditcols -- Incidencias
+    id_incidencia num /pk
+    id_proyecto vc5 /nn /fk t_proyectos
+    resumen vc4000 /nn
+    observaciones clob
+    fecha_reporte date /nn /default sysdate
+    tipo_acceso vc2 /nn /check PF,PJ,CA
+    id_aplicacion num /nn /fk t_aplicaciones
+    id_version num /nn /fk t_versiones
+    id_ambiente vc5 /nn /fk t_ambientes
+    ticket_externo vc100 /index
+    id_tipo vc2 /nn /fk t_incidencia_tipos
+    id_estado vc2 /nn /fk t_incidencia_estados
+    id_version_finalizacion num /fk t_versiones
+    fecha_finalizacion date
+    usuario_reporte vc255 /nn
+    usuario_responsable vc255
