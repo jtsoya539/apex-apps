@@ -1,0 +1,249 @@
+{
+  "id":"20000"
+ ,"Identification":{
+    "Name":"Settings"
+   ,"Alias":"SETTINGS"
+   ,"Title":"Settings"
+   ,"Page Group":"User Settings (69975632160457082215)"
+  }
+ ,"Appearance":{
+    "Page Mode":"Modal Dialog"
+   ,"Dialog Template":"Drawer (69974525991664080762)"
+   ,"Template Options":[
+      "#DEFAULT#"
+     ,"t-Dialog--noPadding"
+     ,"js-dialog-class-t-Drawer--pullOutEnd"
+     ,"js-dialog-class-t-Drawer--md"
+    ]
+  }
+ ,"Dialog":{
+    "Chained":true
+  }
+ ,"Navigation Menu":{
+    "Override User Interface Level":false
+  }
+ ,"Navigation":{
+    "Cursor Focus":"Do not focus cursor"
+   ,"Warn on Unsaved Changes":true
+  }
+ ,"Security":{
+    "Authentication":"Page Requires Authentication"
+   ,"Deep Linking":"Application Default"
+   ,"Page Access Protection":"Arguments Must Have Checksum"
+   ,"Form Auto Complete":"Off"
+   ,"Browser Cache":"Application Default"
+  }
+ ,"Session Management":{
+    "Rejoin Sessions":"Application Default"
+  }
+ ,"Advanced":{
+    "Enable duplicate page submissions":"Yes - Enable page to be re-posted"
+   ,"Reload on Submit":"Only for Success"
+  }
+ ,"Server Cache":{
+    "Caching":"Disabled"
+  }
+ ,"Help":{
+    "Help Text":"This page contains a list of settings applicable to the current application user."
+  }
+ ,"Configuration":{
+    "Build Option":"Feature: User Settings (69975632686195082216)"
+  }
+ ,"Regions":[
+    {
+      "id":"69975637305822082219"
+     ,"Identification":{
+        "Title":"\u0026APP_USER."
+       ,"Type":"Static Content"
+      }
+     ,"Layout":{
+        "Sequence":10
+       ,"Parent Region":"No Parent"
+       ,"Position":"BODY"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+      }
+     ,"Appearance":{
+        "Template":"Hero (69974595150424080799)"
+       ,"Template Options":[
+          "#DEFAULT#"
+         ,"t-HeroRegion--hideIcon"
+        ]
+       ,"Render Components":"Above Content"
+      }
+     ,"Accessibility":{
+        "Use Landmark":true
+       ,"Landmark Type":"Template Default"
+      }
+     ,"Advanced":{
+        "Region Display Selector":false
+       ,"Exclude Title from Translation":false
+      }
+     ,"Server-side Condition":{
+        "Type":"No Rows returned"
+       ,"SQL Query":"select 1\n  from apex_application_auth \n where application_id            = :APP_ID \n   and is_current_authentication = \u0027Y\u0027 \n   and scheme_type_code          = \u0027NATIVE_APEX_ACCOUNTS\u0027"
+      }
+     ,"Server Cache":{
+        "Caching":"Disabled"
+      }
+     ,"Customization":{
+        "Customizable":"Not Customizable By End Users"
+      }
+     ,"Attributes":{
+        "Settings":{
+          "Output As":"HTML"
+         ,"Expand Shortcuts":false
+        }
+      }
+    }
+   ,{
+      "id":"69975637609738082219"
+     ,"Identification":{
+        "Title":"\u0026APP_USER."
+       ,"Type":"Cards"
+      }
+     ,"Source":{
+        "Location":"Local Database"
+       ,"Type":"Table \/ View"
+       ,"Table Owner":"Parsing Schema"
+       ,"Table Name":"APEX_WORKSPACE_APEX_USERS"
+       ,"Include ROWID Column":false
+       ,"Where Clause":"user_name = :APP_USER"
+      }
+     ,"Order By":{
+        "Type":"None"
+      }
+     ,"Layout":{
+        "Sequence":20
+       ,"Parent Region":"No Parent"
+       ,"Position":"BODY"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+      }
+     ,"Appearance":{
+        "Template":"Cards Container (69974568934222080789)"
+       ,"Template Options":[
+          "#DEFAULT#"
+         ,"t-CardsRegion--styleB"
+        ]
+       ,"Render Components":"Above Content"
+      }
+     ,"Accessibility":{
+        "Use Landmark":true
+       ,"Landmark Type":"Template Default"
+      }
+     ,"Advanced":{
+        "Region Display Selector":false
+       ,"Exclude Title from Translation":false
+      }
+     ,"Server-side Condition":{
+        "Type":"Rows returned"
+       ,"SQL Query":"select 1 \n  from apex_application_auth \n where application_id            = :APP_ID \n   and is_current_authentication = \u0027Y\u0027 \n   and scheme_type_code          = \u0027NATIVE_APEX_ACCOUNTS\u0027"
+      }
+     ,"Server Cache":{
+        "Caching":"Disabled"
+      }
+     ,"Customization":{
+        "Customizable":"Not Customizable By End Users"
+      }
+     ,"Attributes":{
+        "id":"69975638119806082220"
+       ,"Appearance":{
+          "Layout":"Horizontal (Row)"
+        }
+       ,"Card":{
+          "CSS Classes":[
+            "a-CardView--noUI"
+          ]
+        }
+       ,"Title":{
+          "Advanced Formatting":false
+         ,"Column":"USER_NAME"
+        }
+       ,"Subtitle":{
+          "Advanced Formatting":false
+         ,"Column":"EMAIL"
+        }
+       ,"Body":{
+          "Advanced Formatting":false
+        }
+       ,"Secondary Body":{
+          "Advanced Formatting":false
+        }
+       ,"Icon and Badge":{
+          "Icon Source":"Initials"
+         ,"Icon Column":"EMAIL"
+         ,"Icon Position":"Start"
+        }
+       ,"Media":{
+          "Advanced Formatting":false
+         ,"Source":"No Media"
+        }
+       ,"Performance":{
+          "Lazy Loading":false
+        }
+       ,"Pagination":{
+          "Type":"Scroll"
+         ,"Show Total Count":false
+        }
+      }
+    }
+   ,{
+      "id":"69975638630694082220"
+     ,"Identification":{
+        "Title":"Settings"
+       ,"Type":"List"
+      }
+     ,"Source":{
+        "List":"User Settings (69975636239466082218)"
+      }
+     ,"Layout":{
+        "Sequence":30
+       ,"Parent Region":"No Parent"
+       ,"Position":"BODY"
+       ,"Start New Layout":false
+       ,"Start New Row":true
+       ,"Column":"Automatic"
+       ,"New Column":true
+       ,"Column Span":"Automatic"
+      }
+     ,"Appearance":{
+        "Template":"Blank with Attributes (69974561899909080785)"
+       ,"Template Options":[
+          "#DEFAULT#"
+        ]
+       ,"Render Components":"Above Content"
+      }
+     ,"Accessibility":{
+        "Use Landmark":true
+       ,"Landmark Type":"Template Default"
+      }
+     ,"Advanced":{
+        "Region Display Selector":false
+       ,"Exclude Title from Translation":false
+      }
+     ,"Server Cache":{
+        "Caching":"Disabled"
+      }
+     ,"Customization":{
+        "Customizable":"Not Customizable By End Users"
+      }
+     ,"Attributes":{
+        "Appearance":{
+          "List Template":"Media List (69975284650852080836)"
+         ,"Template Options":[
+            "#DEFAULT#"
+           ,"t-MediaList--showBadges"
+           ,"u-colors"
+          ]
+        }
+      }
+    }
+  ]
+}

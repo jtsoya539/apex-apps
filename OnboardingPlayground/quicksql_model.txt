@@ -1,0 +1,23 @@
+# drop: true
+# auditcols: true
+# prefix: "obp"
+t_proveedores -- Proveedores
+    id_proveedor num /pk
+    descripcion vc4000 /nn
+    activo vc1 /nn /upper /check S, N
+
+t_operaciones -- Operaciones de Biometría
+    id_operacion num /pk
+    nro_documento vc100 /nn
+    imagen_frente file
+    imagen_dorso file
+    imagen_selfie file
+    validado vc1 /nn /upper /check S, N
+    estado vc15 /nn /upper
+
+t_operacion_ejecuciones -- Ejecuciones de Operaciones de Biometría
+    id_operacion_ejecucion num /pk
+    id_operacion num /fk t_operaciones
+    id_proveedor num /fk t_proveedores
+    ok vc1 /nn /upper /check S, N
+    respuesta clob
