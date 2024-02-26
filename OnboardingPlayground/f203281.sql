@@ -33,7 +33,7 @@ prompt APPLICATION 203281 - OnboardingPlayground
 -- Application Export:
 --   Application:     203281
 --   Name:            OnboardingPlayground
---   Date and Time:   20:33 Friday February 23, 2024
+--   Date and Time:   15:48 Monday February 26, 2024
 --   Exported By:     JAVIER.MEZA.PY@GMAIL.COM
 --   Flashback:       0
 --   Export Type:     Application Export
@@ -123,7 +123,7 @@ wwv_imp_workspace.create_flow(
 ,p_substitution_string_01=>'APP_NAME'
 ,p_substitution_value_01=>'OnboardingPlayground'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240223202957'
+,p_last_upd_yyyymmddhh24miss=>'20240226152353'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>6
 ,p_print_server_type=>'INSTANCE'
@@ -19524,7 +19524,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'02'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240223192908'
+,p_last_upd_yyyymmddhh24miss=>'20240226152353'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(70046846935373449375)
@@ -19696,7 +19696,9 @@ wwv_flow_imp_page.create_page_item(
 ,p_attribute_05=>'IMAGEN_FRENTE_LASTUPD'
 ,p_attribute_06=>'Y'
 ,p_attribute_08=>'attachment'
+,p_attribute_11=>'image/*'
 ,p_attribute_12=>'INLINE'
+,p_attribute_22=>'ENVIRONMENT'
 );
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(70046848421663449377)
@@ -19773,7 +19775,9 @@ wwv_flow_imp_page.create_page_item(
 ,p_attribute_05=>'IMAGEN_DORSO_LASTUPD'
 ,p_attribute_06=>'Y'
 ,p_attribute_08=>'attachment'
+,p_attribute_11=>'image/*'
 ,p_attribute_12=>'INLINE'
+,p_attribute_22=>'ENVIRONMENT'
 );
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(70046850486506449378)
@@ -19850,7 +19854,9 @@ wwv_flow_imp_page.create_page_item(
 ,p_attribute_05=>'IMAGEN_SELFIE_LASTUPD'
 ,p_attribute_06=>'Y'
 ,p_attribute_08=>'attachment'
+,p_attribute_11=>'image/*'
 ,p_attribute_12=>'INLINE'
+,p_attribute_22=>'USER'
 );
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(70046852482932449379)
