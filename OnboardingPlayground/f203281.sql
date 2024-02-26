@@ -33,7 +33,7 @@ prompt APPLICATION 203281 - OnboardingPlayground
 -- Application Export:
 --   Application:     203281
 --   Name:            OnboardingPlayground
---   Date and Time:   18:48 Monday February 26, 2024
+--   Date and Time:   19:16 Monday February 26, 2024
 --   Exported By:     JAVIER.MEZA.PY@GMAIL.COM
 --   Flashback:       0
 --   Export Type:     Application Export
@@ -123,7 +123,7 @@ wwv_imp_workspace.create_flow(
 ,p_substitution_string_01=>'APP_NAME'
 ,p_substitution_value_01=>'OnboardingPlayground'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240226184327'
+,p_last_upd_yyyymmddhh24miss=>'20240226190956'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>6
 ,p_print_server_type=>'INSTANCE'
@@ -14765,7 +14765,7 @@ wwv_flow_imp_shared.create_automation(
 ,p_static_id=>'ejecutar-operaciones'
 ,p_trigger_type=>'POLLING'
 ,p_polling_interval=>'FREQ=MINUTELY;INTERVAL=1'
-,p_polling_status=>'DISABLED'
+,p_polling_status=>'ACTIVE'
 ,p_result_type=>'ROWS'
 ,p_location=>'LOCAL'
 ,p_use_local_sync_table=>false
@@ -14776,9 +14776,11 @@ wwv_flow_imp_shared.create_automation(
 ,p_commit_each_row=>true
 ,p_error_handling_type=>'IGNORE'
 ,p_code_snippet=>wwv_flow_string.join(wwv_flow_t_varchar2(
-'begin',
-'  null;',
-'end;'))
+'BEGIN',
+'  UPDATE opt_operaciones',
+'     SET estado = ''PROCESADO''',
+'   WHERE id_operacion = :id_operacion;',
+'END;'))
 );
 wwv_flow_imp_shared.create_automation_action(
  p_id=>wwv_flow_imp.id(7772166255169037)
