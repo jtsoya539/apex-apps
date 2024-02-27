@@ -33,7 +33,7 @@ prompt APPLICATION 203281 - OnboardingPlayground
 -- Application Export:
 --   Application:     203281
 --   Name:            OnboardingPlayground
---   Date and Time:   19:16 Monday February 26, 2024
+--   Date and Time:   18:27 Tuesday February 27, 2024
 --   Exported By:     JAVIER.MEZA.PY@GMAIL.COM
 --   Flashback:       0
 --   Export Type:     Application Export
@@ -123,7 +123,7 @@ wwv_imp_workspace.create_flow(
 ,p_substitution_string_01=>'APP_NAME'
 ,p_substitution_value_01=>'OnboardingPlayground'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240226190956'
+,p_last_upd_yyyymmddhh24miss=>'20240227180716'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>6
 ,p_print_server_type=>'INSTANCE'
@@ -14764,34 +14764,30 @@ wwv_flow_imp_shared.create_automation(
 ,p_name=>'ejecutar_operaciones'
 ,p_static_id=>'ejecutar-operaciones'
 ,p_trigger_type=>'POLLING'
-,p_polling_interval=>'FREQ=MINUTELY;INTERVAL=1'
+,p_polling_interval=>'FREQ=MINUTELY;INTERVAL=2'
 ,p_polling_status=>'ACTIVE'
 ,p_result_type=>'ROWS'
 ,p_location=>'LOCAL'
 ,p_use_local_sync_table=>false
 ,p_query_type=>'SQL'
-,p_query_source=>'SELECT * FROM opt_operaciones WHERE estado = ''NUEVO'''
+,p_query_source=>'SELECT id_operacion FROM opt_operaciones WHERE estado = ''NUEVO'''
 ,p_include_rowid_column=>false
 ,p_pk_column_name=>'ID_OPERACION'
 ,p_commit_each_row=>true
-,p_error_handling_type=>'IGNORE'
-,p_code_snippet=>wwv_flow_string.join(wwv_flow_t_varchar2(
-'BEGIN',
-'  UPDATE opt_operaciones',
-'     SET estado = ''PROCESADO''',
-'   WHERE id_operacion = :id_operacion;',
-'END;'))
+,p_error_handling_type=>'ABORT'
+,p_init_proc_name=>'opk_cisef.pr_login'
 );
 wwv_flow_imp_shared.create_automation_action(
  p_id=>wwv_flow_imp.id(7772166255169037)
 ,p_automation_id=>wwv_flow_imp.id(7771821070169032)
-,p_name=>'New Action'
+,p_name=>'ejecutar-operacion'
 ,p_execution_sequence=>10
 ,p_action_type=>'NATIVE_PLSQL'
 ,p_action_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
-'begin',
-'    null;',
-'end;'))
+'BEGIN',
+'  apex_automation.log_info(''ID_OPERACION: '' || :id_operacion);',
+'  opk_cisef.pr_execute(:id_operacion);',
+'END;'))
 ,p_action_clob_language=>'PLSQL'
 ,p_location=>'LOCAL'
 ,p_stop_execution_on_error=>true
