@@ -33,7 +33,7 @@ prompt APPLICATION 203281 - OnboardingPlayground
 -- Application Export:
 --   Application:     203281
 --   Name:            OnboardingPlayground
---   Date and Time:   19:53 Tuesday February 27, 2024
+--   Date and Time:   20:27 Tuesday February 27, 2024
 --   Exported By:     JAVIER.MEZA.PY@GMAIL.COM
 --   Flashback:       0
 --   Export Type:     Application Export
@@ -123,7 +123,7 @@ wwv_imp_workspace.create_flow(
 ,p_substitution_string_01=>'APP_NAME'
 ,p_substitution_value_01=>'OnboardingPlayground'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240227195230'
+,p_last_upd_yyyymmddhh24miss=>'20240227202647'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>6
 ,p_print_server_type=>'INSTANCE'
@@ -18615,7 +18615,7 @@ begin
 wwv_flow_imp_page.create_page(
  p_id=>4
 ,p_name=>'Operaciones'
-,p_alias=>'OPERACIONES1'
+,p_alias=>'OPERACIONES'
 ,p_step_title=>'Operaciones'
 ,p_allow_duplicate_submissions=>'N'
 ,p_reload_on_submit=>'A'
@@ -18642,7 +18642,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'03'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240227193909'
+,p_last_upd_yyyymmddhh24miss=>'20240227202647'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(70054619765793501733)
