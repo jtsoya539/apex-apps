@@ -33,7 +33,7 @@ prompt APPLICATION 203281 - OnboardingPlayground
 -- Application Export:
 --   Application:     203281
 --   Name:            OnboardingPlayground
---   Date and Time:   15:22 Wednesday February 28, 2024
+--   Date and Time:   13:24 Monday March 4, 2024
 --   Exported By:     JAVIER.MEZA.PY@GMAIL.COM
 --   Flashback:       0
 --   Export Type:     Application Export
@@ -123,7 +123,7 @@ wwv_imp_workspace.create_flow(
 ,p_substitution_string_01=>'APP_NAME'
 ,p_substitution_value_01=>'OnboardingPlayground'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240228152151'
+,p_last_upd_yyyymmddhh24miss=>'20240304132134'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>6
 ,p_print_server_type=>'INSTANCE'
@@ -14771,7 +14771,7 @@ wwv_flow_imp_shared.create_automation(
 ,p_location=>'LOCAL'
 ,p_use_local_sync_table=>false
 ,p_query_type=>'SQL'
-,p_query_source=>'SELECT id_operacion FROM opt_operaciones WHERE estado = ''NUEVO'''
+,p_query_source=>'SELECT id_operacion FROM opt_operaciones WHERE estado = ''EJECUCION_PENDIENTE'''
 ,p_include_rowid_column=>false
 ,p_pk_column_name=>'ID_OPERACION'
 ,p_commit_each_row=>true
@@ -19456,7 +19456,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'02'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240228025822'
+,p_last_upd_yyyymmddhh24miss=>'20240304131924'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(70062496795429657364)
@@ -19871,7 +19871,7 @@ wwv_flow_imp_page.create_page_item(
 ,p_item_sequence=>190
 ,p_item_plug_id=>wwv_flow_imp.id(70062496795429657364)
 ,p_item_source_plug_id=>wwv_flow_imp.id(70062496795429657364)
-,p_item_default=>'NUEVO'
+,p_item_default=>'EJECUCION_PENDIENTE'
 ,p_prompt=>'Estado'
 ,p_source=>'ESTADO'
 ,p_source_type=>'REGION_SOURCE_COLUMN'
