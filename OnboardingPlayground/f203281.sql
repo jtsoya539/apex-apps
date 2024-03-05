@@ -33,7 +33,7 @@ prompt APPLICATION 203281 - OnboardingPlayground
 -- Application Export:
 --   Application:     203281
 --   Name:            OnboardingPlayground
---   Date and Time:   16:29 Tuesday March 5, 2024
+--   Date and Time:   18:02 Tuesday March 5, 2024
 --   Exported By:     JAVIER.MEZA.PY@GMAIL.COM
 --   Flashback:       0
 --   Export Type:     Application Export
@@ -123,7 +123,7 @@ wwv_imp_workspace.create_flow(
 ,p_substitution_string_01=>'APP_NAME'
 ,p_substitution_value_01=>'OnboardingPlayground'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240305162834'
+,p_last_upd_yyyymmddhh24miss=>'20240305180232'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>6
 ,p_print_server_type=>'INSTANCE'
@@ -14788,6 +14788,7 @@ wwv_flow_imp_shared.create_automation_action(
 'BEGIN',
 '  apex_automation.log_info(''ID_OPERACION: '' || :id_operacion);',
 '  opk_cisef.pr_execute(:id_operacion);',
+'  opk_digiyo.pr_execute(:id_operacion);',
 'END;'))
 ,p_action_clob_language=>'PLSQL'
 ,p_location=>'LOCAL'
