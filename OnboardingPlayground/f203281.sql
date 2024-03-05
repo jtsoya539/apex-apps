@@ -33,7 +33,7 @@ prompt APPLICATION 203281 - OnboardingPlayground
 -- Application Export:
 --   Application:     203281
 --   Name:            OnboardingPlayground
---   Date and Time:   13:55 Monday March 4, 2024
+--   Date and Time:   16:29 Tuesday March 5, 2024
 --   Exported By:     JAVIER.MEZA.PY@GMAIL.COM
 --   Flashback:       0
 --   Export Type:     Application Export
@@ -123,7 +123,7 @@ wwv_imp_workspace.create_flow(
 ,p_substitution_string_01=>'APP_NAME'
 ,p_substitution_value_01=>'OnboardingPlayground'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240304135403'
+,p_last_upd_yyyymmddhh24miss=>'20240305162834'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>6
 ,p_print_server_type=>'INSTANCE'
@@ -18770,7 +18770,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'03'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240304135403'
+,p_last_upd_yyyymmddhh24miss=>'20240305162834'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(70062519451619657379)
@@ -19001,6 +19001,11 @@ wwv_flow_imp_page.create_report_columns(
 ,p_use_as_row_header=>'N'
 ,p_column_format=>'IMAGE:OPT_OPERACIONES:IMAGEN_FRENTE:ID_OPERACION::IMAGEN_FRENTE_MIMETYPE:IMAGEN_FRENTE_FILENAME:IMAGEN_FRENTE_LASTUPD::::'
 ,p_heading_alignment=>'LEFT'
+,p_display_when_cond_type=>'EXISTS'
+,p_display_when_condition=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select 1 from "OPT_OPERACIONES"',
+'where "IMAGEN_FRENTE" is not null',
+'and "ID_OPERACION" = :P4_ID_OPERACION'))
 ,p_derived_column=>'N'
 ,p_include_in_export=>'Y'
 );
@@ -19537,7 +19542,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'02'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240304131924'
+,p_last_upd_yyyymmddhh24miss=>'20240305162522'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(70062496795429657364)
@@ -19687,7 +19692,6 @@ wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(70062497901984657365)
 ,p_name=>'P6_IMAGEN_FRENTE'
 ,p_source_data_type=>'BLOB'
-,p_is_required=>true
 ,p_item_sequence=>30
 ,p_item_plug_id=>wwv_flow_imp.id(70062496795429657364)
 ,p_item_source_plug_id=>wwv_flow_imp.id(70062496795429657364)
@@ -19766,7 +19770,6 @@ wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(70062499933426657367)
 ,p_name=>'P6_IMAGEN_DORSO'
 ,p_source_data_type=>'BLOB'
-,p_is_required=>true
 ,p_item_sequence=>80
 ,p_item_plug_id=>wwv_flow_imp.id(70062496795429657364)
 ,p_item_source_plug_id=>wwv_flow_imp.id(70062496795429657364)
@@ -19845,7 +19848,6 @@ wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(70062501893362657368)
 ,p_name=>'P6_IMAGEN_SELFIE'
 ,p_source_data_type=>'BLOB'
-,p_is_required=>true
 ,p_item_sequence=>130
 ,p_item_plug_id=>wwv_flow_imp.id(70062496795429657364)
 ,p_item_source_plug_id=>wwv_flow_imp.id(70062496795429657364)
