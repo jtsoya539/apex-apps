@@ -33,7 +33,7 @@ prompt APPLICATION 203281 - OnboardingPlayground
 -- Application Export:
 --   Application:     203281
 --   Name:            OnboardingPlayground
---   Date and Time:   13:26 Wednesday March 6, 2024
+--   Date and Time:   20:29 Wednesday March 6, 2024
 --   Exported By:     JAVIER.MEZA.PY@GMAIL.COM
 --   Flashback:       0
 --   Export Type:     Application Export
@@ -123,7 +123,7 @@ wwv_imp_workspace.create_flow(
 ,p_substitution_string_01=>'APP_NAME'
 ,p_substitution_value_01=>'OnboardingPlayground'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240306132529'
+,p_last_upd_yyyymmddhh24miss=>'20240306201654'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>6
 ,p_print_server_type=>'INSTANCE'
@@ -19600,7 +19600,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'02'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240305162522'
+,p_last_upd_yyyymmddhh24miss=>'20240306201654'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(70062496795429657364)
@@ -19770,7 +19770,6 @@ wwv_flow_imp_page.create_page_item(
 ,p_attribute_08=>'attachment'
 ,p_attribute_11=>'image/*'
 ,p_attribute_12=>'INLINE'
-,p_attribute_22=>'ENVIRONMENT'
 );
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(70062498281719657366)
@@ -19848,7 +19847,6 @@ wwv_flow_imp_page.create_page_item(
 ,p_attribute_08=>'attachment'
 ,p_attribute_11=>'image/*'
 ,p_attribute_12=>'INLINE'
-,p_attribute_22=>'ENVIRONMENT'
 );
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(70062500346562657367)
@@ -19926,7 +19924,6 @@ wwv_flow_imp_page.create_page_item(
 ,p_attribute_08=>'attachment'
 ,p_attribute_11=>'image/*'
 ,p_attribute_12=>'INLINE'
-,p_attribute_22=>'USER'
 );
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(70062502342988657368)
