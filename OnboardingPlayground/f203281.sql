@@ -33,7 +33,7 @@ prompt APPLICATION 203281 - OnboardingPlayground
 -- Application Export:
 --   Application:     203281
 --   Name:            OnboardingPlayground
---   Date and Time:   14:02 Friday March 8, 2024
+--   Date and Time:   15:16 Friday March 8, 2024
 --   Exported By:     JAVIER.MEZA.PY@GMAIL.COM
 --   Flashback:       0
 --   Export Type:     Application Export
@@ -123,7 +123,7 @@ wwv_imp_workspace.create_flow(
 ,p_substitution_string_01=>'APP_NAME'
 ,p_substitution_value_01=>'OnboardingPlayground'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240308135900'
+,p_last_upd_yyyymmddhh24miss=>'20240308151129'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>6
 ,p_print_server_type=>'INSTANCE'
@@ -20594,7 +20594,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'16'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240308135020'
+,p_last_upd_yyyymmddhh24miss=>'20240308144625'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12962624146175637)
@@ -20709,7 +20709,6 @@ wwv_flow_imp_page.create_page_item(
 ,p_cMaxlength=>100
 ,p_field_template=>wwv_flow_imp.id(70058524692785571726)
 ,p_item_template_options=>'#DEFAULT#'
-,p_is_persistent=>'N'
 ,p_inline_help_text=>unistr('N\00FAmero de documento de la persona')
 ,p_attribute_01=>'N'
 ,p_attribute_02=>'N'
@@ -20802,7 +20801,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'16'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240308135631'
+,p_last_upd_yyyymmddhh24miss=>'20240308145516'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12966954436175652)
@@ -20872,6 +20871,7 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_position=>'PREVIOUS'
 ,p_button_execute_validations=>'N'
 ,p_icon_css_classes=>'fa-chevron-left'
+,p_security_scheme=>wwv_flow_imp.id(70058643370328571848)
 );
 wwv_flow_imp_page.create_page_branch(
  p_id=>wwv_flow_imp.id(12971243519175654)
@@ -20965,7 +20965,7 @@ wwv_flow_imp_page.create_page_process(
 '                     l_response_body;',
 '',
 '  IF json_value(l_response_body, ''$.status'') <> 200 THEN',
-unistr('    raise_application_error(-20000, ''Imagen no v\00E1lida'');'),
+'    raise_application_error(-20000, l_response_body);',
 '  END IF;',
 '  -- ============================================',
 'END;'))
@@ -20990,7 +20990,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'16'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240308135850'
+,p_last_upd_yyyymmddhh24miss=>'20240308145531'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12971907278175654)
@@ -21060,6 +21060,7 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_position=>'PREVIOUS'
 ,p_button_execute_validations=>'N'
 ,p_icon_css_classes=>'fa-chevron-left'
+,p_security_scheme=>wwv_flow_imp.id(70058643370328571848)
 );
 wwv_flow_imp_page.create_page_branch(
  p_id=>wwv_flow_imp.id(12976251523175657)
@@ -21154,7 +21155,7 @@ wwv_flow_imp_page.create_page_process(
 '',
 '',
 '  IF json_value(l_response_body, ''$.status'') <> 200 THEN',
-unistr('    raise_application_error(-20000, ''Imagen no v\00E1lida'');'),
+'    raise_application_error(-20000, l_response_body);',
 '  END IF;',
 '  -- ============================================',
 'END;'))
@@ -21179,7 +21180,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'16'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240308135900'
+,p_last_upd_yyyymmddhh24miss=>'20240308145545'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12976923084175657)
@@ -21249,6 +21250,7 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_position=>'PREVIOUS'
 ,p_button_execute_validations=>'N'
 ,p_icon_css_classes=>'fa-chevron-left'
+,p_security_scheme=>wwv_flow_imp.id(70058643370328571848)
 );
 wwv_flow_imp_page.create_page_branch(
  p_id=>wwv_flow_imp.id(12981229108175660)
@@ -21342,7 +21344,7 @@ wwv_flow_imp_page.create_page_process(
 '                     l_response_body;',
 '',
 '  IF json_value(l_response_body, ''$.status'') <> 200 THEN',
-unistr('    raise_application_error(-20000, ''Imagen no v\00E1lida'');'),
+'    raise_application_error(-20000, l_response_body);',
 '  END IF;',
 '  -- ============================================',
 'END;',
@@ -21368,7 +21370,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'06'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240308134913'
+,p_last_upd_yyyymmddhh24miss=>'20240308151129'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12981979188175660)
@@ -21437,6 +21439,7 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_position=>'PREVIOUS'
 ,p_button_execute_validations=>'N'
 ,p_icon_css_classes=>'fa-chevron-left'
+,p_security_scheme=>wwv_flow_imp.id(70058643370328571848)
 );
 wwv_flow_imp_page.create_page_branch(
  p_id=>wwv_flow_imp.id(12985552368175662)
@@ -21472,8 +21475,12 @@ wwv_flow_imp_page.create_page_process(
 ,p_process_name=>'New'
 ,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'DECLARE',
-'  l_response_body CLOB;',
-'  l_file          BLOB;',
+'  l_response_body     CLOB;',
+'  l_file              BLOB;',
+'  l_validation_status VARCHAR2(100);',
+'  r_operacion         opt_operaciones%ROWTYPE;',
+'  l_estado            opt_operacion_ejecuciones.estado%TYPE;',
+'  l_validado          opt_operacion_ejecuciones.validado%TYPE;',
 'BEGIN',
 '  opk_cisef.pr_config;',
 '',
@@ -21494,6 +21501,111 @@ wwv_flow_imp_page.create_page_process(
 '  :p12_respuesta  := :p12_respuesta || opk_cisef.c_separator ||',
 '                     l_response_body;',
 '  -- ============================================',
+'  l_response_body := apex_web_service.make_rest_request(p_url         => opk_cisef.g_url_base ||',
+'                                                                         ''/Status'',',
+'                                                        p_http_method => ''POST'',',
+'                                                        p_body        => ''{"operationToken": "'' ||',
+'                                                                         :p12_referencia_1 || ''"}'');',
+'  :p12_respuesta  := :p12_respuesta || opk_cisef.c_separator ||',
+'                     l_response_body;',
+'',
+'  l_validation_status := json_value(l_response_body, ''$.validationStatus'');',
+'  -- ============================================',
+'',
+'  IF l_validation_status = ''Expired'' THEN',
+'    l_estado   := ''EXPIRADO'';',
+'    l_validado := ''N'';',
+'  ELSIF l_validation_status = ''Rejected'' THEN',
+'    l_estado   := ''RECHAZADO'';',
+'    l_validado := ''N'';',
+'  ELSIF l_validation_status = ''Validated'' THEN',
+'    l_estado   := ''FINALIZADO'';',
+'    l_validado := ''S'';',
+'  ELSE',
+'    l_estado   := ''PENDIENTE'';',
+'    l_validado := ''N'';',
+'  END IF;',
+'',
+'  r_operacion.nro_documento := :p12_nro_documento;',
+'  r_operacion.validado      := ''N'';',
+'  r_operacion.estado        := ''EJECUCION_OK'';',
+'',
+'  SELECT filename, mime_type, created_on, blob_content',
+'    INTO r_operacion.imagen_frente_filename,',
+'         r_operacion.imagen_frente_mimetype,',
+'         r_operacion.imagen_frente_lastupd,',
+'         r_operacion.imagen_frente',
+'    FROM apex_application_temp_files',
+'   WHERE NAME = :p13_imagen_frente;',
+'',
+'  SELECT filename, mime_type, created_on, blob_content',
+'    INTO r_operacion.imagen_dorso_filename,',
+'         r_operacion.imagen_dorso_mimetype,',
+'         r_operacion.imagen_dorso_lastupd,',
+'         r_operacion.imagen_dorso',
+'    FROM apex_application_temp_files',
+'   WHERE NAME = :p14_imagen_dorso;',
+'',
+'  SELECT filename, mime_type, created_on, blob_content',
+'    INTO r_operacion.imagen_selfie_filename,',
+'         r_operacion.imagen_selfie_mimetype,',
+'         r_operacion.imagen_selfie_lastupd,',
+'         r_operacion.imagen_selfie',
+'    FROM apex_application_temp_files',
+'   WHERE NAME = :p15_imagen_selfie;',
+'',
+'  INSERT INTO opt_operaciones',
+'    (nro_documento,',
+'     imagen_frente_filename,',
+'     imagen_frente_mimetype,',
+'     imagen_frente_lastupd,',
+'     imagen_frente,',
+'     imagen_dorso_filename,',
+'     imagen_dorso_mimetype,',
+'     imagen_dorso_lastupd,',
+'     imagen_dorso,',
+'     imagen_selfie_filename,',
+'     imagen_selfie_mimetype,',
+'     imagen_selfie_lastupd,',
+'     imagen_selfie,',
+'     validado,',
+'     estado)',
+'  VALUES',
+'    (r_operacion.nro_documento,',
+'     r_operacion.imagen_frente_filename,',
+'     r_operacion.imagen_frente_mimetype,',
+'     r_operacion.imagen_frente_lastupd,',
+'     r_operacion.imagen_frente,',
+'     r_operacion.imagen_dorso_filename,',
+'     r_operacion.imagen_dorso_mimetype,',
+'     r_operacion.imagen_dorso_lastupd,',
+'     r_operacion.imagen_dorso,',
+'     r_operacion.imagen_selfie_filename,',
+'     r_operacion.imagen_selfie_mimetype,',
+'     r_operacion.imagen_selfie_lastupd,',
+'     r_operacion.imagen_selfie,',
+'     r_operacion.validado,',
+'     r_operacion.estado)',
+'  RETURNING id_operacion INTO r_operacion.id_operacion;',
+'',
+'  INSERT INTO opt_operacion_ejecuciones',
+'    (id_operacion,',
+'     id_proveedor,',
+'     ok,',
+'     respuesta,',
+'     validado,',
+'     estado,',
+'     referencia_1,',
+'     referencia_2)',
+'  VALUES',
+'    (r_operacion.id_operacion,',
+'     opk_cisef.c_id_proveedor,',
+'     ''S'',',
+'     :p12_respuesta,',
+'     l_validado,',
+'     l_estado,',
+'     :p12_referencia_1,',
+'     :p12_referencia_2);',
 'END;'))
 ,p_process_clob_language=>'PLSQL'
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
