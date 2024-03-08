@@ -33,12 +33,12 @@ prompt APPLICATION 203281 - OnboardingPlayground
 -- Application Export:
 --   Application:     203281
 --   Name:            OnboardingPlayground
---   Date and Time:   02:03 Friday March 8, 2024
+--   Date and Time:   02:17 Friday March 8, 2024
 --   Exported By:     JAVIER.MEZA.PY@GMAIL.COM
 --   Flashback:       0
 --   Export Type:     Application Export
 --     Pages:                     19
---       Items:                   56
+--       Items:                   60
 --       Validations:              1
 --       Processes:               21
 --       Regions:                 54
@@ -123,7 +123,7 @@ wwv_imp_workspace.create_flow(
 ,p_substitution_string_01=>'APP_NAME'
 ,p_substitution_value_01=>'OnboardingPlayground'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240308020128'
+,p_last_upd_yyyymmddhh24miss=>'20240308021542'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>6
 ,p_print_server_type=>'INSTANCE'
@@ -20592,9 +20592,9 @@ wwv_flow_imp_page.create_page(
 ,p_page_template_options=>'#DEFAULT#'
 ,p_dialog_height=>'400'
 ,p_protection_level=>'C'
-,p_page_component_map=>'06'
+,p_page_component_map=>'17'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240308015033'
+,p_last_upd_yyyymmddhh24miss=>'20240308020641'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12962624146175637)
@@ -20660,6 +20660,29 @@ wwv_flow_imp_page.create_page_branch(
 ,p_branch_when_button_id=>wwv_flow_imp.id(12964660067175644)
 ,p_branch_sequence=>20
 );
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(12989457345274312)
+,p_name=>'P12_NRO_DOCUMENTO'
+,p_source_data_type=>'VARCHAR2'
+,p_is_required=>true
+,p_item_sequence=>10
+,p_item_plug_id=>wwv_flow_imp.id(12962748518175637)
+,p_item_source_plug_id=>wwv_flow_imp.id(70062496795429657364)
+,p_prompt=>'Nro. Documento'
+,p_source=>'NRO_DOCUMENTO'
+,p_source_type=>'REGION_SOURCE_COLUMN'
+,p_display_as=>'NATIVE_TEXT_FIELD'
+,p_cSize=>32
+,p_cMaxlength=>100
+,p_field_template=>wwv_flow_imp.id(70058524692785571726)
+,p_item_template_options=>'#DEFAULT#'
+,p_is_persistent=>'N'
+,p_inline_help_text=>unistr('N\00FAmero de documento de la persona')
+,p_attribute_01=>'N'
+,p_attribute_02=>'N'
+,p_attribute_04=>'TEXT'
+,p_attribute_05=>'NONE'
+);
 wwv_flow_imp_page.create_page_da_event(
  p_id=>wwv_flow_imp.id(12964709665175645)
 ,p_name=>'Cancel Dialog'
@@ -20693,9 +20716,9 @@ wwv_flow_imp_page.create_page(
 ,p_page_template_options=>'#DEFAULT#'
 ,p_dialog_height=>'400'
 ,p_protection_level=>'C'
-,p_page_component_map=>'06'
+,p_page_component_map=>'17'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240308015014'
+,p_last_upd_yyyymmddhh24miss=>'20240308021425'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12966954436175652)
@@ -20782,6 +20805,33 @@ wwv_flow_imp_page.create_page_branch(
 ,p_branch_when_button_id=>wwv_flow_imp.id(12968899667175653)
 ,p_branch_sequence=>10
 );
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(12989970592294934)
+,p_name=>'P13_IMAGEN_FRENTE'
+,p_source_data_type=>'BLOB'
+,p_is_required=>true
+,p_item_sequence=>10
+,p_item_plug_id=>wwv_flow_imp.id(12967068032175652)
+,p_item_source_plug_id=>wwv_flow_imp.id(70062496795429657364)
+,p_prompt=>'Imagen Frente'
+,p_source=>'IMAGEN_FRENTE'
+,p_source_type=>'REGION_SOURCE_COLUMN'
+,p_display_as=>'NATIVE_IMAGE_UPLOAD'
+,p_cSize=>60
+,p_field_template=>wwv_flow_imp.id(70058523436121571726)
+,p_item_template_options=>'#DEFAULT#'
+,p_is_persistent=>'N'
+,p_inline_help_text=>'Imagen del frente del documento de la persona'
+,p_attribute_01=>'DB_COLUMN'
+,p_attribute_02=>'IMAGEN_FRENTE_MIMETYPE'
+,p_attribute_03=>'IMAGEN_FRENTE_FILENAME'
+,p_attribute_05=>'IMAGEN_FRENTE_LASTUPD'
+,p_attribute_06=>'Y'
+,p_attribute_12=>'INLINE'
+,p_attribute_18=>'Y'
+,p_attribute_19=>'AUTO'
+,p_attribute_22=>'ENVIRONMENT'
+);
 wwv_flow_imp_page.create_page_da_event(
  p_id=>wwv_flow_imp.id(12969057443175653)
 ,p_name=>'Cancel Dialog'
@@ -20815,9 +20865,9 @@ wwv_flow_imp_page.create_page(
 ,p_page_template_options=>'#DEFAULT#'
 ,p_dialog_height=>'400'
 ,p_protection_level=>'C'
-,p_page_component_map=>'06'
+,p_page_component_map=>'17'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240308015014'
+,p_last_upd_yyyymmddhh24miss=>'20240308021503'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12971907278175654)
@@ -20904,6 +20954,33 @@ wwv_flow_imp_page.create_page_branch(
 ,p_branch_when_button_id=>wwv_flow_imp.id(12973823313175655)
 ,p_branch_sequence=>10
 );
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(12990246648300600)
+,p_name=>'P14_IMAGEN_DORSO'
+,p_source_data_type=>'BLOB'
+,p_is_required=>true
+,p_item_sequence=>10
+,p_item_plug_id=>wwv_flow_imp.id(12972016837175654)
+,p_item_source_plug_id=>wwv_flow_imp.id(70062496795429657364)
+,p_prompt=>'Imagen Dorso'
+,p_source=>'IMAGEN_DORSO'
+,p_source_type=>'REGION_SOURCE_COLUMN'
+,p_display_as=>'NATIVE_IMAGE_UPLOAD'
+,p_cSize=>60
+,p_field_template=>wwv_flow_imp.id(70058523436121571726)
+,p_item_template_options=>'#DEFAULT#'
+,p_is_persistent=>'N'
+,p_inline_help_text=>'Imagen del dorso del documento de la persona'
+,p_attribute_01=>'DB_COLUMN'
+,p_attribute_02=>'IMAGEN_DORSO_MIMETYPE'
+,p_attribute_03=>'IMAGEN_DORSO_FILENAME'
+,p_attribute_05=>'IMAGEN_DORSO_LASTUPD'
+,p_attribute_06=>'Y'
+,p_attribute_12=>'INLINE'
+,p_attribute_18=>'Y'
+,p_attribute_19=>'AUTO'
+,p_attribute_22=>'ENVIRONMENT'
+);
 wwv_flow_imp_page.create_page_da_event(
  p_id=>wwv_flow_imp.id(12974011015175655)
 ,p_name=>'Cancel Dialog'
@@ -20937,9 +21014,9 @@ wwv_flow_imp_page.create_page(
 ,p_page_template_options=>'#DEFAULT#'
 ,p_dialog_height=>'400'
 ,p_protection_level=>'C'
-,p_page_component_map=>'06'
+,p_page_component_map=>'17'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240308015014'
+,p_last_upd_yyyymmddhh24miss=>'20240308021542'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12976923084175657)
@@ -21025,6 +21102,33 @@ wwv_flow_imp_page.create_page_branch(
 ,p_branch_type=>'REDIRECT_URL'
 ,p_branch_when_button_id=>wwv_flow_imp.id(12978888469175658)
 ,p_branch_sequence=>10
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(12990630684307580)
+,p_name=>'P15_IMAGEN_SELFIE'
+,p_source_data_type=>'BLOB'
+,p_is_required=>true
+,p_item_sequence=>10
+,p_item_plug_id=>wwv_flow_imp.id(12977063987175657)
+,p_item_source_plug_id=>wwv_flow_imp.id(70062496795429657364)
+,p_prompt=>'Imagen Selfie'
+,p_source=>'IMAGEN_SELFIE'
+,p_source_type=>'REGION_SOURCE_COLUMN'
+,p_display_as=>'NATIVE_IMAGE_UPLOAD'
+,p_cSize=>60
+,p_field_template=>wwv_flow_imp.id(70058523436121571726)
+,p_item_template_options=>'#DEFAULT#'
+,p_is_persistent=>'N'
+,p_inline_help_text=>'Imagen selfie de la persona'
+,p_attribute_01=>'DB_COLUMN'
+,p_attribute_02=>'IMAGEN_SELFIE_MIMETYPE'
+,p_attribute_03=>'IMAGEN_SELFIE_FILENAME'
+,p_attribute_05=>'IMAGEN_SELFIE_LASTUPD'
+,p_attribute_06=>'Y'
+,p_attribute_12=>'INLINE'
+,p_attribute_18=>'Y'
+,p_attribute_19=>'AUTO'
+,p_attribute_22=>'USER'
 );
 wwv_flow_imp_page.create_page_da_event(
  p_id=>wwv_flow_imp.id(12979077947175658)
