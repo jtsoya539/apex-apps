@@ -33,14 +33,14 @@ prompt APPLICATION 203281 - OnboardingPlayground
 -- Application Export:
 --   Application:     203281
 --   Name:            OnboardingPlayground
---   Date and Time:   02:17 Friday March 8, 2024
+--   Date and Time:   14:02 Friday March 8, 2024
 --   Exported By:     JAVIER.MEZA.PY@GMAIL.COM
 --   Flashback:       0
 --   Export Type:     Application Export
 --     Pages:                     19
---       Items:                   60
+--       Items:                   64
 --       Validations:              1
---       Processes:               21
+--       Processes:               27
 --       Regions:                 54
 --       Buttons:                 48
 --       Dynamic Actions:         18
@@ -123,7 +123,7 @@ wwv_imp_workspace.create_flow(
 ,p_substitution_string_01=>'APP_NAME'
 ,p_substitution_value_01=>'OnboardingPlayground'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240308021542'
+,p_last_upd_yyyymmddhh24miss=>'20240308135900'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>6
 ,p_print_server_type=>'INSTANCE'
@@ -20592,9 +20592,9 @@ wwv_flow_imp_page.create_page(
 ,p_page_template_options=>'#DEFAULT#'
 ,p_dialog_height=>'400'
 ,p_protection_level=>'C'
-,p_page_component_map=>'17'
+,p_page_component_map=>'16'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240308020641'
+,p_last_upd_yyyymmddhh24miss=>'20240308135020'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12962624146175637)
@@ -20661,6 +20661,39 @@ wwv_flow_imp_page.create_page_branch(
 ,p_branch_sequence=>20
 );
 wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(7886090719781730)
+,p_name=>'P12_RESPUESTA'
+,p_data_type=>'CLOB'
+,p_item_sequence=>30
+,p_item_plug_id=>wwv_flow_imp.id(12962748518175637)
+,p_display_as=>'NATIVE_HIDDEN'
+,p_attribute_01=>'Y'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(7886130010781731)
+,p_name=>'P12_REFERENCIA_1'
+,p_item_sequence=>40
+,p_item_plug_id=>wwv_flow_imp.id(12962748518175637)
+,p_display_as=>'NATIVE_HIDDEN'
+,p_attribute_01=>'Y'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(7886231460781732)
+,p_name=>'P12_REFERENCIA_2'
+,p_item_sequence=>50
+,p_item_plug_id=>wwv_flow_imp.id(12962748518175637)
+,p_display_as=>'NATIVE_HIDDEN'
+,p_attribute_01=>'Y'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(7886658815781736)
+,p_name=>'P12_ACCESS_TOKEN'
+,p_item_sequence=>20
+,p_item_plug_id=>wwv_flow_imp.id(12962748518175637)
+,p_display_as=>'NATIVE_HIDDEN'
+,p_attribute_01=>'Y'
+);
+wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(12989457345274312)
 ,p_name=>'P12_NRO_DOCUMENTO'
 ,p_source_data_type=>'VARCHAR2'
@@ -20701,6 +20734,57 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_DIALOG_CANCEL'
 );
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(7885842002781728)
+,p_process_sequence=>10
+,p_process_point=>'AFTER_SUBMIT'
+,p_process_type=>'NATIVE_PLSQL'
+,p_process_name=>'New'
+,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'BEGIN',
+'  opk_cisef.pr_login;',
+'  :p12_access_token := opk_cisef.g_access_token;',
+'END;'))
+,p_process_clob_language=>'PLSQL'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_internal_uid=>7885842002781728
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(7885932949781729)
+,p_process_sequence=>20
+,p_process_point=>'AFTER_SUBMIT'
+,p_process_type=>'NATIVE_PLSQL'
+,p_process_name=>'New_1'
+,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'DECLARE',
+'  l_response_body CLOB;',
+'BEGIN',
+'  opk_cisef.pr_config;',
+'',
+'  apex_web_service.clear_request_headers;',
+'  apex_web_service.set_request_headers(p_name_01  => ''Authorization'',',
+'                                       p_value_01 => ''Bearer '' ||',
+'                                                     :p12_access_token,',
+'                                       p_name_02  => ''Content-Type'',',
+'                                       p_value_02 => ''application/json'',',
+'                                       p_name_03  => ''Accept'',',
+'                                       p_value_03 => ''application/json'');',
+'  -- ============================================',
+'  l_response_body   := apex_web_service.make_rest_request(p_url         => opk_cisef.g_url_base ||',
+'                                                                           ''/DApi/NewOperation'',',
+'                                                          p_http_method => ''POST'',',
+'                                                          p_body        => ''{"personId": "'' ||',
+'                                                                           :p12_nro_documento ||',
+'                                                                           ''", "isMassive": false, "isRecurrent": false, "doFullOnboarding": true}'');',
+'  :p12_respuesta    := l_response_body;',
+'  :p12_referencia_1 := json_value(l_response_body, ''$.operationToken'');',
+'  :p12_referencia_2 := json_value(l_response_body, ''$.operationGuid'');',
+'  -- ============================================',
+'END;'))
+,p_process_clob_language=>'PLSQL'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_internal_uid=>7885932949781729
+);
 end;
 /
 prompt --application/pages/page_00013
@@ -20716,9 +20800,9 @@ wwv_flow_imp_page.create_page(
 ,p_page_template_options=>'#DEFAULT#'
 ,p_dialog_height=>'400'
 ,p_protection_level=>'C'
-,p_page_component_map=>'17'
+,p_page_component_map=>'16'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240308021425'
+,p_last_upd_yyyymmddhh24miss=>'20240308135631'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12966954436175652)
@@ -20808,28 +20892,20 @@ wwv_flow_imp_page.create_page_branch(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(12989970592294934)
 ,p_name=>'P13_IMAGEN_FRENTE'
-,p_source_data_type=>'BLOB'
 ,p_is_required=>true
 ,p_item_sequence=>10
 ,p_item_plug_id=>wwv_flow_imp.id(12967068032175652)
-,p_item_source_plug_id=>wwv_flow_imp.id(70062496795429657364)
 ,p_prompt=>'Imagen Frente'
-,p_source=>'IMAGEN_FRENTE'
-,p_source_type=>'REGION_SOURCE_COLUMN'
 ,p_display_as=>'NATIVE_IMAGE_UPLOAD'
 ,p_cSize=>60
 ,p_field_template=>wwv_flow_imp.id(70058523436121571726)
 ,p_item_template_options=>'#DEFAULT#'
-,p_is_persistent=>'N'
 ,p_inline_help_text=>'Imagen del frente del documento de la persona'
-,p_attribute_01=>'DB_COLUMN'
-,p_attribute_02=>'IMAGEN_FRENTE_MIMETYPE'
-,p_attribute_03=>'IMAGEN_FRENTE_FILENAME'
-,p_attribute_05=>'IMAGEN_FRENTE_LASTUPD'
-,p_attribute_06=>'Y'
+,p_attribute_01=>'APEX_APPLICATION_TEMP_FILES'
+,p_attribute_09=>'SESSION'
+,p_attribute_10=>'N'
 ,p_attribute_12=>'INLINE'
-,p_attribute_18=>'Y'
-,p_attribute_19=>'AUTO'
+,p_attribute_18=>'N'
 ,p_attribute_22=>'ENVIRONMENT'
 );
 wwv_flow_imp_page.create_page_da_event(
@@ -20850,6 +20926,53 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_DIALOG_CANCEL'
 );
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(7886381211781733)
+,p_process_sequence=>10
+,p_process_point=>'AFTER_SUBMIT'
+,p_process_type=>'NATIVE_PLSQL'
+,p_process_name=>'New'
+,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'DECLARE',
+'  l_response_body CLOB;',
+'  l_file          BLOB;',
+'BEGIN',
+'  opk_cisef.pr_config;',
+'',
+'  apex_web_service.clear_request_headers;',
+'  apex_web_service.set_request_headers(p_name_01  => ''Authorization'',',
+'                                       p_value_01 => ''Bearer '' ||',
+'                                                     :p12_access_token,',
+'                                       p_name_02  => ''Content-Type'',',
+'                                       p_value_02 => ''application/json'',',
+'                                       p_name_03  => ''Accept'',',
+'                                       p_value_03 => ''application/json'');',
+'  -- ============================================',
+'  SELECT blob_content',
+'    INTO l_file',
+'    FROM apex_application_temp_files',
+'   WHERE NAME = :p13_imagen_frente;',
+'',
+'  l_response_body := apex_web_service.make_rest_request(p_url         => opk_cisef.g_url_base ||',
+'                                                                         ''/DApi/AddFront'',',
+'                                                        p_http_method => ''POST'',',
+'                                                        p_body        => ''{"operationGuid": "'' ||',
+'                                                                         :p12_referencia_2 ||',
+'                                                                         ''", "image": "'' ||',
+'                                                                         REPLACE(apex_web_service.blob2clobbase64(l_file),',
+'                                                                                 utl_tcp.crlf) || ''"}'');',
+'  :p12_respuesta  := :p12_respuesta || opk_cisef.c_separator ||',
+'                     l_response_body;',
+'',
+'  IF json_value(l_response_body, ''$.status'') <> 200 THEN',
+unistr('    raise_application_error(-20000, ''Imagen no v\00E1lida'');'),
+'  END IF;',
+'  -- ============================================',
+'END;'))
+,p_process_clob_language=>'PLSQL'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_internal_uid=>7886381211781733
+);
 end;
 /
 prompt --application/pages/page_00014
@@ -20865,9 +20988,9 @@ wwv_flow_imp_page.create_page(
 ,p_page_template_options=>'#DEFAULT#'
 ,p_dialog_height=>'400'
 ,p_protection_level=>'C'
-,p_page_component_map=>'17'
+,p_page_component_map=>'16'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240308021503'
+,p_last_upd_yyyymmddhh24miss=>'20240308135850'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12971907278175654)
@@ -20957,28 +21080,20 @@ wwv_flow_imp_page.create_page_branch(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(12990246648300600)
 ,p_name=>'P14_IMAGEN_DORSO'
-,p_source_data_type=>'BLOB'
 ,p_is_required=>true
 ,p_item_sequence=>10
 ,p_item_plug_id=>wwv_flow_imp.id(12972016837175654)
-,p_item_source_plug_id=>wwv_flow_imp.id(70062496795429657364)
 ,p_prompt=>'Imagen Dorso'
-,p_source=>'IMAGEN_DORSO'
-,p_source_type=>'REGION_SOURCE_COLUMN'
 ,p_display_as=>'NATIVE_IMAGE_UPLOAD'
 ,p_cSize=>60
 ,p_field_template=>wwv_flow_imp.id(70058523436121571726)
 ,p_item_template_options=>'#DEFAULT#'
-,p_is_persistent=>'N'
 ,p_inline_help_text=>'Imagen del dorso del documento de la persona'
-,p_attribute_01=>'DB_COLUMN'
-,p_attribute_02=>'IMAGEN_DORSO_MIMETYPE'
-,p_attribute_03=>'IMAGEN_DORSO_FILENAME'
-,p_attribute_05=>'IMAGEN_DORSO_LASTUPD'
-,p_attribute_06=>'Y'
+,p_attribute_01=>'APEX_APPLICATION_TEMP_FILES'
+,p_attribute_09=>'SESSION'
+,p_attribute_10=>'N'
 ,p_attribute_12=>'INLINE'
-,p_attribute_18=>'Y'
-,p_attribute_19=>'AUTO'
+,p_attribute_18=>'N'
 ,p_attribute_22=>'ENVIRONMENT'
 );
 wwv_flow_imp_page.create_page_da_event(
@@ -20999,6 +21114,54 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_DIALOG_CANCEL'
 );
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(7886763654781737)
+,p_process_sequence=>10
+,p_process_point=>'AFTER_SUBMIT'
+,p_process_type=>'NATIVE_PLSQL'
+,p_process_name=>'New'
+,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'DECLARE',
+'  l_response_body CLOB;',
+'  l_file          BLOB;',
+'BEGIN',
+'  opk_cisef.pr_config;',
+'',
+'  apex_web_service.clear_request_headers;',
+'  apex_web_service.set_request_headers(p_name_01  => ''Authorization'',',
+'                                       p_value_01 => ''Bearer '' ||',
+'                                                     :p12_access_token,',
+'                                       p_name_02  => ''Content-Type'',',
+'                                       p_value_02 => ''application/json'',',
+'                                       p_name_03  => ''Accept'',',
+'                                       p_value_03 => ''application/json'');',
+'  -- ============================================',
+'  SELECT blob_content',
+'    INTO l_file',
+'    FROM apex_application_temp_files',
+'   WHERE NAME = :p14_imagen_dorso;',
+'',
+'  l_response_body := apex_web_service.make_rest_request(p_url         => opk_cisef.g_url_base ||',
+'                                                                         ''/DApi/AddBack'',',
+'                                                        p_http_method => ''POST'',',
+'                                                        p_body        => ''{"operationGuid": "'' ||',
+'                                                                         :p12_referencia_2 ||',
+'                                                                         ''", "image": "'' ||',
+'                                                                         REPLACE(apex_web_service.blob2clobbase64(l_file),',
+'                                                                                 utl_tcp.crlf) || ''"}'');',
+'  :p12_respuesta  := :p12_respuesta || opk_cisef.c_separator ||',
+'                     l_response_body;',
+'',
+'',
+'  IF json_value(l_response_body, ''$.status'') <> 200 THEN',
+unistr('    raise_application_error(-20000, ''Imagen no v\00E1lida'');'),
+'  END IF;',
+'  -- ============================================',
+'END;'))
+,p_process_clob_language=>'PLSQL'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_internal_uid=>7886763654781737
+);
 end;
 /
 prompt --application/pages/page_00015
@@ -21014,9 +21177,9 @@ wwv_flow_imp_page.create_page(
 ,p_page_template_options=>'#DEFAULT#'
 ,p_dialog_height=>'400'
 ,p_protection_level=>'C'
-,p_page_component_map=>'17'
+,p_page_component_map=>'16'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240308021542'
+,p_last_upd_yyyymmddhh24miss=>'20240308135900'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12976923084175657)
@@ -21106,28 +21269,20 @@ wwv_flow_imp_page.create_page_branch(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(12990630684307580)
 ,p_name=>'P15_IMAGEN_SELFIE'
-,p_source_data_type=>'BLOB'
 ,p_is_required=>true
 ,p_item_sequence=>10
 ,p_item_plug_id=>wwv_flow_imp.id(12977063987175657)
-,p_item_source_plug_id=>wwv_flow_imp.id(70062496795429657364)
 ,p_prompt=>'Imagen Selfie'
-,p_source=>'IMAGEN_SELFIE'
-,p_source_type=>'REGION_SOURCE_COLUMN'
 ,p_display_as=>'NATIVE_IMAGE_UPLOAD'
 ,p_cSize=>60
 ,p_field_template=>wwv_flow_imp.id(70058523436121571726)
 ,p_item_template_options=>'#DEFAULT#'
-,p_is_persistent=>'N'
 ,p_inline_help_text=>'Imagen selfie de la persona'
-,p_attribute_01=>'DB_COLUMN'
-,p_attribute_02=>'IMAGEN_SELFIE_MIMETYPE'
-,p_attribute_03=>'IMAGEN_SELFIE_FILENAME'
-,p_attribute_05=>'IMAGEN_SELFIE_LASTUPD'
-,p_attribute_06=>'Y'
+,p_attribute_01=>'APEX_APPLICATION_TEMP_FILES'
+,p_attribute_09=>'SESSION'
+,p_attribute_10=>'N'
 ,p_attribute_12=>'INLINE'
-,p_attribute_18=>'Y'
-,p_attribute_19=>'AUTO'
+,p_attribute_18=>'N'
 ,p_attribute_22=>'USER'
 );
 wwv_flow_imp_page.create_page_da_event(
@@ -21148,6 +21303,54 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_DIALOG_CANCEL'
 );
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(7886854261781738)
+,p_process_sequence=>10
+,p_process_point=>'AFTER_SUBMIT'
+,p_process_type=>'NATIVE_PLSQL'
+,p_process_name=>'New'
+,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'DECLARE',
+'  l_response_body CLOB;',
+'  l_file          BLOB;',
+'BEGIN',
+'  opk_cisef.pr_config;',
+'',
+'  apex_web_service.clear_request_headers;',
+'  apex_web_service.set_request_headers(p_name_01  => ''Authorization'',',
+'                                       p_value_01 => ''Bearer '' ||',
+'                                                     :p12_access_token,',
+'                                       p_name_02  => ''Content-Type'',',
+'                                       p_value_02 => ''application/json'',',
+'                                       p_name_03  => ''Accept'',',
+'                                       p_value_03 => ''application/json'');',
+'  -- ============================================',
+'  SELECT blob_content',
+'    INTO l_file',
+'    FROM apex_application_temp_files',
+'   WHERE NAME = :p15_imagen_selfie;',
+'',
+'  l_response_body := apex_web_service.make_rest_request(p_url         => opk_cisef.g_url_base ||',
+'                                                                         ''/DApi/AddSelfie'',',
+'                                                        p_http_method => ''POST'',',
+'                                                        p_body        => ''{"operationGuid": "'' ||',
+'                                                                         :p12_referencia_2 ||',
+'                                                                         ''", "image": "'' ||',
+'                                                                         REPLACE(apex_web_service.blob2clobbase64(l_file),',
+'                                                                                 utl_tcp.crlf) || ''"}'');',
+'  :p12_respuesta  := :p12_respuesta || opk_cisef.c_separator ||',
+'                     l_response_body;',
+'',
+'  IF json_value(l_response_body, ''$.status'') <> 200 THEN',
+unistr('    raise_application_error(-20000, ''Imagen no v\00E1lida'');'),
+'  END IF;',
+'  -- ============================================',
+'END;',
+''))
+,p_process_clob_language=>'PLSQL'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_internal_uid=>7886854261781738
+);
 end;
 /
 prompt --application/pages/page_00016
@@ -21165,7 +21368,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'06'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240308015014'
+,p_last_upd_yyyymmddhh24miss=>'20240308134913'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12981979188175660)
@@ -21262,11 +21465,47 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_action=>'NATIVE_DIALOG_CANCEL'
 );
 wwv_flow_imp_page.create_page_process(
- p_id=>wwv_flow_imp.id(12986351910175664)
+ p_id=>wwv_flow_imp.id(7886938929781739)
 ,p_process_sequence=>10
+,p_process_point=>'AFTER_SUBMIT'
+,p_process_type=>'NATIVE_PLSQL'
+,p_process_name=>'New'
+,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'DECLARE',
+'  l_response_body CLOB;',
+'  l_file          BLOB;',
+'BEGIN',
+'  opk_cisef.pr_config;',
+'',
+'  apex_web_service.clear_request_headers;',
+'  apex_web_service.set_request_headers(p_name_01  => ''Authorization'',',
+'                                       p_value_01 => ''Bearer '' ||',
+'                                                     :p12_access_token,',
+'                                       p_name_02  => ''Content-Type'',',
+'                                       p_value_02 => ''application/json'',',
+'                                       p_name_03  => ''Accept'',',
+'                                       p_value_03 => ''application/json'');',
+'  -- ============================================',
+'  l_response_body := apex_web_service.make_rest_request(p_url         => opk_cisef.g_url_base ||',
+'                                                                         ''/DApi/FinishProcess'',',
+'                                                        p_http_method => ''POST'',',
+'                                                        p_body        => ''{"operationGuid": "'' ||',
+'                                                                         :p12_referencia_2 || ''"}'');',
+'  :p12_respuesta  := :p12_respuesta || opk_cisef.c_separator ||',
+'                     l_response_body;',
+'  -- ============================================',
+'END;'))
+,p_process_clob_language=>'PLSQL'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_internal_uid=>7886938929781739
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(12986351910175664)
+,p_process_sequence=>20
 ,p_process_point=>'AFTER_SUBMIT'
 ,p_process_type=>'NATIVE_CLOSE_WINDOW'
 ,p_process_name=>'Close Dialog'
+,p_attribute_02=>'Y'
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
 ,p_internal_uid=>12986351910175664
 );
