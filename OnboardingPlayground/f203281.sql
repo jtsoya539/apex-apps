@@ -33,7 +33,7 @@ prompt APPLICATION 203281 - OnboardingPlayground
 -- Application Export:
 --   Application:     203281
 --   Name:            OnboardingPlayground
---   Date and Time:   15:16 Friday March 8, 2024
+--   Date and Time:   17:48 Sunday March 10, 2024
 --   Exported By:     JAVIER.MEZA.PY@GMAIL.COM
 --   Flashback:       0
 --   Export Type:     Application Export
@@ -123,7 +123,7 @@ wwv_imp_workspace.create_flow(
 ,p_substitution_string_01=>'APP_NAME'
 ,p_substitution_value_01=>'OnboardingPlayground'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240308151129'
+,p_last_upd_yyyymmddhh24miss=>'20240310174809'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>6
 ,p_print_server_type=>'INSTANCE'
@@ -18815,7 +18815,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'03'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240308015942'
+,p_last_upd_yyyymmddhh24miss=>'20240310173315'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(70062519451619657379)
@@ -19519,7 +19519,7 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_template_options=>'#DEFAULT#:t-Button--iconLeft'
 ,p_button_template_id=>wwv_flow_imp.id(70058526031711571727)
 ,p_button_is_hot=>'Y'
-,p_button_image_alt=>unistr('Operaci\00F3n (Pasos)')
+,p_button_image_alt=>'CISEF (Paso a Paso)'
 ,p_button_position=>'NEXT'
 ,p_button_redirect_url=>'f?p=&APP_ID.:12:&SESSION.::&DEBUG.:RP,12::'
 ,p_icon_css_classes=>'fa-plus'
@@ -20594,7 +20594,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'16'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240308144625'
+,p_last_upd_yyyymmddhh24miss=>'20240310174541'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12962624146175637)
@@ -20769,13 +20769,19 @@ wwv_flow_imp_page.create_page_process(
 '                                       p_name_03  => ''Accept'',',
 '                                       p_value_03 => ''application/json'');',
 '  -- ============================================',
-'  l_response_body   := apex_web_service.make_rest_request(p_url         => opk_cisef.g_url_base ||',
-'                                                                           ''/DApi/NewOperation'',',
-'                                                          p_http_method => ''POST'',',
-'                                                          p_body        => ''{"personId": "'' ||',
-'                                                                           :p12_nro_documento ||',
-'                                                                           ''", "isMassive": false, "isRecurrent": false, "doFullOnboarding": true}'');',
-'  :p12_respuesta    := l_response_body;',
+'  l_response_body := apex_web_service.make_rest_request(p_url         => opk_cisef.g_url_base ||',
+'                                                                         ''/DApi/NewOperation'',',
+'                                                        p_http_method => ''POST'',',
+'                                                        p_body        => ''{"personId": "'' ||',
+'                                                                         :p12_nro_documento ||',
+'                                                                         ''", "isMassive": false, "isRecurrent": false, "doFullOnboarding": true}'');',
+'  :p12_respuesta  := l_response_body;',
+'',
+'  IF apex_web_service.g_status_code <> 200 OR',
+'     json_value(l_response_body, ''$.status'') <> 200 THEN',
+'    raise_application_error(-20000, l_response_body);',
+'  END IF;',
+'',
 '  :p12_referencia_1 := json_value(l_response_body, ''$.operationToken'');',
 '  :p12_referencia_2 := json_value(l_response_body, ''$.operationGuid'');',
 '  -- ============================================',
@@ -20801,7 +20807,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'16'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240308145516'
+,p_last_upd_yyyymmddhh24miss=>'20240310174424'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12966954436175652)
@@ -20964,7 +20970,8 @@ wwv_flow_imp_page.create_page_process(
 '  :p12_respuesta  := :p12_respuesta || opk_cisef.c_separator ||',
 '                     l_response_body;',
 '',
-'  IF json_value(l_response_body, ''$.status'') <> 200 THEN',
+'  IF apex_web_service.g_status_code <> 200 OR',
+'     json_value(l_response_body, ''$.status'') <> 200 THEN',
 '    raise_application_error(-20000, l_response_body);',
 '  END IF;',
 '  -- ============================================',
@@ -20990,7 +20997,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'16'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240308145531'
+,p_last_upd_yyyymmddhh24miss=>'20240310174445'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12971907278175654)
@@ -21154,7 +21161,8 @@ wwv_flow_imp_page.create_page_process(
 '                     l_response_body;',
 '',
 '',
-'  IF json_value(l_response_body, ''$.status'') <> 200 THEN',
+'  IF apex_web_service.g_status_code <> 200 OR',
+'     json_value(l_response_body, ''$.status'') <> 200 THEN',
 '    raise_application_error(-20000, l_response_body);',
 '  END IF;',
 '  -- ============================================',
@@ -21180,7 +21188,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'16'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240308145545'
+,p_last_upd_yyyymmddhh24miss=>'20240310174504'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12976923084175657)
@@ -21343,7 +21351,8 @@ wwv_flow_imp_page.create_page_process(
 '  :p12_respuesta  := :p12_respuesta || opk_cisef.c_separator ||',
 '                     l_response_body;',
 '',
-'  IF json_value(l_response_body, ''$.status'') <> 200 THEN',
+'  IF apex_web_service.g_status_code <> 200 OR',
+'     json_value(l_response_body, ''$.status'') <> 200 THEN',
 '    raise_application_error(-20000, l_response_body);',
 '  END IF;',
 '  -- ============================================',
@@ -21370,7 +21379,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'06'
 ,p_last_updated_by=>'JAVIER.MEZA.PY@GMAIL.COM'
-,p_last_upd_yyyymmddhh24miss=>'20240308151129'
+,p_last_upd_yyyymmddhh24miss=>'20240310174809'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12981979188175660)
@@ -21500,6 +21509,11 @@ wwv_flow_imp_page.create_page_process(
 '                                                                         :p12_referencia_2 || ''"}'');',
 '  :p12_respuesta  := :p12_respuesta || opk_cisef.c_separator ||',
 '                     l_response_body;',
+'',
+'  IF apex_web_service.g_status_code <> 200 OR',
+'     json_value(l_response_body, ''$.status'') <> 200 THEN',
+'    raise_application_error(-20000, l_response_body);',
+'  END IF;',
 '  -- ============================================',
 '  l_response_body := apex_web_service.make_rest_request(p_url         => opk_cisef.g_url_base ||',
 '                                                                         ''/Status'',',
@@ -21508,6 +21522,11 @@ wwv_flow_imp_page.create_page_process(
 '                                                                         :p12_referencia_1 || ''"}'');',
 '  :p12_respuesta  := :p12_respuesta || opk_cisef.c_separator ||',
 '                     l_response_body;',
+'',
+'  IF apex_web_service.g_status_code <> 200 OR',
+'     json_value(l_response_body, ''$.status'') <> 200 THEN',
+'    raise_application_error(-20000, l_response_body);',
+'  END IF;',
 '',
 '  l_validation_status := json_value(l_response_body, ''$.validationStatus'');',
 '  -- ============================================',
